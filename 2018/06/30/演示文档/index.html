@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html>
+    <!-- title -->
+
+
+
+
+
+<head>
+    <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>知识库构建算法（图文版） · Ex_treme&#39;s blog</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7);
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s 1;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= /css/style.css?v=20180317 as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css" href= /css/mobile.css?v=20180317 media="(max-width: 980px)"/>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        
+    <link rel="icon" href= /assets/bitbug_favicon.ico>
+    <script>
+        (function (w) {
+            "use strict";
+            // rel=preload support test
+            if (!w.loadCSS) {
+                w.loadCSS = function () { };
+            }
+            // define on the loadCSS obj
+            var rp = loadCSS.relpreload = {};
+            // rel=preload feature support test
+            // runs once and returns a function for compat purposes
+            rp.support = (function () {
+                var ret;
+                try {
+                    ret = w.document.createElement("link").relList.supports("preload");
+                } catch (e) {
+                    ret = false;
+                }
+                return function () {
+                    return ret;
+                };
+            })();
+
+            // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+            // then change that media back to its intended value on load
+            rp.bindMediaToggle = function (link) {
+                // remember existing media attr for ultimate state, or default to 'all'
+                var finalMedia = link.media || "all";
+
+                function enableStylesheet() {
+                    link.media = finalMedia;
+                }
+
+                // bind load handlers to enable media
+                if (link.addEventListener) {
+                    link.addEventListener("load", enableStylesheet);
+                } else if (link.attachEvent) {
+                    link.attachEvent("onload", enableStylesheet);
+                }
+
+                // Set rel and non-applicable media type to start an async request
+                // note: timeout allows this to happen async to let rendering continue in IE
+                setTimeout(function () {
+                    link.rel = "stylesheet";
+                    link.media = "only x";
+                });
+                // also enable media after 3 seconds,
+                // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+                setTimeout(enableStylesheet, 3000);
+            };
+
+            // loop through link elements in DOM
+            rp.poly = function () {
+                // double check this to prevent external calls from running
+                if (rp.support()) {
+                    return;
+                }
+                var links = w.document.getElementsByTagName("link");
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    // qualify links to those with rel=preload and as=style attrs
+                    if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) {
+                        // prevent rerunning on link
+                        link.setAttribute("data-loadcss", true);
+                        // bind listeners to toggle media back
+                        rp.bindMediaToggle(link);
+                    }
+                }
+            };
+
+            // if unsupported, run the polyfill
+            if (!rp.support()) {
+                // run once at least
+                rp.poly();
+
+                // rerun poly on an interval until onload
+                var run = w.setInterval(rp.poly, 500);
+                if (w.addEventListener) {
+                    w.addEventListener("load", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                } else if (w.attachEvent) {
+                    w.attachEvent("onload", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                }
+            }
+            // commonjs
+            if (typeof exports !== "undefined") {
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }(typeof global !== "undefined" ? global : this));
+    </script>
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Ex_treme&#39;s blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">知识库构建算法（图文版）</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>Ex_treme's blog.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style=
+
+
+
+
+
+
+
+
+height:50vh;
+
+>
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            知识库构建算法（图文版）
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "EMDT">EMDT</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "知识库构建算法">知识库构建算法</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "QGDT">QGDT</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/06/30</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
+        
+    </div>
+</div>
+        <script>
+  // load webfont-loader async, and add callback function
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+  
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
+        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
+      if (postIntroTags) {
+        postIntroTags.classList.add('post-fade-in');
+      }
+      if (postIntroMeat) {
+        postIntroMeat.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  async("https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", asyncCb)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide1.JPG" alt="image"></p>
+<blockquote>
+<p>基于WEB工作文档的知识库构建算法介绍</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide2.JPG" alt="image"></p>
+<blockquote>
+<p>介绍一个共分为四个部分，首先我们将阐述知识库构建算法的设计思路，而后我们将分别介绍抽取算法、挖掘算法和问句生成算法，最后我们将对我们提出的算法作出总结。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide3.JPG" alt="image"></p>
+<blockquote>
+<p>算法设计考虑到算法的通用性，只要是WEB文档，不管是产品手册、案例文档、还是用户指南，都要能广泛适用。<br>
+WEB文档含有大量的网页噪声，抽取算法应该能有效的避免网页噪声，抽取主体内容。<br>
+只要是符合问答标准的信息，不管是关键词、短语还是句子都要能被挖掘算法检测出来，保证最大化挖掘问答信息对。<br>
+由于WEB文档规范性较高，答案一般具有较强的规范性和针对性，因此我们将重点集中在如何将含有关键词、短语、句子的序列组合生成高质量的问题信息。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide4.JPG" alt="image"></p>
+<blockquote>
+<p>那么，我们要如何保证算法的通用性呢？<br>
+我们采用基于行块分布函数的正文抽取算法，解决抽取算法的通用性问题，我们分别提出了EMDT基于Web文档密度和标签的问答对抽取及挖掘算法和QGDT基于模板和深度学习的问句生成算法，分别解决了尽量多的挖掘问答信息对，和尽量好的生成高质量问答对这两个知识库构建的重点和难点问题。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide5.JPG" alt="image"></p>
+<blockquote>
+<p>下面我们开始介绍EMDT抽取挖掘算法</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide6.JPG" alt="image"></p>
+<blockquote>
+<p>第一部分：基于行块分布函数的正文抽取算法。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide7.JPG" alt="image"></p>
+<blockquote>
+<p>对于一个WEB文档来说，如果去除了所有的HTML标签和CSS样式，只保留文本行和分隔符后，那么WEB文档中的文本块的分布就如左图所示，x轴为文本块的序号，y轴为文本块的长度，可以清晰的看到，正文主体部分非常突出，我们利用以下几个特点建模并抽取正文：</p>
+</blockquote>
+<ul>
+<li>第一点：正文的开始到结束的内容具有连续性</li>
+<li>第二点：在给定的窗口的中，窗口内的正文的文本块大小不为零</li>
+<li>第三点：正文的头部之前和尾部之后必然会出现文本块大小为零的情况也就是出现换行符\n</li>
+<li>第四点：在指定的窗口内，文本块大小之和最大的部分一定出现在正文内。</li>
+</ul>
+<blockquote>
+<p>我们根据以上特征对WEB文档进行建模，其约束条件已经分别给出，我们依靠该算法去除了网页源噪声，保留了正文主体部分的网页源代码，供下一步的挖掘使用。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide8.JPG" alt="image"></p>
+<blockquote>
+<p>下面我们介绍基于网页DOM树技术的挖掘算法：</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide9.JPG" alt="image"></p>
+<blockquote>
+<p>我们知道网页源代码可以解析成一个个文档对象模型，即网页DOM-tree，在DOM树中，我们发现并且认为&lt; h &gt;标签和&lt; div &gt;标签是两个非常重要的特征，如果我们只关注这两个标签，正文主体部分的源代码解析后一般如左图所示：<br>
+实践证明，具有问题特征的信息一般被放到&lt; h &gt;标签内作为标题，并且&lt; h &gt;标签从1-6的分布一般是按照层级关系书写，另外一个特点是，具有问答特征的信息通常被至于块级元素&lt; div &gt;标签内。<br>
+我们以&lt; h &gt;标签和&lt; div &gt;标签为强特征，深度遍历整个DOM树，找出所有同时具备这两个标签的结点，而后依据深度挖掘的顺序和&lt; h &gt;标签1-6的权重关系，挖掘出所有具备以上所述特征的父亲结点和对应的子孙结点，挖掘生成的问题我们按照主题、父问题、子问题的顺序组成问题序列，我们称之为搜索词，需要注意的是它并不是最后的问题信息，关于问句的生成我们将在后面重点介绍。需要额外补充说明的一点是，关于主题信息我们一般通过&lt; title &gt;这个强标签进行抽取，也可以辅以规则进行更精确的抽取。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide10.JPG" alt="image"></p>
+<blockquote>
+<p>下面我们介绍问答对判定模型</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide11.JPG" alt="image"></p>
+<blockquote>
+<p>这是第二种挖掘算法，适用于无法通过强标签特征挖掘问答信息的的WEB文档，是我们对问答对挖掘算法的有力补充。<br>
+通过观察左图WEB文档的文本分布，我们可以看到，具有挖掘价值的WEB文档的文本分布一般具有规律性，即标题—正文，小标题—正文，换句话说，即文本行行间距可以用于切割WEB文档，区分不同问答对信息，因此我们提出了最大迭代切割算法来挖掘问答对信息：<br>
+首先去除正文主体所有的标签信息，只保留文本行和换行符，我们称之为密度化，进一步将密度化后的文档，转换成只含有文本信息和文本行间距的文本序列，而后按照文本行间隔由大至小的顺序，依次切割文本序列，将切割后的文本序列首部作为问题信息，其余部分连接后作为答案信息，并通过jaccard系数判定问答对之间的相关性，将相关度低于0.25这个阈值的问答对信息过滤，对每次迭代切割后生成的问答对信息，通过QADM问答对判定模型进行判定，模型左侧表征的是使用TextRank加权的问答对整体相关度，右侧表征的是问答特征得分，通过QADM对问答序列排序打分，保留得分最高的单次迭代切割后生成的问答对信息。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide12.JPG" alt="image"></p>
+<blockquote>
+<p>最后，我们将抽取算法和两种挖掘算法融合，提出了EMDT，即基于WEB文档密度和标签的问答对抽取及挖掘算法。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide13.JPG" alt="image"></p>
+<blockquote>
+<p>下面我们简单阐述EMDT算法的执行流程：<br>
+首先我们批量上传并逐个读取WEB文档，先使用TEBR算法去除网页噪声并保留正文源代码，而后基于正文标签特征，和文本密度分布特征，挖掘问答信息对。一般而言，由于WEB文档的强标签特性，采用基于标签的问答对挖掘算法便能取得很高的挖掘率，约为320%，融合基于文本密度分布的挖掘算法，能够使得挖掘率提高20%，达到340%。需要特别强调的时，基于标签的挖掘算法，挖掘出的答案信息我们会保留网页源代码，这是为了在APP中渲染HTML标签，从而为用户提供更好的显示效果。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide14.JPG" alt="image"></p>
+<blockquote>
+<p>下面我们介绍问句生成算法，其目的就是为了将EMDT挖掘生成的搜索词序列，转化成符合提问习惯和产品文档规范的问句。我们提出的基于模板和深度学习的问句生成算法，使用了机器学习、深度学习、检索模型和排序算法等知识，有效解决了由词、句序列生成问句的重点难点问题。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide15.JPG" alt="image"></p>
+<blockquote>
+<p>QGDT首先要求人工配置，问句生成模板若干个，人工标注一定数量的支持向量机训练集，和能覆盖WEB文档集合的Word2vec词向量训练语料以及训练RNN深度学习语言模型问句语料。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide16.JPG" alt="image"></p>
+<blockquote>
+<p>我们根据华为提供的测试集制定了12个问句生成模板，包括了4个单检索词问句生成模板、4个双检索词问句生成模板和4个三检索词问句生成模板，如表1所示。<br>
+我们人工匹配了1000条EMDT挖掘生成的搜索词序列，用来训练机器学习模型支持向量机，这1000条人工匹配的问句我们称之为模板集，支持向量机分类器用于判定搜索词序列中是否含有冗余搜索词，丢弃对于生成问句多余的搜索词，判定后的搜索词序列称为检索词序列，用于最后的问句生成，机器学习模型训练的相关参数如表2所示。<br>
+为了训练Word2Vec词向量模型，我们从百度知道爬取了一千万条问答信息，训练时加入预处理后华为测试集进行训练，确保覆盖问句生成所涉及到的所有检索词。词向量模型的训练参数如表3所示。<br>
+我们进一步处理问答语料，保留符合我们预定义问句生成模板的问句信息，约4万条，同时加入模板集，训练RNN+LSTM深度学习语言模型，深度学习神经网络相关参数如表4所示。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide17.JPG" alt="image"></p>
+<blockquote>
+<p>模板和模型训练完毕后，我们进入QGDT算法的第二部分，相似度的计算。相似度计算主要是通过了比较检索词序列与模板集的相似度，为问句生成模板排序打分，我们主要依据了word move distance基于词向量的词移距离来比较多个检索词之间的相似度，我们依据概率随机采样从模板集中选取模板，最后根据相似度计算模型为问句生成模板排序打分。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide18.JPG" alt="image"></p>
+<blockquote>
+<p>下面我们简单介绍词移距离是如何解决短语、句子或者文档等粗粒度单位的相似度比较问题。我们知道词向量模型最重要的作用是通过神经网络隐藏层将所有词压缩成低维向量表征，从而解决维度爆炸问题，通过余弦定理计算两个词之间的夹角作为相似度。<br>
+公式的含义如图所示，即左边句子中所有单词转移到右边句子的最短总距离，换句或说，两个句子间的距离就是每个单词移动距离的总和，因此称之为词移距离。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide19.JPG" alt="image"></p>
+<blockquote>
+<p>接下来介绍QGDT第三部分，频度计算，深度学习语言模型不仅解决了N-gram语言模型的维度爆炸问题，还通过循环神经网络和长短期记忆网络自动学习语言特征，使用开始标签&lt; start or end &gt;初始化网络后，对应的输出层参数可以表征下一个单词出现的可能，得分总和的平均，我们称之为频度。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide20.JPG" alt="image"></p>
+<blockquote>
+<p>我们利用长短期神经网络的记忆特性，不但解决的概率平滑问题，还学习了问句的深度表征，该公式反映的是用RNNLM语言模型打分，并通过sigmod函数将得分归一化到[0,1]这个区间，为下一步模型融合奠定基础！</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide21.JPG" alt="image"></p>
+<blockquote>
+<p>最后我们介绍QGDT的最后一部分————模型融合，相似度计算模型具有调节因子阿尔法，RNNLM语言模型具有调节因子贝塔，我们再引入融合常量纳木大,将两个模型进行线性融合，生成最终的问句生成模型，完成问句匹配模板的排序打分。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide22.JPG" alt="image"></p>
+<blockquote>
+<p>我们简单介绍QGDT的检索模型，利用预留的测试集，依次对相似度计算模型和频度计算模型进行测试，线性调整阿尔法和贝塔的取值,使得所有问句匹配模板，排序打分的差值达到最大，从而确定阿尔法和贝塔的最终取值，而后将纳木大从[0,1]线性增大，取前1平均精度作为评判指标，使得前1平均精度达到最大。至此，QGDT排序算法介绍完毕！</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide23.JPG" alt="image"></p>
+<blockquote>
+<p>最后一章，算法总结，我们创造性的提出了EMDT抽取挖掘算法和QGDT问句生成算法</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide24.JPG" alt="image"></p>
+<blockquote>
+<p>EMDT算法在华为提供的3501个测试集上，挖掘出了11914条问答对信息，挖掘率高达340%，平均每个文档挖掘出3.4条问答信息。<br>
+我们调节QGDT的两个模型调节因子和一个模型融合因子，最终，1平均精度为0.73，同时2平均精度高达0.87，有效证明了，生成的问句可接受程度非常高，基本达到了预期效果。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide25.JPG" alt="image"></p>
+<blockquote>
+<p>最后，不管是EMDT还是QGDT，都已在GITHUB上开源，上传至PYPI，提供pip的简易安装方式，其中QGDT还提供了CPU版本以供测试和云端部署，方便算法研究以及生产环境下的使用。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/Slide26.JPG" alt="image"></p>
+<blockquote>
+<p>演示讲解完毕，感谢观看！</p>
+</blockquote>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/07/20/复赛笔记（一）：EXCLE和集合SET的处理/" title= 复赛笔记（一）：EXCLE和集合SET的处理 >
+                    <div class="nextTitle">复赛笔记（一）：EXCLE和集合SET的处理</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/06/28/云端知识库构建/" title= 云端构建知识库 >
+                    <div class="prevTitle">云端构建知识库</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:pzsyjsgldd@163.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/pzs741" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+        <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 53 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2018/07/25/更方便的操作云服务器/" >云服务器基础操作</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/20</span><a class="archive-post-title" href= "/2018/07/20/复赛笔记（一）：EXCLE和集合SET的处理/" >复赛笔记（一）：EXCLE和集合SET的处理</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/30</span><a class="archive-post-title" href= "/2018/06/30/演示文档/" >知识库构建算法（图文版）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/28</span><a class="archive-post-title" href= "/2018/06/28/云端知识库构建/" >云端构建知识库</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/20</span><a class="archive-post-title" href= "/2018/06/20/生日快乐/" >我的二十五岁</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2018/06/19/折腾之旅3/" >填坑之旅（三）---NGINX配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/18</span><a class="archive-post-title" href= "/2018/06/18/cpu/" >填坑之旅（二）---QGDT(CPU版)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2018/06/17/阿里云二次部署/" >添坑之旅（一）---阿里云二次部署</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/13</span><a class="archive-post-title" href= "/2018/06/13/发布算法库/" >发布我的第二个算法库---EWDT</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/12</span><a class="archive-post-title" href= "/2018/06/12/基于Web文档密度和标签的问答对抽取及挖掘算法 /" >基于Web文档密度和标签的问答对抽取及挖掘算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/08</span><a class="archive-post-title" href= "/2018/06/08/excle/" >一次千万级EXCLE数据处理任务</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/07</span><a class="archive-post-title" href= "/2018/06/07/基于深度学习和模板的问句生成算法/" >基于深度学习和模板的问句生成算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/02</span><a class="archive-post-title" href= "/2018/06/02/pytorch/" >pytorch环境配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/22</span><a class="archive-post-title" href= "/2018/05/22/django搜索接口实现/" >django搜索接口的实现</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/18</span><a class="archive-post-title" href= "/2018/05/18/django前端快速部署/" >django前端快速部署</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/17</span><a class="archive-post-title" href= "/2018/05/17/conda常用命令大全/" >conda常用命令</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/12</span><a class="archive-post-title" href= "/2018/05/12/阿里云部署/" >阿里云部署实战</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/06</span><a class="archive-post-title" href= "/2018/05/06/生产环境配置/" >django+nginx+uwsgi生产环境配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/02</span><a class="archive-post-title" href= "/2018/05/02/Elasticsearch的Restful接口的应用/" >Elasticsearch的Restful接口的应用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/01</span><a class="archive-post-title" href= "/2018/05/01/elasticsearch查询/" >elasticsearch查询</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span><a class="archive-post-title" href= "/2018/04/29/elasticsearch/" >elasticsearch基础</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/03</span><a class="archive-post-title" href= "/2018/04/03/SAS3/" >文章搜索引擎————TF-IDF算法整合</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/30</span><a class="archive-post-title" href= "/2018/03/30/LDA/" >主题检索模型铺垫————LDA基础</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/29</span><a class="archive-post-title" href= "/2018/03/29/关键词检索模型————TF-IDF的简单应用/" >关键词检索模型————TF-IDF的简单应用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/28</span><a class="archive-post-title" href= "/2018/03/28/jieba/" >jieba————做最好的Python中文分词组件</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/27</span><a class="archive-post-title" href= "/2018/03/27/文章摘要器————HanLP的简单使用/" >文章摘要器————HanLP的简单使用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/26</span><a class="archive-post-title" href= "/2018/03/26/深入浅出————自然语言处理/" >深入浅出————自然语言处理</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/24</span><a class="archive-post-title" href= "/2018/03/24/Hexo迁移流程/" >Hexo迁移流程</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2018/03/23/从NLP讲到神经网络————词向量word2vec原理浅析/" >从NLP讲到神经网络————词向量word2vec原理浅析</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2018/03/21/面对未知，何去何从？/" >面对未知，何去何从？</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/20</span><a class="archive-post-title" href= "/2018/03/20/我的抑郁人格/" >我的抑郁人格</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/06</span><a class="archive-post-title" href= "/2018/03/06/PySpider框架基本使用流程/" >PySpider框架基本使用流程</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/28</span><a class="archive-post-title" href= "/2018/02/28/为了充满仪式感的生活而忙碌/" >为了充满仪式感的生活而忙碌</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/26</span><a class="archive-post-title" href= "/2018/02/26/为什么而战/" >为什么而战</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/21</span><a class="archive-post-title" href= "/2018/02/21/白夜追凶/" >白夜追凶</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2018/02/20/The power of faith/" >The power of faith</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/19</span><a class="archive-post-title" href= "/2018/02/19/人生太短，只够相爱/" >人生太短，只够相爱</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/18</span><a class="archive-post-title" href= "/2018/02/18/where is the rest/" >where is the rest?</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/17</span><a class="archive-post-title" href= "/2018/02/17/鸿福泽天，天伦共乐/" >洪福齐天，天伦之乐</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/14</span><a class="archive-post-title" href= "/2018/02/14/你的身体不只属于你自己/" >你的身体不只属于你自己</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/13</span><a class="archive-post-title" href= "/2018/02/13/科幻是怎样一根线/" >科幻是怎样一根线</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/12</span><a class="archive-post-title" href= "/2018/02/12/翻滚吧！番茄炒蛋！/" >翻滚吧！番茄炒蛋！</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/11</span><a class="archive-post-title" href= "/2018/02/11/我只想说我还是以前那个我/" >我只想说我还是以前那个我</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/10</span><a class="archive-post-title" href= "/2018/02/10/谁说挂面不调盐/" >谁说挂面不调盐</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/09</span><a class="archive-post-title" href= "/2018/02/09/hello-world/" >Hello World</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="elasticsearch"><span class="iconfont-archer">&#xe606;</span>elasticsearch</span>
+    
+        <span class="sidebar-tag-name" data-tags="restful"><span class="iconfont-archer">&#xe606;</span>restful</span>
+    
+        <span class="sidebar-tag-name" data-tags="API"><span class="iconfont-archer">&#xe606;</span>API</span>
+    
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+    
+        <span class="sidebar-tag-name" data-tags="github"><span class="iconfont-archer">&#xe606;</span>github</span>
+    
+        <span class="sidebar-tag-name" data-tags="迁移"><span class="iconfont-archer">&#xe606;</span>迁移</span>
+    
+        <span class="sidebar-tag-name" data-tags="LDA"><span class="iconfont-archer">&#xe606;</span>LDA</span>
+    
+        <span class="sidebar-tag-name" data-tags="主题模型"><span class="iconfont-archer">&#xe606;</span>主题模型</span>
+    
+        <span class="sidebar-tag-name" data-tags="pyspider"><span class="iconfont-archer">&#xe606;</span>pyspider</span>
+    
+        <span class="sidebar-tag-name" data-tags="django"><span class="iconfont-archer">&#xe606;</span>django</span>
+    
+        <span class="sidebar-tag-name" data-tags="搜索引擎"><span class="iconfont-archer">&#xe606;</span>搜索引擎</span>
+    
+        <span class="sidebar-tag-name" data-tags="SAS"><span class="iconfont-archer">&#xe606;</span>SAS</span>
+    
+        <span class="sidebar-tag-name" data-tags="前端展示"><span class="iconfont-archer">&#xe606;</span>前端展示</span>
+    
+        <span class="sidebar-tag-name" data-tags="conda"><span class="iconfont-archer">&#xe606;</span>conda</span>
+    
+        <span class="sidebar-tag-name" data-tags="pip"><span class="iconfont-archer">&#xe606;</span>pip</span>
+    
+        <span class="sidebar-tag-name" data-tags="虚拟环境"><span class="iconfont-archer">&#xe606;</span>虚拟环境</span>
+    
+        <span class="sidebar-tag-name" data-tags="数据库"><span class="iconfont-archer">&#xe606;</span>数据库</span>
+    
+        <span class="sidebar-tag-name" data-tags="前端"><span class="iconfont-archer">&#xe606;</span>前端</span>
+    
+        <span class="sidebar-tag-name" data-tags="快速部署"><span class="iconfont-archer">&#xe606;</span>快速部署</span>
+    
+        <span class="sidebar-tag-name" data-tags="TF-IDF"><span class="iconfont-archer">&#xe606;</span>TF-IDF</span>
+    
+        <span class="sidebar-tag-name" data-tags="检索模型"><span class="iconfont-archer">&#xe606;</span>检索模型</span>
+    
+        <span class="sidebar-tag-name" data-tags="分支"><span class="iconfont-archer">&#xe606;</span>分支</span>
+    
+        <span class="sidebar-tag-name" data-tags="cpu"><span class="iconfont-archer">&#xe606;</span>cpu</span>
+    
+        <span class="sidebar-tag-name" data-tags="云服务器"><span class="iconfont-archer">&#xe606;</span>云服务器</span>
+    
+        <span class="sidebar-tag-name" data-tags="bible"><span class="iconfont-archer">&#xe606;</span>bible</span>
+    
+        <span class="sidebar-tag-name" data-tags="api"><span class="iconfont-archer">&#xe606;</span>api</span>
+    
+        <span class="sidebar-tag-name" data-tags="接口"><span class="iconfont-archer">&#xe606;</span>接口</span>
+    
+        <span class="sidebar-tag-name" data-tags="kibana"><span class="iconfont-archer">&#xe606;</span>kibana</span>
+    
+        <span class="sidebar-tag-name" data-tags="CUDR"><span class="iconfont-archer">&#xe606;</span>CUDR</span>
+    
+        <span class="sidebar-tag-name" data-tags="查询"><span class="iconfont-archer">&#xe606;</span>查询</span>
+    
+        <span class="sidebar-tag-name" data-tags="jieba"><span class="iconfont-archer">&#xe606;</span>jieba</span>
+    
+        <span class="sidebar-tag-name" data-tags="PageRank"><span class="iconfont-archer">&#xe606;</span>PageRank</span>
+    
+        <span class="sidebar-tag-name" data-tags="TextRank"><span class="iconfont-archer">&#xe606;</span>TextRank</span>
+    
+        <span class="sidebar-tag-name" data-tags="pytorch"><span class="iconfont-archer">&#xe606;</span>pytorch</span>
+    
+        <span class="sidebar-tag-name" data-tags="深度学习"><span class="iconfont-archer">&#xe606;</span>深度学习</span>
+    
+        <span class="sidebar-tag-name" data-tags="语言模型"><span class="iconfont-archer">&#xe606;</span>语言模型</span>
+    
+        <span class="sidebar-tag-name" data-tags="excle"><span class="iconfont-archer">&#xe606;</span>excle</span>
+    
+        <span class="sidebar-tag-name" data-tags="数据处理"><span class="iconfont-archer">&#xe606;</span>数据处理</span>
+    
+        <span class="sidebar-tag-name" data-tags="xadmin"><span class="iconfont-archer">&#xe606;</span>xadmin</span>
+    
+        <span class="sidebar-tag-name" data-tags="后台"><span class="iconfont-archer">&#xe606;</span>后台</span>
+    
+        <span class="sidebar-tag-name" data-tags="仪式感"><span class="iconfont-archer">&#xe606;</span>仪式感</span>
+    
+        <span class="sidebar-tag-name" data-tags="焦虑"><span class="iconfont-archer">&#xe606;</span>焦虑</span>
+    
+        <span class="sidebar-tag-name" data-tags="军事"><span class="iconfont-archer">&#xe606;</span>军事</span>
+    
+        <span class="sidebar-tag-name" data-tags="影评"><span class="iconfont-archer">&#xe606;</span>影评</span>
+    
+        <span class="sidebar-tag-name" data-tags="红海行动"><span class="iconfont-archer">&#xe606;</span>红海行动</span>
+    
+        <span class="sidebar-tag-name" data-tags="湄公河行动"><span class="iconfont-archer">&#xe606;</span>湄公河行动</span>
+    
+        <span class="sidebar-tag-name" data-tags="黑鹰坠落"><span class="iconfont-archer">&#xe606;</span>黑鹰坠落</span>
+    
+        <span class="sidebar-tag-name" data-tags="快速开发"><span class="iconfont-archer">&#xe606;</span>快速开发</span>
+    
+        <span class="sidebar-tag-name" data-tags="后台管理"><span class="iconfont-archer">&#xe606;</span>后台管理</span>
+    
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
+    
+        <span class="sidebar-tag-name" data-tags="知识库构建"><span class="iconfont-archer">&#xe606;</span>知识库构建</span>
+    
+        <span class="sidebar-tag-name" data-tags="新时代周刊"><span class="iconfont-archer">&#xe606;</span>新时代周刊</span>
+    
+        <span class="sidebar-tag-name" data-tags="爱情观"><span class="iconfont-archer">&#xe606;</span>爱情观</span>
+    
+        <span class="sidebar-tag-name" data-tags="书评"><span class="iconfont-archer">&#xe606;</span>书评</span>
+    
+        <span class="sidebar-tag-name" data-tags="关键词"><span class="iconfont-archer">&#xe606;</span>关键词</span>
+    
+        <span class="sidebar-tag-name" data-tags="NLP"><span class="iconfont-archer">&#xe606;</span>NLP</span>
+    
+        <span class="sidebar-tag-name" data-tags="词向量"><span class="iconfont-archer">&#xe606;</span>词向量</span>
+    
+        <span class="sidebar-tag-name" data-tags="Wordvec"><span class="iconfont-archer">&#xe606;</span>Wordvec</span>
+    
+        <span class="sidebar-tag-name" data-tags="神经网络"><span class="iconfont-archer">&#xe606;</span>神经网络</span>
+    
+        <span class="sidebar-tag-name" data-tags="pypi"><span class="iconfont-archer">&#xe606;</span>pypi</span>
+    
+        <span class="sidebar-tag-name" data-tags="setuptools"><span class="iconfont-archer">&#xe606;</span>setuptools</span>
+    
+        <span class="sidebar-tag-name" data-tags="高血压"><span class="iconfont-archer">&#xe606;</span>高血压</span>
+    
+        <span class="sidebar-tag-name" data-tags="冠心病"><span class="iconfont-archer">&#xe606;</span>冠心病</span>
+    
+        <span class="sidebar-tag-name" data-tags="尿毒症"><span class="iconfont-archer">&#xe606;</span>尿毒症</span>
+    
+        <span class="sidebar-tag-name" data-tags="中风"><span class="iconfont-archer">&#xe606;</span>中风</span>
+    
+        <span class="sidebar-tag-name" data-tags="健康"><span class="iconfont-archer">&#xe606;</span>健康</span>
+    
+        <span class="sidebar-tag-name" data-tags="EMDT"><span class="iconfont-archer">&#xe606;</span>EMDT</span>
+    
+        <span class="sidebar-tag-name" data-tags="问答对"><span class="iconfont-archer">&#xe606;</span>问答对</span>
+    
+        <span class="sidebar-tag-name" data-tags="QADM"><span class="iconfont-archer">&#xe606;</span>QADM</span>
+    
+        <span class="sidebar-tag-name" data-tags="问句生成"><span class="iconfont-archer">&#xe606;</span>问句生成</span>
+    
+        <span class="sidebar-tag-name" data-tags="WMD"><span class="iconfont-archer">&#xe606;</span>WMD</span>
+    
+        <span class="sidebar-tag-name" data-tags="RNNLM"><span class="iconfont-archer">&#xe606;</span>RNNLM</span>
+    
+        <span class="sidebar-tag-name" data-tags="xlrd"><span class="iconfont-archer">&#xe606;</span>xlrd</span>
+    
+        <span class="sidebar-tag-name" data-tags="xlwt"><span class="iconfont-archer">&#xe606;</span>xlwt</span>
+    
+        <span class="sidebar-tag-name" data-tags="set"><span class="iconfont-archer">&#xe606;</span>set</span>
+    
+        <span class="sidebar-tag-name" data-tags="摄影，北京，密云水库"><span class="iconfont-archer">&#xe606;</span>摄影，北京，密云水库</span>
+    
+        <span class="sidebar-tag-name" data-tags="自我"><span class="iconfont-archer">&#xe606;</span>自我</span>
+    
+        <span class="sidebar-tag-name" data-tags="人格"><span class="iconfont-archer">&#xe606;</span>人格</span>
+    
+        <span class="sidebar-tag-name" data-tags="挫折"><span class="iconfont-archer">&#xe606;</span>挫折</span>
+    
+        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
+    
+        <span class="sidebar-tag-name" data-tags="uwsgi"><span class="iconfont-archer">&#xe606;</span>uwsgi</span>
+    
+        <span class="sidebar-tag-name" data-tags="静态文件"><span class="iconfont-archer">&#xe606;</span>静态文件</span>
+    
+        <span class="sidebar-tag-name" data-tags="抑郁"><span class="iconfont-archer">&#xe606;</span>抑郁</span>
+    
+        <span class="sidebar-tag-name" data-tags="心理学"><span class="iconfont-archer">&#xe606;</span>心理学</span>
+    
+        <span class="sidebar-tag-name" data-tags="HanLP"><span class="iconfont-archer">&#xe606;</span>HanLP</span>
+    
+        <span class="sidebar-tag-name" data-tags="ACC"><span class="iconfont-archer">&#xe606;</span>ACC</span>
+    
+        <span class="sidebar-tag-name" data-tags="wxPython"><span class="iconfont-archer">&#xe606;</span>wxPython</span>
+    
+        <span class="sidebar-tag-name" data-tags="上传"><span class="iconfont-archer">&#xe606;</span>上传</span>
+    
+        <span class="sidebar-tag-name" data-tags="下载"><span class="iconfont-archer">&#xe606;</span>下载</span>
+    
+        <span class="sidebar-tag-name" data-tags="挂起"><span class="iconfont-archer">&#xe606;</span>挂起</span>
+    
+        <span class="sidebar-tag-name" data-tags="分词算法"><span class="iconfont-archer">&#xe606;</span>分词算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="HMM"><span class="iconfont-archer">&#xe606;</span>HMM</span>
+    
+        <span class="sidebar-tag-name" data-tags="吉他，曲谱"><span class="iconfont-archer">&#xe606;</span>吉他，曲谱</span>
+    
+        <span class="sidebar-tag-name" data-tags="知识库构建算法"><span class="iconfont-archer">&#xe606;</span>知识库构建算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="QGDT"><span class="iconfont-archer">&#xe606;</span>QGDT</span>
+    
+        <span class="sidebar-tag-name" data-tags="爬虫"><span class="iconfont-archer">&#xe606;</span>爬虫</span>
+    
+        <span class="sidebar-tag-name" data-tags="self.crwal"><span class="iconfont-archer">&#xe606;</span>self.crwal</span>
+    
+        <span class="sidebar-tag-name" data-tags="生日"><span class="iconfont-archer">&#xe606;</span>生日</span>
+    
+        <span class="sidebar-tag-name" data-tags="二十五"><span class="iconfont-archer">&#xe606;</span>二十五</span>
+    
+        <span class="sidebar-tag-name" data-tags="警匪"><span class="iconfont-archer">&#xe606;</span>警匪</span>
+    
+        <span class="sidebar-tag-name" data-tags="推理"><span class="iconfont-archer">&#xe606;</span>推理</span>
+    
+        <span class="sidebar-tag-name" data-tags="三体"><span class="iconfont-archer">&#xe606;</span>三体</span>
+    
+        <span class="sidebar-tag-name" data-tags="地球往事"><span class="iconfont-archer">&#xe606;</span>地球往事</span>
+    
+        <span class="sidebar-tag-name" data-tags="番茄"><span class="iconfont-archer">&#xe606;</span>番茄</span>
+    
+        <span class="sidebar-tag-name" data-tags="鸡蛋"><span class="iconfont-archer">&#xe606;</span>鸡蛋</span>
+    
+        <span class="sidebar-tag-name" data-tags="炒菜"><span class="iconfont-archer">&#xe606;</span>炒菜</span>
+    
+        <span class="sidebar-tag-name" data-tags="挂面"><span class="iconfont-archer">&#xe606;</span>挂面</span>
+    
+        <span class="sidebar-tag-name" data-tags="早餐"><span class="iconfont-archer">&#xe606;</span>早餐</span>
+    
+        <span class="sidebar-tag-name" data-tags="IQAS"><span class="iconfont-archer">&#xe606;</span>IQAS</span>
+    
+        <span class="sidebar-tag-name" data-tags="阿里云"><span class="iconfont-archer">&#xe606;</span>阿里云</span>
+    
+        <span class="sidebar-tag-name" data-tags="环境部署"><span class="iconfont-archer">&#xe606;</span>环境部署</span>
+    
+        <span class="sidebar-tag-name" data-tags="环境配置"><span class="iconfont-archer">&#xe606;</span>环境配置</span>
+    
+        <span class="sidebar-tag-name" data-tags="云部署"><span class="iconfont-archer">&#xe606;</span>云部署</span>
+    
+        <span class="sidebar-tag-name" data-tags="未知"><span class="iconfont-archer">&#xe606;</span>未知</span>
+    
+        <span class="sidebar-tag-name" data-tags="未来"><span class="iconfont-archer">&#xe606;</span>未来</span>
+    
+        <span class="sidebar-tag-name" data-tags="家族"><span class="iconfont-archer">&#xe606;</span>家族</span>
+    
+        <span class="sidebar-tag-name" data-tags="耄耋"><span class="iconfont-archer">&#xe606;</span>耄耋</span>
+    
+        <span class="sidebar-tag-name" data-tags="天伦"><span class="iconfont-archer">&#xe606;</span>天伦</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="工作"><span class="iconfont-archer">&#xe60a;</span>工作</span>
+    
+        <span class="sidebar-category-name" data-categories="爱好"><span class="iconfont-archer">&#xe60a;</span>爱好</span>
+    
+        <span class="sidebar-category-name" data-categories="朋友"><span class="iconfont-archer">&#xe60a;</span>朋友</span>
+    
+        <span class="sidebar-category-name" data-categories="家人"><span class="iconfont-archer">&#xe60a;</span>家人</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: '/',
+        author: 'John Doe'
+    }
+</script>
+    <!-- busuanzi  -->
+    
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+    
+    </body>
+</html>
+
+

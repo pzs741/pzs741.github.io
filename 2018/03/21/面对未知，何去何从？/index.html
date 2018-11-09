@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html>
+    <!-- title -->
+
+
+
+
+
+<head>
+    <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>面对未知，何去何从？ · Ex_treme&#39;s blog</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7);
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s 1;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= /css/style.css?v=20180317 as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css" href= /css/mobile.css?v=20180317 media="(max-width: 980px)"/>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        
+    <link rel="icon" href= /assets/bitbug_favicon.ico>
+    <script>
+        (function (w) {
+            "use strict";
+            // rel=preload support test
+            if (!w.loadCSS) {
+                w.loadCSS = function () { };
+            }
+            // define on the loadCSS obj
+            var rp = loadCSS.relpreload = {};
+            // rel=preload feature support test
+            // runs once and returns a function for compat purposes
+            rp.support = (function () {
+                var ret;
+                try {
+                    ret = w.document.createElement("link").relList.supports("preload");
+                } catch (e) {
+                    ret = false;
+                }
+                return function () {
+                    return ret;
+                };
+            })();
+
+            // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+            // then change that media back to its intended value on load
+            rp.bindMediaToggle = function (link) {
+                // remember existing media attr for ultimate state, or default to 'all'
+                var finalMedia = link.media || "all";
+
+                function enableStylesheet() {
+                    link.media = finalMedia;
+                }
+
+                // bind load handlers to enable media
+                if (link.addEventListener) {
+                    link.addEventListener("load", enableStylesheet);
+                } else if (link.attachEvent) {
+                    link.attachEvent("onload", enableStylesheet);
+                }
+
+                // Set rel and non-applicable media type to start an async request
+                // note: timeout allows this to happen async to let rendering continue in IE
+                setTimeout(function () {
+                    link.rel = "stylesheet";
+                    link.media = "only x";
+                });
+                // also enable media after 3 seconds,
+                // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+                setTimeout(enableStylesheet, 3000);
+            };
+
+            // loop through link elements in DOM
+            rp.poly = function () {
+                // double check this to prevent external calls from running
+                if (rp.support()) {
+                    return;
+                }
+                var links = w.document.getElementsByTagName("link");
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    // qualify links to those with rel=preload and as=style attrs
+                    if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) {
+                        // prevent rerunning on link
+                        link.setAttribute("data-loadcss", true);
+                        // bind listeners to toggle media back
+                        rp.bindMediaToggle(link);
+                    }
+                }
+            };
+
+            // if unsupported, run the polyfill
+            if (!rp.support()) {
+                // run once at least
+                rp.poly();
+
+                // rerun poly on an interval until onload
+                var run = w.setInterval(rp.poly, 500);
+                if (w.addEventListener) {
+                    w.addEventListener("load", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                } else if (w.attachEvent) {
+                    w.attachEvent("onload", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                }
+            }
+            // commonjs
+            if (typeof exports !== "undefined") {
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }(typeof global !== "undefined" ? global : this));
+    </script>
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Ex_treme&#39;s blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">面对未知，何去何从？</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>Ex_treme's blog.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style=
+
+
+
+
+
+
+
+
+height:50vh;
+
+>
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            面对未知，何去何从？
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "心理学">心理学</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "未知">未知</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "未来">未来</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/03/21</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
+        
+    </div>
+</div>
+        <script>
+  // load webfont-loader async, and add callback function
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+  
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
+        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
+      if (postIntroTags) {
+        postIntroTags.classList.add('post-fade-in');
+      }
+      if (postIntroMeat) {
+        postIntroMeat.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  async("https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", asyncCb)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>这是来自know yourself微信公众号的一篇文章<a href="http://mp.weixin.qq.com/s/ctZJB8o1sjKaMJkhN-4_Eg" target="_blank" rel="noopener">《面对未知，如何能够免于恐惧？》</a></p>
+<blockquote>
+<p>成熟就是一种对“未知”的接纳。</p>
+<p>Maturity has everything to do with the acceptance of “not knowing”.</p>
+<p>—— Mark Z. Danielewski, House of Leaves</p>
+</blockquote>
+<p>很多人说“未知”的结果往往比坏的结果更可怕，因为未知所以你不知道最坏能又多坏，偶尔又憧憬的一个美好的结局，但又不敢奢望，如此便更加煎熬折磨了，亲身经历的我对此感触颇深，特作此文。</p>
+<p>不确定也是两面的，按照心理学的说发，确定性倾向的人期待一个能控制的未来，不确定令他们担忧。二不确定性倾向的人能更好的适应不确定的环境从而把控自己的未来。那么显而易见的确定性倾向的害怕不确定会给我们的生活带来很多负面的影响，也就是的对未知的取向了。</p>
+<blockquote>
+<p>认知闭合是Arie Kruglanski于1993年提出的概念，它表达的是“个体在应对不确定的情境时，对于确定性答案的强烈愿望”。</p>
+</blockquote>
+<p>Kruglanski说的这种认知闭合，有时候仅仅因为自己的过度想象就会带来严重的负面情绪，那么下面说的这两个阶段简直就是两个极端。</p>
+<blockquote>
+<p>第一个阶段是抓住（seize）：我们会拼命搜寻所有能够获得的信息，不惜一切地核实和确认，希望能够获得一个确定的答案。</p>
+<p>第二个阶段则是冷冻（freeze）：如果客观条件不允许我们获得确定的答案，我们就开始刻意地不去想它，想要保护这种闭合的状态。</p>
+</blockquote>
+<p>抓住这个阶段让我对可能引导未来的因素，即使它再小再不起眼，仍然由于心理作用，被自己不断的方法，强迫自己认为它能给你一个肯定的回答。但是一旦这种回答并不令自己满意或者说没办法获得一个确切的答案，那么开始进入冷冻阶段，在这种阶段里面，开始进入封闭，不再去从外界获取信息，即使知道可能有新的信息能让未知的答案变得更加确定，但是已经进入了冷冻状态的自己认为当前封闭的状态能够令自己更加舒服，实际上明确的答案只是自己的一个臆想，不管是好的还是坏的，只是不愿意接受现实罢了。经历过这两个阶段，我们开始凭借直觉去做出判断，很显然，这肯定不是理性的。</p>
+<blockquote>
+<p>认知闭合容易使我们以简单的认知结构去快速处理信息、做出决定。我们往往会放弃理性的思考，做出那些自己最容易做到、最能预料到结果的选择。典型的两种选择就是回避和主动选择坏的结果。</p>
+</blockquote>
+<p>回避和主动选择最坏结果也是两个极端，回避说白了就是什么也不做，想当然的认为什么都不会发生，嗯，自我感觉良好。而主动选择最坏的结果呢？这就是自己给出的明确答案，它会带来什么负面的情绪我不敢说，但我很清楚的知道它对于我这种极度害怕未知的人来说，没有什么坏的情绪比未知更可怕了。与其说你极端，不如说你只是极端的想要得到一个明确的答案而已。</p>
+<p>那么现在就可以问，为什么我会这样的害怕未知？</p>
+<ul>
+<li>[ ] 过滤/选择性注意（filtering）：你主动过滤掉了所有可能是好的信息，只留下并放大了坏的细节。这样，你就总是只能想到那些坏的可能。</li>
+<li>[ ] 极端思维/全或无（‘Black and White’ Thinking）：你觉得一件事只可能有两种结果——要么成功、要么失败，而忽略了人和事物的复杂性和连续性。</li>
+<li>[ ] 过度概括（overgeneralization）：仅仅根据一个不好的细节，或者一件事的微小的缺陷，就概括得出这件事一定会失败。</li>
+<li>[ ] 情绪化推理（emotional reasoning）——因为你对某件事情有着强烈的情绪反应，就认为这件事是符合现实的，而忽视其他的证据；</li>
+<li>[ ] 灾难化（Catastrophizing）：你可能很爱用假设的句子来问自己，比如，“如果对方真的拒绝了我会怎么样？”“如果我真的得了癌症怎么办？”然后，就沉浸在对灾难性结果的设想中，夸大一切可能的后果，认为情况一定会糟糕到你完全无法忍受。</li>
+<li>[ ] 不公平的比较（unfair comparisons）：根据完全不符合实际的标准来解释和推断，并且只和比自己好的人比较，得出自己很差的结论。</li>
+<li>[ ] 度人之心（mind reading）：坚信自己懂得他人的心思，而不考虑其他的可能性，比如无端地揣测“他一定觉得我很差”。</li>
+<li>[ ] 个性化（personalization）：你认为所有的失败都是因为自己的过失和缺点造成的，而看不到他人的因素。例如，“我们离婚，是因为我一无是处”。</li>
+<li>[ ] “应该”式的陈述（Should Statements）：认为自己和别人“应该”怎么做，并且认为，一旦没有这么做，后果将会非常严重。</li>
+</ul>
+<p>上面这些是在陷入未知恐惧时可能产生的一些自动化思维，并不一定全都有，但下面这几点对我的影响比较大。</p>
+<p>极端思维，这个和我的外号不谋而合，简单的说我很难承认过程就是奖励，不敢说是手袋时代的困扰，因为我也是这个时代里面的一份子，我追求的也是一个结果，如果这个结果是好的，那么一切都有意义，如果这个结果是不好的，那么对我而言这是对自己努力的一个很大的否定。</p>
+<p>度人之心和个性化：其实这亦能理解成为极端思维的两个极端，一个是揣测他人，一个是揣测自己。所以我常常会想，我连自己是怎样一个人都不清楚，又怎能理解他人呢？这导致了我会又各种各样的猜测，很少去站在一个平等的角度去理解他人，这一点受到了抑郁人格的影响，也就是所有的不好都是我造成的，主要是我的问题，别人的感受比我的感受更为重要，但是你想给的真的是别人想要的吗？</p>
+<p>其实到这个地方我想说，拥有抑郁人格的人很害怕不确定，所以也很自然的发现和文章<a href="http://mp.weixin.qq.com/s/ctZJB8o1sjKaMJkhN-4_Eg" target="_blank" rel="noopener">《面对未知，如何能够免于恐惧？》</a>分析的很多观点也就不谋而合了。</p>
+<blockquote>
+<p>安全感缺失<br>
+对未知感到恐惧的人，可能是由成长环境中安全感的缺失导致的。在充满压力的环境（不一定是经济引起的，也可能是情感和自我）下成长的孩子，在面对未知的恐惧（即使与自己无关）时，控制自己情绪的能力比较差。</p>
+<p>控制欲<br>
+有时，你对未知的恐惧，实际上是对失控的恐惧。</p>
+<p>低自尊水平<br>
+从根本上，你的焦虑和恐惧可能来源于你的低自尊，即自我评价过低。你之所以不愿意面对未来，是因为你对自己的不信任：你觉得自己是没有价值的，总是不愿意相信好的事情会在自己身上发生。</p>
+</blockquote>
+<p>这里面我对安全感缺失和低自尊水平是比较认可的，安全感缺失是很糟糕的一点，试问如果一个男人自己都给不了自己安全感，那他如何给别人以安全感，他如何能够承担的起自己身上的责任与义务呢？低自尊水平很容易表现出不自信，它的另一种表现形式我认为是自负，所以无论如何看清楚自己才是最重要的，一些本源的东西，你是没办法去改变的。</p>
+<p>但是没办法改变不代表消极的接受，对于像我这种对未来或者说极其害怕不确定的人，该如何去做才能既不对未来丧失把控感又不至于对未来产生过度的担忧呢？</p>
+<p>文章给出的答案我不置可否，因为在不影响正常生活的前提下我讨厌自我修缮或者学习如何去重构去改变，甚至去找心理咨询师，对，我并没有自卑到认为我存在心理问题或者这是一种病，但文章关于对待不确定的认知值得每一个人去思考，因为没有谁的未来是确定的。</p>
+<blockquote>
+<p>其实，不确定性才是唯一确定的事情。只有那些能够容忍不确定的人，才会愿意不断走出舒适区域，不断探索更大的世界。也只有能够容忍不确定的人，才能和其他人好好得建立起联系。而那些能够享受不确定的人，往往是充满好奇心和活力的，他们不会自我束缚，也不会过度限制他人。他们往往有更多的正面情绪，因为生活就是关于未知的，关于不得不改变，关于在不知道接下来会发生什么的情况下，把握住眼前这一刻，并尽可能地享受它。</p>
+<p>里尔克说，要对你心里所有还未解决的事有耐心。要去爱问题本身，爱上锁的房间和用不熟悉的语调写成的书本。不要急于寻找那些此刻你无法获得的答案，因为你也无法活出他们。最重要的是，要去尝试所有事情。此时你要先带着问题去生活，而生活会逐渐地、不知不觉地，在一段时间后越来越接近你要的答案。</p>
+</blockquote>
+<p>做这篇文章的意义不言而喻，带着问题去生活，同时生活就是问题叠着问题，但生活又是最好的导师，我们知道一个真正好的问题，它对于每个人的答案一定不是唯一的。</p>
+<p>但是我这个人讨厌不确定，那我便给出自己一切确定的东西，以飨读者和自己。杨绛有句话说得好，所有的痛苦只是因为你读的书太少。说起读书，读万卷书行万里路，理论与实践相结合固然没错，但实话实说，我不是一个很能读书的人，以前我有一个错误的认知，书多尔杂，书读的越多越好，最后发现与其漫无目的的读书，不如因为疑问而读书，因为困惑而读书，书是生活的结晶，很多你以为烦恼的问题，其实早有生活的导师为你杜撰成书了。</p>
+<ul>
+<li>[x] 建立一个相对严密的知识体系。多读书、多了解其他行业和学科的知识，并不代表你就不会做出错误判断，但能让你降低犯错的概率。</li>
+<li>[x] 多读书，特别是有空多看看百科全书，许多学科的入门教材或者大师写的科普书籍都是极好的。</li>
+<li>[x] 多读书，多看一些其他学科的基础教材，多练练外语，读个 MBA，考个证书，多和其他行业打交道，这些对于个人的提升都是长久的。</li>
+<li>[x] 投资什么都不如投资自己的大脑，回报率最高的投资是坚持学习。对于大多数人而言，能改变生活品质往往是运气使然，但运气是暂时的，而你对这个世界的认知才是永恒的。</li>
+<li>[x] 人之患，在于对自己处于信息链哪个位置的无知。</li>
+</ul>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/03/23/从NLP讲到神经网络————词向量word2vec原理浅析/" title= 从NLP讲到神经网络————词向量word2vec原理浅析 >
+                    <div class="nextTitle">从NLP讲到神经网络————词向量word2vec原理浅析</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/03/20/我的抑郁人格/" title= 我的抑郁人格 >
+                    <div class="prevTitle">我的抑郁人格</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:pzsyjsgldd@163.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/pzs741" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+        <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 53 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2018/07/25/更方便的操作云服务器/" >云服务器基础操作</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/20</span><a class="archive-post-title" href= "/2018/07/20/复赛笔记（一）：EXCLE和集合SET的处理/" >复赛笔记（一）：EXCLE和集合SET的处理</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/30</span><a class="archive-post-title" href= "/2018/06/30/演示文档/" >知识库构建算法（图文版）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/28</span><a class="archive-post-title" href= "/2018/06/28/云端知识库构建/" >云端构建知识库</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/20</span><a class="archive-post-title" href= "/2018/06/20/生日快乐/" >我的二十五岁</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2018/06/19/折腾之旅3/" >填坑之旅（三）---NGINX配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/18</span><a class="archive-post-title" href= "/2018/06/18/cpu/" >填坑之旅（二）---QGDT(CPU版)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2018/06/17/阿里云二次部署/" >添坑之旅（一）---阿里云二次部署</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/13</span><a class="archive-post-title" href= "/2018/06/13/发布算法库/" >发布我的第二个算法库---EWDT</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/12</span><a class="archive-post-title" href= "/2018/06/12/基于Web文档密度和标签的问答对抽取及挖掘算法 /" >基于Web文档密度和标签的问答对抽取及挖掘算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/08</span><a class="archive-post-title" href= "/2018/06/08/excle/" >一次千万级EXCLE数据处理任务</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/07</span><a class="archive-post-title" href= "/2018/06/07/基于深度学习和模板的问句生成算法/" >基于深度学习和模板的问句生成算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/02</span><a class="archive-post-title" href= "/2018/06/02/pytorch/" >pytorch环境配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/22</span><a class="archive-post-title" href= "/2018/05/22/django搜索接口实现/" >django搜索接口的实现</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/18</span><a class="archive-post-title" href= "/2018/05/18/django前端快速部署/" >django前端快速部署</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/17</span><a class="archive-post-title" href= "/2018/05/17/conda常用命令大全/" >conda常用命令</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/12</span><a class="archive-post-title" href= "/2018/05/12/阿里云部署/" >阿里云部署实战</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/06</span><a class="archive-post-title" href= "/2018/05/06/生产环境配置/" >django+nginx+uwsgi生产环境配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/02</span><a class="archive-post-title" href= "/2018/05/02/Elasticsearch的Restful接口的应用/" >Elasticsearch的Restful接口的应用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/01</span><a class="archive-post-title" href= "/2018/05/01/elasticsearch查询/" >elasticsearch查询</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span><a class="archive-post-title" href= "/2018/04/29/elasticsearch/" >elasticsearch基础</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/03</span><a class="archive-post-title" href= "/2018/04/03/SAS3/" >文章搜索引擎————TF-IDF算法整合</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/30</span><a class="archive-post-title" href= "/2018/03/30/LDA/" >主题检索模型铺垫————LDA基础</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/29</span><a class="archive-post-title" href= "/2018/03/29/关键词检索模型————TF-IDF的简单应用/" >关键词检索模型————TF-IDF的简单应用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/28</span><a class="archive-post-title" href= "/2018/03/28/jieba/" >jieba————做最好的Python中文分词组件</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/27</span><a class="archive-post-title" href= "/2018/03/27/文章摘要器————HanLP的简单使用/" >文章摘要器————HanLP的简单使用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/26</span><a class="archive-post-title" href= "/2018/03/26/深入浅出————自然语言处理/" >深入浅出————自然语言处理</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/24</span><a class="archive-post-title" href= "/2018/03/24/Hexo迁移流程/" >Hexo迁移流程</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2018/03/23/从NLP讲到神经网络————词向量word2vec原理浅析/" >从NLP讲到神经网络————词向量word2vec原理浅析</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2018/03/21/面对未知，何去何从？/" >面对未知，何去何从？</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/20</span><a class="archive-post-title" href= "/2018/03/20/我的抑郁人格/" >我的抑郁人格</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/06</span><a class="archive-post-title" href= "/2018/03/06/PySpider框架基本使用流程/" >PySpider框架基本使用流程</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/28</span><a class="archive-post-title" href= "/2018/02/28/为了充满仪式感的生活而忙碌/" >为了充满仪式感的生活而忙碌</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/26</span><a class="archive-post-title" href= "/2018/02/26/为什么而战/" >为什么而战</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/21</span><a class="archive-post-title" href= "/2018/02/21/白夜追凶/" >白夜追凶</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2018/02/20/The power of faith/" >The power of faith</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/19</span><a class="archive-post-title" href= "/2018/02/19/人生太短，只够相爱/" >人生太短，只够相爱</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/18</span><a class="archive-post-title" href= "/2018/02/18/where is the rest/" >where is the rest?</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/17</span><a class="archive-post-title" href= "/2018/02/17/鸿福泽天，天伦共乐/" >洪福齐天，天伦之乐</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/14</span><a class="archive-post-title" href= "/2018/02/14/你的身体不只属于你自己/" >你的身体不只属于你自己</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/13</span><a class="archive-post-title" href= "/2018/02/13/科幻是怎样一根线/" >科幻是怎样一根线</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/12</span><a class="archive-post-title" href= "/2018/02/12/翻滚吧！番茄炒蛋！/" >翻滚吧！番茄炒蛋！</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/11</span><a class="archive-post-title" href= "/2018/02/11/我只想说我还是以前那个我/" >我只想说我还是以前那个我</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/10</span><a class="archive-post-title" href= "/2018/02/10/谁说挂面不调盐/" >谁说挂面不调盐</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/09</span><a class="archive-post-title" href= "/2018/02/09/hello-world/" >Hello World</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="elasticsearch"><span class="iconfont-archer">&#xe606;</span>elasticsearch</span>
+    
+        <span class="sidebar-tag-name" data-tags="restful"><span class="iconfont-archer">&#xe606;</span>restful</span>
+    
+        <span class="sidebar-tag-name" data-tags="API"><span class="iconfont-archer">&#xe606;</span>API</span>
+    
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+    
+        <span class="sidebar-tag-name" data-tags="github"><span class="iconfont-archer">&#xe606;</span>github</span>
+    
+        <span class="sidebar-tag-name" data-tags="迁移"><span class="iconfont-archer">&#xe606;</span>迁移</span>
+    
+        <span class="sidebar-tag-name" data-tags="LDA"><span class="iconfont-archer">&#xe606;</span>LDA</span>
+    
+        <span class="sidebar-tag-name" data-tags="主题模型"><span class="iconfont-archer">&#xe606;</span>主题模型</span>
+    
+        <span class="sidebar-tag-name" data-tags="pyspider"><span class="iconfont-archer">&#xe606;</span>pyspider</span>
+    
+        <span class="sidebar-tag-name" data-tags="django"><span class="iconfont-archer">&#xe606;</span>django</span>
+    
+        <span class="sidebar-tag-name" data-tags="搜索引擎"><span class="iconfont-archer">&#xe606;</span>搜索引擎</span>
+    
+        <span class="sidebar-tag-name" data-tags="SAS"><span class="iconfont-archer">&#xe606;</span>SAS</span>
+    
+        <span class="sidebar-tag-name" data-tags="前端展示"><span class="iconfont-archer">&#xe606;</span>前端展示</span>
+    
+        <span class="sidebar-tag-name" data-tags="conda"><span class="iconfont-archer">&#xe606;</span>conda</span>
+    
+        <span class="sidebar-tag-name" data-tags="pip"><span class="iconfont-archer">&#xe606;</span>pip</span>
+    
+        <span class="sidebar-tag-name" data-tags="虚拟环境"><span class="iconfont-archer">&#xe606;</span>虚拟环境</span>
+    
+        <span class="sidebar-tag-name" data-tags="数据库"><span class="iconfont-archer">&#xe606;</span>数据库</span>
+    
+        <span class="sidebar-tag-name" data-tags="前端"><span class="iconfont-archer">&#xe606;</span>前端</span>
+    
+        <span class="sidebar-tag-name" data-tags="快速部署"><span class="iconfont-archer">&#xe606;</span>快速部署</span>
+    
+        <span class="sidebar-tag-name" data-tags="TF-IDF"><span class="iconfont-archer">&#xe606;</span>TF-IDF</span>
+    
+        <span class="sidebar-tag-name" data-tags="检索模型"><span class="iconfont-archer">&#xe606;</span>检索模型</span>
+    
+        <span class="sidebar-tag-name" data-tags="分支"><span class="iconfont-archer">&#xe606;</span>分支</span>
+    
+        <span class="sidebar-tag-name" data-tags="cpu"><span class="iconfont-archer">&#xe606;</span>cpu</span>
+    
+        <span class="sidebar-tag-name" data-tags="云服务器"><span class="iconfont-archer">&#xe606;</span>云服务器</span>
+    
+        <span class="sidebar-tag-name" data-tags="bible"><span class="iconfont-archer">&#xe606;</span>bible</span>
+    
+        <span class="sidebar-tag-name" data-tags="api"><span class="iconfont-archer">&#xe606;</span>api</span>
+    
+        <span class="sidebar-tag-name" data-tags="接口"><span class="iconfont-archer">&#xe606;</span>接口</span>
+    
+        <span class="sidebar-tag-name" data-tags="kibana"><span class="iconfont-archer">&#xe606;</span>kibana</span>
+    
+        <span class="sidebar-tag-name" data-tags="CUDR"><span class="iconfont-archer">&#xe606;</span>CUDR</span>
+    
+        <span class="sidebar-tag-name" data-tags="查询"><span class="iconfont-archer">&#xe606;</span>查询</span>
+    
+        <span class="sidebar-tag-name" data-tags="jieba"><span class="iconfont-archer">&#xe606;</span>jieba</span>
+    
+        <span class="sidebar-tag-name" data-tags="PageRank"><span class="iconfont-archer">&#xe606;</span>PageRank</span>
+    
+        <span class="sidebar-tag-name" data-tags="TextRank"><span class="iconfont-archer">&#xe606;</span>TextRank</span>
+    
+        <span class="sidebar-tag-name" data-tags="pytorch"><span class="iconfont-archer">&#xe606;</span>pytorch</span>
+    
+        <span class="sidebar-tag-name" data-tags="深度学习"><span class="iconfont-archer">&#xe606;</span>深度学习</span>
+    
+        <span class="sidebar-tag-name" data-tags="语言模型"><span class="iconfont-archer">&#xe606;</span>语言模型</span>
+    
+        <span class="sidebar-tag-name" data-tags="excle"><span class="iconfont-archer">&#xe606;</span>excle</span>
+    
+        <span class="sidebar-tag-name" data-tags="数据处理"><span class="iconfont-archer">&#xe606;</span>数据处理</span>
+    
+        <span class="sidebar-tag-name" data-tags="xadmin"><span class="iconfont-archer">&#xe606;</span>xadmin</span>
+    
+        <span class="sidebar-tag-name" data-tags="后台"><span class="iconfont-archer">&#xe606;</span>后台</span>
+    
+        <span class="sidebar-tag-name" data-tags="仪式感"><span class="iconfont-archer">&#xe606;</span>仪式感</span>
+    
+        <span class="sidebar-tag-name" data-tags="焦虑"><span class="iconfont-archer">&#xe606;</span>焦虑</span>
+    
+        <span class="sidebar-tag-name" data-tags="军事"><span class="iconfont-archer">&#xe606;</span>军事</span>
+    
+        <span class="sidebar-tag-name" data-tags="影评"><span class="iconfont-archer">&#xe606;</span>影评</span>
+    
+        <span class="sidebar-tag-name" data-tags="红海行动"><span class="iconfont-archer">&#xe606;</span>红海行动</span>
+    
+        <span class="sidebar-tag-name" data-tags="湄公河行动"><span class="iconfont-archer">&#xe606;</span>湄公河行动</span>
+    
+        <span class="sidebar-tag-name" data-tags="黑鹰坠落"><span class="iconfont-archer">&#xe606;</span>黑鹰坠落</span>
+    
+        <span class="sidebar-tag-name" data-tags="快速开发"><span class="iconfont-archer">&#xe606;</span>快速开发</span>
+    
+        <span class="sidebar-tag-name" data-tags="后台管理"><span class="iconfont-archer">&#xe606;</span>后台管理</span>
+    
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
+    
+        <span class="sidebar-tag-name" data-tags="知识库构建"><span class="iconfont-archer">&#xe606;</span>知识库构建</span>
+    
+        <span class="sidebar-tag-name" data-tags="新时代周刊"><span class="iconfont-archer">&#xe606;</span>新时代周刊</span>
+    
+        <span class="sidebar-tag-name" data-tags="爱情观"><span class="iconfont-archer">&#xe606;</span>爱情观</span>
+    
+        <span class="sidebar-tag-name" data-tags="书评"><span class="iconfont-archer">&#xe606;</span>书评</span>
+    
+        <span class="sidebar-tag-name" data-tags="关键词"><span class="iconfont-archer">&#xe606;</span>关键词</span>
+    
+        <span class="sidebar-tag-name" data-tags="NLP"><span class="iconfont-archer">&#xe606;</span>NLP</span>
+    
+        <span class="sidebar-tag-name" data-tags="词向量"><span class="iconfont-archer">&#xe606;</span>词向量</span>
+    
+        <span class="sidebar-tag-name" data-tags="Wordvec"><span class="iconfont-archer">&#xe606;</span>Wordvec</span>
+    
+        <span class="sidebar-tag-name" data-tags="神经网络"><span class="iconfont-archer">&#xe606;</span>神经网络</span>
+    
+        <span class="sidebar-tag-name" data-tags="pypi"><span class="iconfont-archer">&#xe606;</span>pypi</span>
+    
+        <span class="sidebar-tag-name" data-tags="setuptools"><span class="iconfont-archer">&#xe606;</span>setuptools</span>
+    
+        <span class="sidebar-tag-name" data-tags="高血压"><span class="iconfont-archer">&#xe606;</span>高血压</span>
+    
+        <span class="sidebar-tag-name" data-tags="冠心病"><span class="iconfont-archer">&#xe606;</span>冠心病</span>
+    
+        <span class="sidebar-tag-name" data-tags="尿毒症"><span class="iconfont-archer">&#xe606;</span>尿毒症</span>
+    
+        <span class="sidebar-tag-name" data-tags="中风"><span class="iconfont-archer">&#xe606;</span>中风</span>
+    
+        <span class="sidebar-tag-name" data-tags="健康"><span class="iconfont-archer">&#xe606;</span>健康</span>
+    
+        <span class="sidebar-tag-name" data-tags="EMDT"><span class="iconfont-archer">&#xe606;</span>EMDT</span>
+    
+        <span class="sidebar-tag-name" data-tags="问答对"><span class="iconfont-archer">&#xe606;</span>问答对</span>
+    
+        <span class="sidebar-tag-name" data-tags="QADM"><span class="iconfont-archer">&#xe606;</span>QADM</span>
+    
+        <span class="sidebar-tag-name" data-tags="问句生成"><span class="iconfont-archer">&#xe606;</span>问句生成</span>
+    
+        <span class="sidebar-tag-name" data-tags="WMD"><span class="iconfont-archer">&#xe606;</span>WMD</span>
+    
+        <span class="sidebar-tag-name" data-tags="RNNLM"><span class="iconfont-archer">&#xe606;</span>RNNLM</span>
+    
+        <span class="sidebar-tag-name" data-tags="xlrd"><span class="iconfont-archer">&#xe606;</span>xlrd</span>
+    
+        <span class="sidebar-tag-name" data-tags="xlwt"><span class="iconfont-archer">&#xe606;</span>xlwt</span>
+    
+        <span class="sidebar-tag-name" data-tags="set"><span class="iconfont-archer">&#xe606;</span>set</span>
+    
+        <span class="sidebar-tag-name" data-tags="摄影，北京，密云水库"><span class="iconfont-archer">&#xe606;</span>摄影，北京，密云水库</span>
+    
+        <span class="sidebar-tag-name" data-tags="自我"><span class="iconfont-archer">&#xe606;</span>自我</span>
+    
+        <span class="sidebar-tag-name" data-tags="人格"><span class="iconfont-archer">&#xe606;</span>人格</span>
+    
+        <span class="sidebar-tag-name" data-tags="挫折"><span class="iconfont-archer">&#xe606;</span>挫折</span>
+    
+        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
+    
+        <span class="sidebar-tag-name" data-tags="uwsgi"><span class="iconfont-archer">&#xe606;</span>uwsgi</span>
+    
+        <span class="sidebar-tag-name" data-tags="静态文件"><span class="iconfont-archer">&#xe606;</span>静态文件</span>
+    
+        <span class="sidebar-tag-name" data-tags="抑郁"><span class="iconfont-archer">&#xe606;</span>抑郁</span>
+    
+        <span class="sidebar-tag-name" data-tags="心理学"><span class="iconfont-archer">&#xe606;</span>心理学</span>
+    
+        <span class="sidebar-tag-name" data-tags="HanLP"><span class="iconfont-archer">&#xe606;</span>HanLP</span>
+    
+        <span class="sidebar-tag-name" data-tags="ACC"><span class="iconfont-archer">&#xe606;</span>ACC</span>
+    
+        <span class="sidebar-tag-name" data-tags="wxPython"><span class="iconfont-archer">&#xe606;</span>wxPython</span>
+    
+        <span class="sidebar-tag-name" data-tags="上传"><span class="iconfont-archer">&#xe606;</span>上传</span>
+    
+        <span class="sidebar-tag-name" data-tags="下载"><span class="iconfont-archer">&#xe606;</span>下载</span>
+    
+        <span class="sidebar-tag-name" data-tags="挂起"><span class="iconfont-archer">&#xe606;</span>挂起</span>
+    
+        <span class="sidebar-tag-name" data-tags="分词算法"><span class="iconfont-archer">&#xe606;</span>分词算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="HMM"><span class="iconfont-archer">&#xe606;</span>HMM</span>
+    
+        <span class="sidebar-tag-name" data-tags="吉他，曲谱"><span class="iconfont-archer">&#xe606;</span>吉他，曲谱</span>
+    
+        <span class="sidebar-tag-name" data-tags="知识库构建算法"><span class="iconfont-archer">&#xe606;</span>知识库构建算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="QGDT"><span class="iconfont-archer">&#xe606;</span>QGDT</span>
+    
+        <span class="sidebar-tag-name" data-tags="爬虫"><span class="iconfont-archer">&#xe606;</span>爬虫</span>
+    
+        <span class="sidebar-tag-name" data-tags="self.crwal"><span class="iconfont-archer">&#xe606;</span>self.crwal</span>
+    
+        <span class="sidebar-tag-name" data-tags="生日"><span class="iconfont-archer">&#xe606;</span>生日</span>
+    
+        <span class="sidebar-tag-name" data-tags="二十五"><span class="iconfont-archer">&#xe606;</span>二十五</span>
+    
+        <span class="sidebar-tag-name" data-tags="警匪"><span class="iconfont-archer">&#xe606;</span>警匪</span>
+    
+        <span class="sidebar-tag-name" data-tags="推理"><span class="iconfont-archer">&#xe606;</span>推理</span>
+    
+        <span class="sidebar-tag-name" data-tags="三体"><span class="iconfont-archer">&#xe606;</span>三体</span>
+    
+        <span class="sidebar-tag-name" data-tags="地球往事"><span class="iconfont-archer">&#xe606;</span>地球往事</span>
+    
+        <span class="sidebar-tag-name" data-tags="番茄"><span class="iconfont-archer">&#xe606;</span>番茄</span>
+    
+        <span class="sidebar-tag-name" data-tags="鸡蛋"><span class="iconfont-archer">&#xe606;</span>鸡蛋</span>
+    
+        <span class="sidebar-tag-name" data-tags="炒菜"><span class="iconfont-archer">&#xe606;</span>炒菜</span>
+    
+        <span class="sidebar-tag-name" data-tags="挂面"><span class="iconfont-archer">&#xe606;</span>挂面</span>
+    
+        <span class="sidebar-tag-name" data-tags="早餐"><span class="iconfont-archer">&#xe606;</span>早餐</span>
+    
+        <span class="sidebar-tag-name" data-tags="IQAS"><span class="iconfont-archer">&#xe606;</span>IQAS</span>
+    
+        <span class="sidebar-tag-name" data-tags="阿里云"><span class="iconfont-archer">&#xe606;</span>阿里云</span>
+    
+        <span class="sidebar-tag-name" data-tags="环境部署"><span class="iconfont-archer">&#xe606;</span>环境部署</span>
+    
+        <span class="sidebar-tag-name" data-tags="环境配置"><span class="iconfont-archer">&#xe606;</span>环境配置</span>
+    
+        <span class="sidebar-tag-name" data-tags="云部署"><span class="iconfont-archer">&#xe606;</span>云部署</span>
+    
+        <span class="sidebar-tag-name" data-tags="未知"><span class="iconfont-archer">&#xe606;</span>未知</span>
+    
+        <span class="sidebar-tag-name" data-tags="未来"><span class="iconfont-archer">&#xe606;</span>未来</span>
+    
+        <span class="sidebar-tag-name" data-tags="家族"><span class="iconfont-archer">&#xe606;</span>家族</span>
+    
+        <span class="sidebar-tag-name" data-tags="耄耋"><span class="iconfont-archer">&#xe606;</span>耄耋</span>
+    
+        <span class="sidebar-tag-name" data-tags="天伦"><span class="iconfont-archer">&#xe606;</span>天伦</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="工作"><span class="iconfont-archer">&#xe60a;</span>工作</span>
+    
+        <span class="sidebar-category-name" data-categories="爱好"><span class="iconfont-archer">&#xe60a;</span>爱好</span>
+    
+        <span class="sidebar-category-name" data-categories="朋友"><span class="iconfont-archer">&#xe60a;</span>朋友</span>
+    
+        <span class="sidebar-category-name" data-categories="家人"><span class="iconfont-archer">&#xe60a;</span>家人</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: '/',
+        author: 'John Doe'
+    }
+</script>
+    <!-- busuanzi  -->
+    
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+    
+    </body>
+</html>
+
+

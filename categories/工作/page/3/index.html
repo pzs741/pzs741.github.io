@@ -302,6 +302,40 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/05/06/生产环境配置/" >
+                
+                    <span>django+nginx+uwsgi生产环境配置</span>
+            </a>
+            <div class="abstract-content">
+                 生产环境配置
+ mysql基础配置
+123456#修改配置文件$ nano /etc/mysql//mysql.conf.d/mysqld.cnf bind 0.0.0.0#给所有用户赋权GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;root&apos; WITH GRANT OPTION;FLUSH PRIVILEGES;
+ 依赖包环境配置
+12345678910111213141516#导出依赖包pip listpip freeze &gt; requirement...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/06</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "django">django</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "uwsgi">uwsgi</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/05/02/Elasticsearch的Restful接口的应用/" >
                 
                     <span>Elasticsearch的Restful接口的应用</span>
@@ -657,55 +691,6 @@ LDA是一种典型的词袋模型，即一篇文档是由一组词构成，词�
         <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "主题模型">主题模型</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/03/29/关键词检索模型————TF-IDF的简单应用/" >
-                
-                    <span>关键词检索模型————TF-IDF的简单应用</span>
-            </a>
-            <div class="abstract-content">
-                 TF-IDF算法
-
-TF-IDF算法的定义
-TF-IDF算法应用范围
-TF-IDF算法的原理
-
- TF-IDF算法（一）
-
-TF-IDF（term frequency-inverse document frequency）是一种用于信息检索与文本挖掘的常用技术。用以评估一字词对于一个文件集或一个语料库中的其中一份文件的重要程度。
-TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平率很高，并且在其它文章中很少出现，则认为此词或者短语具有很好的类别区分能力，适合用来分类。
-
- TF-IDF算法应用范围
-
-权重计算
-搜索引擎
-论文检索
-文章比对
-关键词抽取
-
- TF-IDF算法的原...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/29</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "TF-IDF">TF-IDF</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "检索模型">检索模型</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "关键词">关键词</a>
     
 </div>
                 
@@ -1595,30 +1580,7 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 54 </div>
+    <div class="total-archive"> Total : 55 </div>
     
     <div class="post-archive">
     
@@ -1631,6 +1593,11 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/本地连接/" >解决本地无法连接和图片压缩问题</a>
         </li>
     
     
@@ -2144,6 +2111,12 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
         <span class="sidebar-tag-name" data-tags="耄耋"><span class="iconfont-archer">&#xe606;</span>耄耋</span>
     
         <span class="sidebar-tag-name" data-tags="天伦"><span class="iconfont-archer">&#xe606;</span>天伦</span>
+    
+        <span class="sidebar-tag-name" data-tags="本地连接"><span class="iconfont-archer">&#xe606;</span>本地连接</span>
+    
+        <span class="sidebar-tag-name" data-tags="jpegoptim"><span class="iconfont-archer">&#xe606;</span>jpegoptim</span>
+    
+        <span class="sidebar-tag-name" data-tags="optipng"><span class="iconfont-archer">&#xe606;</span>optipng</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

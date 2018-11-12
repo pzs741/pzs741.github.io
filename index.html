@@ -317,23 +317,49 @@ height:50vh;
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/逻辑回归模型/" >
+            <a class="abstract-title" href = "/2018/11/12/神经元的多输出/" >
                 
-                    <span>逻辑回归模型</span>
+                    <span>神经元多输出模型</span>
             </a>
             <div class="abstract-content">
-                 神经元——Logits回归模型
- 神经网络
-
-神经元
-逻辑回归模型
-神经网络训练
-
- 神经元结构
-
- 神经元计算
+                 神经元的多输出模型
 
 
+增加神经元的个数，输出也就相应增多
+
+ 从二分类到多分类
+
+
+激活函数的归一化处理
+
+ 多分类例子
+
+
+多分类问题用到多个神经元，下面介绍如何去调整神经网络
+
+ 目标函数
+
+
+目标函数是用来衡量数据的符合程度，也叫损失函数
+
+ 二分类目标函数
+
+
+y = 真实值-预测值
+
+ 多分类目标函数
+
+
+这个时候的预测值已经是一个概率分布了，因此需要将多类别也就是预测输出值进行one-hot编码，也就是把单个值向01向量编码的转换过程，这里的目标函数是向量差的绝对值的和。
+
+ 一般的目标函数
+
+
+统计学中的平方差、信息论中的交叉熵（衡量两个分布的差）
+
+ 损失函数目的
+
+...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -344,9 +370,9 @@ height:50vh;
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经元">神经元</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "逻辑回归">逻辑回归</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "多输出">多输出</a>
     
 </div>
                 
@@ -413,6 +439,45 @@ Tensorflow基础
         <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "机器学习">机器学习</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/12/逻辑回归模型/" >
+                
+                    <span>逻辑回归模型</span>
+            </a>
+            <div class="abstract-content">
+                 神经元——Logits回归模型
+ 神经网络
+
+神经元
+逻辑回归模型
+神经网络训练
+
+ 神经元结构
+
+ 神经元计算
+
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经元">神经元</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "逻辑回归">逻辑回归</a>
     
 </div>
                 
@@ -686,48 +751,6 @@ WEB文档含有大量的网页噪声，抽取算法应该能有效的避免网�
         <a class="post-tag" href="javascript:void(0);" data-tags = "生日">生日</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "二十五">二十五</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/06/19/折腾之旅3/" >
-                
-                    <span>填坑之旅（三）---NGINX配置</span>
-            </a>
-            <div class="abstract-content">
-                 填坑之旅—云服务器生产环境
-在即将大功告成之际，uwsgi出来搅了个局，nginx很正常的泡在80端口，uwsgi跑出来了却没办法路由导80端口，唉…填坑之旅路漫漫
- 填坑必备技能
-123456#查看端口占用情况lsof -i:端口号#查看进程ps aux|grep 进程名#推出进程kill -QUIT PID
- 直接启动django
-
-对外开启8000端口
-python manager.py runserver 0.0.0.0:8000
-http://39.105.124.151:8000/
-
- 通过uwsgi启动django
-
-uwsgi --http :8000 --module...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/19</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "uwsgi">uwsgi</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "静态文件">静态文件</a>
     
 </div>
                 
@@ -1749,7 +1772,56 @@ uwsgi --http :8000 --module...
     
     
     
-    <div class="total-archive"> Total : 57 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 58 </div>
     
     <div class="post-archive">
     
@@ -1761,12 +1833,17 @@ uwsgi --http :8000 --module...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
@@ -1851,12 +1928,12 @@ uwsgi --http :8000 --module...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
@@ -1911,22 +1988,22 @@ uwsgi --http :8000 --module...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
         </li>
     
     
@@ -2302,6 +2379,8 @@ uwsgi --http :8000 --module...
         <span class="sidebar-tag-name" data-tags="神经元"><span class="iconfont-archer">&#xe606;</span>神经元</span>
     
         <span class="sidebar-tag-name" data-tags="逻辑回归"><span class="iconfont-archer">&#xe606;</span>逻辑回归</span>
+    
+        <span class="sidebar-tag-name" data-tags="多输出"><span class="iconfont-archer">&#xe606;</span>多输出</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

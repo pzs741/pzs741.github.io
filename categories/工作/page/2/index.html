@@ -302,6 +302,48 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/06/19/折腾之旅3/" >
+                
+                    <span>填坑之旅（三）---NGINX配置</span>
+            </a>
+            <div class="abstract-content">
+                 填坑之旅—云服务器生产环境
+在即将大功告成之际，uwsgi出来搅了个局，nginx很正常的泡在80端口，uwsgi跑出来了却没办法路由导80端口，唉…填坑之旅路漫漫
+ 填坑必备技能
+123456#查看端口占用情况lsof -i:端口号#查看进程ps aux|grep 进程名#推出进程kill -QUIT PID
+ 直接启动django
+
+对外开启8000端口
+python manager.py runserver 0.0.0.0:8000
+http://39.105.124.151:8000/
+
+ 通过uwsgi启动django
+
+uwsgi --http :8000 --module...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/19</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "uwsgi">uwsgi</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "静态文件">静态文件</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/06/18/cpu/" >
                 
                     <span>填坑之旅（二）---QGDT(CPU版)</span>
@@ -636,43 +678,6 @@ templates —...
         <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/19/爬虫前台/" >
-                
-                    <span>pyspider快速部署爬虫前台</span>
-            </a>
-            <div class="abstract-content">
-                 Pyspider的self.crwal使用
-本文绍一下Pyspider的基本知识和原理
- self.crawl(url, **kwargs)
-12def on_start(self):        self.crawl(&apos;http://localhost:8000/gys/0/&apos;, callback=self.index_page)
-url是起始地址，callback一个回调函数解析网页。
- age
-123@config(age=10 * 24 * 60 * 60)def index_page(self, response):    ...
-age是任务有效期限，...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "pyspider">pyspider</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "爬虫">爬虫</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "self.crwal">self.crwal</a>
     
 </div>
                 
@@ -1664,14 +1669,7 @@ age是任务有效期限，...
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 58 </div>
+    <div class="total-archive"> Total : 59 </div>
     
     <div class="post-archive">
     
@@ -1683,7 +1681,7 @@ age是任务有效期限，...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
@@ -1693,7 +1691,12 @@ age是任务有效期限，...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
@@ -1823,12 +1826,12 @@ age是任务有效期限，...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
         </li>
     
     
@@ -1848,12 +1851,12 @@ age是任务有效期限，...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
         </li>
     
     
@@ -2231,6 +2234,10 @@ age是任务有效期限，...
         <span class="sidebar-tag-name" data-tags="逻辑回归"><span class="iconfont-archer">&#xe606;</span>逻辑回归</span>
     
         <span class="sidebar-tag-name" data-tags="多输出"><span class="iconfont-archer">&#xe606;</span>多输出</span>
+    
+        <span class="sidebar-tag-name" data-tags="训练"><span class="iconfont-archer">&#xe606;</span>训练</span>
+    
+        <span class="sidebar-tag-name" data-tags="梯度下降"><span class="iconfont-archer">&#xe606;</span>梯度下降</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

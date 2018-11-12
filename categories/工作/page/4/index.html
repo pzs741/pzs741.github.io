@@ -302,6 +302,40 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/04/03/SAS3/" >
+                
+                    <span>文章搜索引擎————TF-IDF算法整合</span>
+            </a>
+            <div class="abstract-content">
+                 文章搜索引擎（三）
+这一章主要将TF-IDF算法整合进SAS中，我们称之为TF-IDF检索模型，达到的效果就是，通过在搜索引擎中输入关键字（以空格做分离），POST到Django后台，后台GET导关键词之后，通过TF-IDF算法返回TF-IDF值最大的前五篇文章。
+ TF-IDF算法整合
+搜索方法HTML相关代码
+123456&lt;div class=&quot;inputArea&quot;&gt;                &lt;form method=&quot;post&quot; action=&quot;&#123;% url &apos;index&apos; %...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/03</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "TF-IDF">TF-IDF</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "检索模型">检索模型</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/04/02/SAS2/" >
                 
                     <span>文章搜索引擎————前后端结合</span>
@@ -703,60 +737,6 @@ NLP(Natural Language Processing)自然语言初六，用计算机来处理、理
         <a class="post-tag" href="javascript:void(0);" data-tags = "Wordvec">Wordvec</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/03/06/PySpider框架基本使用流程/" >
-                
-                    <span>PySpider框架基本使用流程</span>
-            </a>
-            <div class="abstract-content">
-                 功能
-
-多进程处理
-去重处理
-错误重试
-代码简洁
-PyQery提取
-JavaScript渲染
-结果监控
-WebUI管理
-
- 安装
-1pip install pyspider
- 查看帮助
-1pyspider --help
- 启动所有组件
-1pyspider all
-
-WebUI运行在5000端口
-如果想要使用phtomjs（高级篇中介绍），在其目录下运行
-
- 编程流程
-
-create projet
-设置一个__START_URL__
-替换a[href^=“http”]为详情页的url表达式
-写详情页的item，return中返回结果
-有下一页的话写用self.crawl回掉下一页url
-...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/06</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "pyspider">pyspider</a>
     
 </div>
                 
@@ -1748,14 +1728,7 @@ create projet
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 58 </div>
+    <div class="total-archive"> Total : 59 </div>
     
     <div class="post-archive">
     
@@ -1767,7 +1740,7 @@ create projet
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
@@ -1777,7 +1750,12 @@ create projet
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
@@ -1907,12 +1885,12 @@ create projet
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
         </li>
     
     
@@ -1932,12 +1910,12 @@ create projet
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
         </li>
     
     
@@ -2315,6 +2293,10 @@ create projet
         <span class="sidebar-tag-name" data-tags="逻辑回归"><span class="iconfont-archer">&#xe606;</span>逻辑回归</span>
     
         <span class="sidebar-tag-name" data-tags="多输出"><span class="iconfont-archer">&#xe606;</span>多输出</span>
+    
+        <span class="sidebar-tag-name" data-tags="训练"><span class="iconfont-archer">&#xe606;</span>训练</span>
+    
+        <span class="sidebar-tag-name" data-tags="梯度下降"><span class="iconfont-archer">&#xe606;</span>梯度下降</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

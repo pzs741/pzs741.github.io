@@ -373,28 +373,27 @@ height:50vh;
 <p>多分类问题用到多个神经元，下面介绍如何去调整神经网络</p>
 </blockquote>
 <h1 id="目标函数"><a class="markdownIt-Anchor" href="#目标函数"></a> 目标函数</h1>
-<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/dsc4.PNG" alt="image"></p>
 <blockquote>
 <p>目标函数是用来衡量数据的符合程度，也叫损失函数</p>
 </blockquote>
 <h2 id="二分类目标函数"><a class="markdownIt-Anchor" href="#二分类目标函数"></a> 二分类目标函数</h2>
-<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/dsc5.PNG" alt="image"></p>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/dsc4.PNG" alt="image"></p>
 <blockquote>
 <p>y = 真实值-预测值</p>
 </blockquote>
 <h2 id="多分类目标函数"><a class="markdownIt-Anchor" href="#多分类目标函数"></a> 多分类目标函数</h2>
-<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/dsc6.PNG" alt="image"></p>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/dsc5.PNG" alt="image"></p>
 <blockquote>
 <p>这个时候的预测值已经是一个概率分布了，因此需要将多类别也就是预测输出值进行one-hot编码，也就是把单个值向01向量编码的转换过程，这里的目标函数是向量差的绝对值的和。</p>
 </blockquote>
 <h2 id="一般的目标函数"><a class="markdownIt-Anchor" href="#一般的目标函数"></a> 一般的目标函数</h2>
-<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/dsc7.PNG" alt="image"></p>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/dsc6.PNG" alt="image"></p>
 <blockquote>
 <p>统计学中的平方差、信息论中的交叉熵（衡量两个分布的差）</p>
 </blockquote>
-<h2 id="损失函数目的"><a class="markdownIt-Anchor" href="#损失函数目的"></a> 损失函数目的</h2>
+<h2 id="多分类例子-2"><a class="markdownIt-Anchor" href="#多分类例子-2"></a> 多分类例子</h2>
 <blockquote>
-<p>模型输出得到的目标函数值越小，说明模型预测结果越好，越精确。</p>
+<p>多分类问题用到多个神经元，下面介绍如何去调整神经网络</p>
 </blockquote>
 
     </article>
@@ -402,12 +401,17 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/11/12/机器学习、深度学习简介/" title= 机器学习、深度学习简介 >
+                    <div class="nextTitle">机器学习、深度学习简介</div>
+                </a>
+            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/11/12/机器学习、深度学习简介/" title= 机器学习、深度学习简介 >
-                    <div class="prevTitle">机器学习、深度学习简介</div>
+                <a href= "/2018/11/09/本地连接/" title= 解决本地无法连接和图片压缩问题 >
+                    <div class="prevTitle">解决本地无法连接和图片压缩问题</div>
                 </a>
             
         </li>
@@ -500,7 +504,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#神经元的多输出模型"><span class="toc-number">1.</span> <span class="toc-text"> 神经元的多输出模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#从二分类到多分类"><span class="toc-number">1.1.</span> <span class="toc-text"> 从二分类到多分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多分类例子"><span class="toc-number">1.2.</span> <span class="toc-text"> 多分类例子</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#目标函数"><span class="toc-number">2.</span> <span class="toc-text"> 目标函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二分类目标函数"><span class="toc-number">2.1.</span> <span class="toc-text"> 二分类目标函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多分类目标函数"><span class="toc-number">2.2.</span> <span class="toc-text"> 多分类目标函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一般的目标函数"><span class="toc-number">2.3.</span> <span class="toc-text"> 一般的目标函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#损失函数目的"><span class="toc-number">2.4.</span> <span class="toc-text"> 损失函数目的</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#神经元的多输出模型"><span class="toc-number">1.</span> <span class="toc-text"> 神经元的多输出模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#从二分类到多分类"><span class="toc-number">1.1.</span> <span class="toc-text"> 从二分类到多分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多分类例子"><span class="toc-number">1.2.</span> <span class="toc-text"> 多分类例子</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#目标函数"><span class="toc-number">2.</span> <span class="toc-text"> 目标函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二分类目标函数"><span class="toc-number">2.1.</span> <span class="toc-text"> 二分类目标函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多分类目标函数"><span class="toc-number">2.2.</span> <span class="toc-text"> 多分类目标函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一般的目标函数"><span class="toc-number">2.3.</span> <span class="toc-text"> 一般的目标函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多分类例子-2"><span class="toc-number">2.4.</span> <span class="toc-text"> 多分类例子</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -1422,14 +1426,7 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 58 </div>
+    <div class="total-archive"> Total : 59 </div>
     
     <div class="post-archive">
     
@@ -1441,7 +1438,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
@@ -1451,7 +1448,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
@@ -1581,12 +1583,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
         </li>
     
     
@@ -1606,12 +1608,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
         </li>
     
     
@@ -1989,6 +1991,10 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="逻辑回归"><span class="iconfont-archer">&#xe606;</span>逻辑回归</span>
     
         <span class="sidebar-tag-name" data-tags="多输出"><span class="iconfont-archer">&#xe606;</span>多输出</span>
+    
+        <span class="sidebar-tag-name" data-tags="训练"><span class="iconfont-archer">&#xe606;</span>训练</span>
+    
+        <span class="sidebar-tag-name" data-tags="梯度下降"><span class="iconfont-archer">&#xe606;</span>梯度下降</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

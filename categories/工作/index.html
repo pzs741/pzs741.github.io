@@ -302,21 +302,24 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建（2）/" >
+            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >
                 
-                    <span>数据处理与模型图构建（2）</span>
+                    <span>神经元实现（二分类logistic回归模型实现）（1）</span>
             </a>
             <div class="abstract-content">
-                 模型图构建流程
+                
+数据加载部分没有发生改变
+使用CifarDta数据进行训练的模块（改变）
+图模型构建模块没有改变
+模型训练(新增)
 
-导包
-读数据模块
-模型图构建
 
- 导包
-1234567import tensorflow as tfimport osimport pickleimport numpy as npCIFAR_DIR = &apos;cifar-10-batches-py&apos;print(os.listdir(CIFAR_DIR))
+只放出新增和改变的代码
 
-[‘batches.meta’, ‘test_batch’, ‘data_batch_1’, ‘data_batch_4’, ‘data_batch_5’, ‘readme.html’, ‘data_batch_2’, ‘data_batch_3’...
+ 模型训练(新增)
+123init = tf.global_variables_initializer()with tf.Session() as sess:    sess.run([loss,accuracy,train_op],feed_dict=&#123;x:,y:&#125;)
+ 使用CifarDta数据进行训练的模块（改变）
+1234567891011121314151617181920212223242526272829303...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -327,9 +330,9 @@
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
     
 </div>
                 
@@ -359,6 +362,43 @@
 
  加载数据集
 123456import pickleimport numpy as npimport osCIFAR_DIR = &apos;cifar-10-batches-py&...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建（2）/" >
+                
+                    <span>数据处理与模型图构建（2）</span>
+            </a>
+            <div class="abstract-content">
+                 模型图构建流程
+
+导包
+读数据模块
+模型图构建
+
+ 导包
+1234567import tensorflow as tfimport osimport pickleimport numpy as npCIFAR_DIR = &apos;cifar-10-batches-py&apos;print(os.listdir(CIFAR_DIR))
+
+[‘batches.meta’, ‘test_batch’, ‘data_batch_1’, ‘data_batch_4’, ‘data_batch_5’, ‘readme.html’, ‘data_batch_2’, ‘data_batch_3’...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -720,40 +760,6 @@ OptiPNG –...
         <a class="post-tag" href="javascript:void(0);" data-tags = "下载">下载</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "挂起">挂起</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/07/20/复赛笔记（一）：EXCLE和集合SET的处理/" >
-                
-                    <span>复赛笔记（一）：EXCLE和集合SET的处理</span>
-            </a>
-            <div class="abstract-content">
-                主要是对EXCLE进行读取和写入，以及利用SET进行过滤操作，完成了EMDT原始输出记录和进一步利用QGDT处理数据再次写入EXCLE。
- EXCLE的基本操作
-EXCLE的操作使用了两个库，读取使用xlrd，写入使用xlwt。
- EXCLE读取操作
-1234567891011121314151617181920212223242526272829303132333435# -*- coding: utf-8 -*-import xlrdimport xlwtfrom datetime import date,datetimedef read_excel():  # 打开文件  work...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/20</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "xlrd">xlrd</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "xlwt">xlwt</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "set">set</a>
     
 </div>
                 
@@ -1793,7 +1799,12 @@ EXCLE的操作使用了两个库，读取使用xlrd，写入使用xlwt。
     
     
     
-    <div class="total-archive"> Total : 61 </div>
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 62 </div>
     
     <div class="post-archive">
     
@@ -1815,7 +1826,7 @@ EXCLE的操作使用了两个库，读取使用xlrd，写入使用xlwt。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
         </li>
     
     
@@ -1825,12 +1836,17 @@ EXCLE的操作使用了两个库，读取使用xlrd，写入使用xlwt。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
         </li>
     
     
@@ -1915,12 +1931,12 @@ EXCLE的操作使用了两个库，读取使用xlrd，写入使用xlwt。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
@@ -1960,12 +1976,12 @@ EXCLE的操作使用了两个库，读取使用xlrd，写入使用xlwt。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
         </li>
     
     
@@ -1975,12 +1991,12 @@ EXCLE的操作使用了两个库，读取使用xlrd，写入使用xlwt。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
@@ -2374,6 +2390,10 @@ EXCLE的操作使用了两个库，读取使用xlrd，写入使用xlwt。
         <span class="sidebar-tag-name" data-tags="梯度下降"><span class="iconfont-archer">&#xe606;</span>梯度下降</span>
     
         <span class="sidebar-tag-name" data-tags="Tensorflow"><span class="iconfont-archer">&#xe606;</span>Tensorflow</span>
+    
+        <span class="sidebar-tag-name" data-tags="二分类"><span class="iconfont-archer">&#xe606;</span>二分类</span>
+    
+        <span class="sidebar-tag-name" data-tags="logistic"><span class="iconfont-archer">&#xe606;</span>logistic</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

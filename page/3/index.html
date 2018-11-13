@@ -317,6 +317,57 @@ height:50vh;
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/06/08/excle/" >
+                
+                    <span>一次千万级EXCLE数据处理任务</span>
+            </a>
+            <div class="abstract-content">
+                 一次千万级EXCLE数据处理任务
+
+21个十万级EXCLE数据，要求对根据一列对二列作统计
+痛点分析
+
+
+不能直接打开—太卡
+
+
+解决办法：python包操作EXCLE
+
+
+数据量太大，pandas无法一次性统计
+
+
+list可变长，两次循环做频率统计
+
+
+文件体积太大，读取慢
+
+
+存为csv
+
+1234567891011121314151617181920212223242526import xlrdfor j in range(1,22):    workbook = xlrd.open_workbook(&apos;/home/pzs741/PycharmProjects/mat...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/08</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "excle">excle</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数据处理">数据处理</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/06/07/基于深度学习和模板的问句生成算法/" >
                 
                     <span>基于深度学习和模板的问句生成算法</span>
@@ -656,58 +707,6 @@ conda remov...
         <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "uwsgi">uwsgi</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/02/Elasticsearch的Restful接口的应用/" >
-                
-                    <span>Elasticsearch的Restful接口的应用</span>
-            </a>
-            <div class="abstract-content">
-                 Elasticsearch的Restful接口的应用
-
-请求指定类型的统计信息
-
-
-$ curl -XGET ‘http://localhost:9200/qa/huawei/_count?pretty’
-
-
-请求指定文档信息
-
-
-$ curl -XGET ‘http://localhost:9200/qa/huawei/c30f512cbee46a242034f31e2dae69df?pretty’
-
-
-请求指定类型的所有文档
-
-
-$ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
-
-
-请求匹配指定字段的文档
-
-...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/02</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "elasticsearch">elasticsearch</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "restful">restful</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "API">API</a>
     
 </div>
                 
@@ -1824,7 +1823,26 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
     
-    <div class="total-archive"> Total : 62 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 63 </div>
     
     <div class="post-archive">
     
@@ -1833,11 +1851,6 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
-        </li>
     
     
         <li class="archive-post-item">
@@ -1851,7 +1864,17 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
         </li>
     
     
@@ -1861,12 +1884,12 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     

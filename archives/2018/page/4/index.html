@@ -302,6 +302,58 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/05/02/Elasticsearch的Restful接口的应用/" >
+                
+                    <span>Elasticsearch的Restful接口的应用</span>
+            </a>
+            <div class="abstract-content">
+                 Elasticsearch的Restful接口的应用
+
+请求指定类型的统计信息
+
+
+$ curl -XGET ‘http://localhost:9200/qa/huawei/_count?pretty’
+
+
+请求指定文档信息
+
+
+$ curl -XGET ‘http://localhost:9200/qa/huawei/c30f512cbee46a242034f31e2dae69df?pretty’
+
+
+请求指定类型的所有文档
+
+
+$ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
+
+
+请求匹配指定字段的文档
+
+...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/02</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "elasticsearch">elasticsearch</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "restful">restful</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "API">API</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/05/01/elasticsearch查询/" >
                 
                     <span>elasticsearch查询</span>
@@ -372,40 +424,6 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/04/SAS4/" >
-                
-                    <span>文章搜索引擎————LDA算法整合</span>
-            </a>
-            <div class="abstract-content">
-                 文章搜索引擎（四）
-这一章主要是把LDA算法整合进去，非常简单，而后是对前端整体的一个实现和展示。
- 整合LDA算法
-LDA算法实现
-1234567891011121314151617181920import jsonimport gensimfrom article.models import ArticleModel# relist 文章id的listdef getTheme(reslist):    fencelist = list()    for res in reslist:        id = res[0]        articles = ArticleModel...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/04</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "前端展示">前端展示</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
             <a class="abstract-title" href = "/2018/04/04/xadmin/" >
                 
                     <span>文章搜索引擎——后台和总结</span>
@@ -457,6 +475,40 @@ xadmin是一款全面的后台系统框架，提供很多功能
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/04/04/SAS4/" >
+                
+                    <span>文章搜索引擎————LDA算法整合</span>
+            </a>
+            <div class="abstract-content">
+                 文章搜索引擎（四）
+这一章主要是把LDA算法整合进去，非常简单，而后是对前端整体的一个实现和展示。
+ 整合LDA算法
+LDA算法实现
+1234567891011121314151617181920import jsonimport gensimfrom article.models import ArticleModel# relist 文章id的listdef getTheme(reslist):    fencelist = list()    for res in reslist:        id = res[0]        articles = ArticleModel...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/04</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "前端展示">前端展示</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/04/03/SAS3/" >
                 
                     <span>文章搜索引擎————TF-IDF算法整合</span>
@@ -491,40 +543,6 @@ xadmin是一款全面的后台系统框架，提供很多功能
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/02/SAS2/" >
-                
-                    <span>文章搜索引擎————前后端结合</span>
-            </a>
-            <div class="abstract-content">
-                 实现文章搜索引擎（二）
-在app&gt;&gt;models中设计相关数据表
- 数据库设计和前端整合
-models设计：
-12345678910111213141516171819202122from django.db import models# Create your models here.# 类对象会对应数据库中的一个表class ArticleModel(models.Model):    #CharField对应数据库的varchar类型    file_name = models.CharField(max_length=50,verbose_name=&apos;文章...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/02</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "前端">前端</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
             <a class="abstract-title" href = "/2018/04/02/密云水库/" >
                 
                     <span>密云水库</span>
@@ -550,6 +568,40 @@ models设计：
                 <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "摄影，北京，密云水库">摄影，北京，密云水库</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/04/02/SAS2/" >
+                
+                    <span>文章搜索引擎————前后端结合</span>
+            </a>
+            <div class="abstract-content">
+                 实现文章搜索引擎（二）
+在app&gt;&gt;models中设计相关数据表
+ 数据库设计和前端整合
+models设计：
+12345678910111213141516171819202122from django.db import models# Create your models here.# 类对象会对应数据库中的一个表class ArticleModel(models.Model):    #CharField对应数据库的varchar类型    file_name = models.CharField(max_length=50,verbose_name=&apos;文章...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/02</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "前端">前端</a>
     
 </div>
                 
@@ -627,46 +679,6 @@ Django框架的核心包括：
                 <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "吉他，曲谱">吉他，曲谱</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/03/30/LDA/" >
-                
-                    <span>主题检索模型铺垫————LDA基础</span>
-            </a>
-            <div class="abstract-content">
-                 LDA算法（一）
-
-LDA算法的定义
-LDA算法应用范围
-LDA算法的原理
-
- LDA算法的定义
-隐式狄利克雷分布（Latent Dirichlet Allocation,简称LDA）是一种概率主题模型。
-LDA是2003年提出的一种主题模型，它可以将文档集中每篇文档的主题以概率分布的形式给出。LDA通过分析一些文档可以从中抽取出它们的主题分布，根据主题分布进行主题聚类或文本聚类。
- LDA算法的特点
-LDA是一种典型的词袋模型，即一篇文档是由一组词构成，词与词之间没有先后顺序的关系。一篇文档可以包含多个主题，文档中每一个词都由其中的一个主题生成。
- LDA算法的作用
-将文档集中每篇文...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/30</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "主题模型">主题模型</a>
     
 </div>
                 
@@ -1711,7 +1723,26 @@ LDA是一种典型的词袋模型，即一篇文档是由一组词构成，词�
     
     
     
-    <div class="total-archive"> Total : 62 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 63 </div>
     
     <div class="post-archive">
     
@@ -1720,11 +1751,6 @@ LDA是一种典型的词袋模型，即一篇文档是由一组词构成，词�
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
-        </li>
     
     
         <li class="archive-post-item">
@@ -1738,7 +1764,17 @@ LDA是一种典型的词袋模型，即一篇文档是由一组词构成，词�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
         </li>
     
     
@@ -1748,12 +1784,12 @@ LDA是一种典型的词袋模型，即一篇文档是由一组词构成，词�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     

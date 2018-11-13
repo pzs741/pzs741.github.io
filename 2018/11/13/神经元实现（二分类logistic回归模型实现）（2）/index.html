@@ -10,7 +10,7 @@
     <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>Ex_treme&#39;s blog</title>
+    <title>神经元实现（二分类logistic回归模型实现）（2） · Ex_treme&#39;s blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -66,6 +66,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180317 as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" type="text/css" href= /css/mobile.css?v=20180317 media="(max-width: 980px)"/>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         
     <link rel="icon" href= /assets/bitbug_favicon.ico>
     <script>
@@ -177,12 +179,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Ex_treme&#39;s blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">神经元实现（二分类logistic回归模型实现）（2）</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Ex_treme's blog.</a>
 </header>
@@ -196,24 +209,69 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            神经元实现（二分类logistic回归模型实现）（2）
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/11/13</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -297,84 +355,313 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/04/SAS4/" >
-                
-                    <span>文章搜索引擎————LDA算法整合</span>
-            </a>
-            <div class="abstract-content">
-                 文章搜索引擎（四）
-这一章主要是把LDA算法整合进去，非常简单，而后是对前端整体的一个实现和展示。
- 整合LDA算法
-LDA算法实现
-1234567891011121314151617181920import jsonimport gensimfrom article.models import ArticleModel# relist 文章id的listdef getTheme(reslist):    fencelist = list()    for res in reslist:        id = res[0]        articles = ArticleModel...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/04</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "前端展示">前端展示</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/03/30/LDA/" >
-                
-                    <span>主题检索模型铺垫————LDA基础</span>
-            </a>
-            <div class="abstract-content">
-                 LDA算法（一）
+            <main class="main post-page">
+    <article class="article-entry">
+        <ul>
+<li>调整了数据集的测试代码</li>
+<li>新增了训练的测试代码</li>
+</ul>
+<h1 id="数据集的测试代码"><a class="markdownIt-Anchor" href="#数据集的测试代码"></a> 数据集的测试代码</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">def load_data(filename):</span><br><span class="line">    &quot;&quot;&quot;read date from data file.&quot;&quot;&quot;</span><br><span class="line">    with open(filename,&apos;rb&apos;) as f:</span><br><span class="line">        data = pickle.load(f,encoding=&apos;bytes&apos;)</span><br><span class="line">        return data[b&apos;data&apos;],data[b&apos;labels&apos;]</span><br><span class="line">    </span><br><span class="line">class CifarData:</span><br><span class="line">    def __init__(self,filenames,need_shuffle):</span><br><span class="line">        all_data = []</span><br><span class="line">        all_labels = []</span><br><span class="line">        for filename in filenames:</span><br><span class="line">            data,labels = load_data(filename)</span><br><span class="line">            for item,label in zip(data,labels):</span><br><span class="line">                if label in [0,1]:</span><br><span class="line">                    all_data.append(item)</span><br><span class="line">                    all_labels.append(label)</span><br><span class="line">        self._data = np.vstack(all_data)</span><br><span class="line">        self._data = self._data / 127.5 -1</span><br><span class="line">        self._labels = np.hstack(all_labels)</span><br><span class="line">        print(self._data.shape)</span><br><span class="line">        print(self._labels.shape)</span><br><span class="line">        </span><br><span class="line">        self._num_examples = self._data.shape[0]</span><br><span class="line">        self._need_shuffle = need_shuffle</span><br><span class="line">        self._indicator = 0</span><br><span class="line">        if self._need_shuffle:</span><br><span class="line">            self._shuffle_data()</span><br><span class="line">    </span><br><span class="line">    def _shuffle_data(self):</span><br><span class="line">        # [0,1,2,3,4,5] - &gt; [5,3,2,4,0,1]</span><br><span class="line">        p = np.random.permutation(self._num_examples)</span><br><span class="line">        self._data = self._data[p]</span><br><span class="line">        self._labels = self._labels[p]</span><br><span class="line">        </span><br><span class="line">    def next_batch(self, batch_size):</span><br><span class="line">        &quot;&quot;&quot;return batch_size examples as a batch.&quot;&quot;&quot;</span><br><span class="line">        end_indicator = self._indicator + batch_size</span><br><span class="line">        if end_indicator &gt; self._num_examples:</span><br><span class="line">            if self._need_shuffle:</span><br><span class="line">                self._shuffle_data()</span><br><span class="line">                self._indicator = 0</span><br><span class="line">                end_indicator = batch_size</span><br><span class="line">            else:</span><br><span class="line">                raise Exception(&quot;have no more examples&quot;)</span><br><span class="line">        if end_indicator &gt; self._num_examples:</span><br><span class="line">            raise Exception(&quot;batch size is larger than all examples&quot;)</span><br><span class="line">        batch_data = self._data[self._indicator:end_indicator]</span><br><span class="line">        batch_labels = self._labels[self._indicator: end_indicator]</span><br><span class="line">        self._indicator = end_indicator</span><br><span class="line">        return batch_data, batch_labels</span><br><span class="line"></span><br><span class="line">train_filenames = [os.path.join(CIFAR_DIR,&apos;data_batch_%d&apos; % i ) for i in range(1,6)]</span><br><span class="line">test_filenames = [os.path.join(CIFAR_DIR,&apos;test_batch&apos;)]</span><br><span class="line"></span><br><span class="line">train_data = CifarData(train_filenames,True)</span><br><span class="line">test_data = CifarData(test_filenames,False)</span><br><span class="line"></span><br><span class="line"># batch_data,batch_labels = train_data.next_batch(10)</span><br><span class="line"># print(batch_data)</span><br><span class="line"># print(batch_labels)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>(10000, 3072)</p>
+<p>(10000,)</p>
+<p>(2000, 3072)</p>
+<p>(2000,)</p>
+</blockquote>
+<h1 id="新增了训练的测试代码"><a class="markdownIt-Anchor" href="#新增了训练的测试代码"></a> 新增了训练的测试代码</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">init = tf.global_variables_initializer()</span><br><span class="line">batch_size = 20</span><br><span class="line">train_steps = 100000</span><br><span class="line">test_steps = 100</span><br><span class="line"></span><br><span class="line">with tf.Session() as sess:</span><br><span class="line">    sess.run(init)</span><br><span class="line">    for i in range(train_steps):</span><br><span class="line">        batch_data,batch_labels = train_data.next_batch(batch_size)</span><br><span class="line">        loss_val, accu_val, _ = sess.run(</span><br><span class="line">            [loss,accuracy,train_op],</span><br><span class="line">            feed_dict=&#123;</span><br><span class="line">                x: batch_data,</span><br><span class="line">                y: batch_labels&#125;)</span><br><span class="line">        if (i+1) % 500 == 0:</span><br><span class="line">            print(&apos;[Train] Step: %d, loss:%4.5f, acc: %4.5f&apos;</span><br><span class="line">                 % (i+1,loss_val,accu_val))</span><br><span class="line">        if (i+1) % 5000 == 0:</span><br><span class="line">            test_data = CifarData(test_filenames,False)</span><br><span class="line">            all_test_acc_val = []</span><br><span class="line">            for j in range(test_steps):</span><br><span class="line">                test_batch_data, test_batch_labels = test_data.next_batch(batch_size)</span><br><span class="line">                test_acc_val = sess.run(</span><br><span class="line">            [accuracy],</span><br><span class="line">            feed_dict=&#123;</span><br><span class="line">                x: test_batch_data,</span><br><span class="line">                y: test_batch_labels&#125;)</span><br><span class="line">                all_test_acc_val.append(test_acc_val)</span><br><span class="line">            test_acc = np.mean(all_test_acc_val)</span><br><span class="line">            print(&quot;[Test] Step: %d, acc: %4.5f&quot; % (i+1,test_acc))</span><br></pre></td></tr></table></figure>
+<p><strong>训练结果：</strong></p>
+<pre><code>[Train] Step: 500, loss:0.34972, acc: 0.65000
+[Train] Step: 1000, loss:0.25081, acc: 0.75000
+[Train] Step: 1500, loss:0.32387, acc: 0.65000
+[Train] Step: 2000, loss:0.19776, acc: 0.80000
+[Train] Step: 2500, loss:0.15003, acc: 0.85000
+[Train] Step: 3000, loss:0.13229, acc: 0.85000
+[Train] Step: 3500, loss:0.20558, acc: 0.80000
+[Train] Step: 4000, loss:0.29615, acc: 0.70000
+[Train] Step: 4500, loss:0.08947, acc: 0.90000
+[Train] Step: 5000, loss:0.24596, acc: 0.75000
+(2000, 3072)
+(2000,)
+[Test] Step: 5000, acc: 0.79400
+[Train] Step: 5500, loss:0.15080, acc: 0.85000
+[Train] Step: 6000, loss:0.13784, acc: 0.85000
+[Train] Step: 6500, loss:0.32210, acc: 0.65000
+[Train] Step: 7000, loss:0.19997, acc: 0.80000
+[Train] Step: 7500, loss:0.30646, acc: 0.65000
+[Train] Step: 8000, loss:0.29746, acc: 0.70000
+[Train] Step: 8500, loss:0.34132, acc: 0.65000
+[Train] Step: 9000, loss:0.24997, acc: 0.75000
+[Train] Step: 9500, loss:0.01327, acc: 1.00000
+[Train] Step: 10000, loss:0.10051, acc: 0.90000
+(2000, 3072)
+(2000,)
+[Test] Step: 10000, acc: 0.80700
+[Train] Step: 10500, loss:0.15171, acc: 0.85000
+[Train] Step: 11000, loss:0.16315, acc: 0.80000
+[Train] Step: 11500, loss:0.03247, acc: 0.95000
+[Train] Step: 12000, loss:0.11663, acc: 0.85000
+[Train] Step: 12500, loss:0.15000, acc: 0.85000
+[Train] Step: 13000, loss:0.15000, acc: 0.85000
+[Train] Step: 13500, loss:0.12864, acc: 0.85000
+[Train] Step: 14000, loss:0.10034, acc: 0.90000
+[Train] Step: 14500, loss:0.15703, acc: 0.85000
+[Train] Step: 15000, loss:0.23820, acc: 0.75000
+(2000, 3072)
+(2000,)
+[Test] Step: 15000, acc: 0.81350
+[Train] Step: 15500, loss:0.23760, acc: 0.75000
+[Train] Step: 16000, loss:0.31062, acc: 0.70000
+[Train] Step: 16500, loss:0.21815, acc: 0.75000
+[Train] Step: 17000, loss:0.10000, acc: 0.90000
+[Train] Step: 17500, loss:0.11240, acc: 0.85000
+[Train] Step: 18000, loss:0.19982, acc: 0.80000
+[Train] Step: 18500, loss:0.10140, acc: 0.90000
+[Train] Step: 19000, loss:0.14327, acc: 0.80000
+[Train] Step: 19500, loss:0.34986, acc: 0.65000
+[Train] Step: 20000, loss:0.19997, acc: 0.80000
+(2000, 3072)
+(2000,)
+[Test] Step: 20000, acc: 0.81400
+[Train] Step: 20500, loss:0.15000, acc: 0.85000
+[Train] Step: 21000, loss:0.05008, acc: 0.95000
+[Train] Step: 21500, loss:0.10000, acc: 0.90000
+[Train] Step: 22000, loss:0.20128, acc: 0.80000
+[Train] Step: 22500, loss:0.10240, acc: 0.90000
+[Train] Step: 23000, loss:0.06212, acc: 0.95000
+[Train] Step: 23500, loss:0.15000, acc: 0.85000
+[Train] Step: 24000, loss:0.15001, acc: 0.85000
+[Train] Step: 24500, loss:0.09032, acc: 0.90000
+[Train] Step: 25000, loss:0.11498, acc: 0.85000
+(2000, 3072)
+(2000,)
+[Test] Step: 25000, acc: 0.81500
+[Train] Step: 25500, loss:0.21641, acc: 0.75000
+[Train] Step: 26000, loss:0.29773, acc: 0.70000
+[Train] Step: 26500, loss:0.19523, acc: 0.80000
+[Train] Step: 27000, loss:0.14999, acc: 0.85000
+[Train] Step: 27500, loss:0.29387, acc: 0.70000
+[Train] Step: 28000, loss:0.09986, acc: 0.90000
+[Train] Step: 28500, loss:0.20017, acc: 0.80000
+[Train] Step: 29000, loss:0.10000, acc: 0.90000
+[Train] Step: 29500, loss:0.06900, acc: 0.90000
+[Train] Step: 30000, loss:0.20000, acc: 0.80000
+(2000, 3072)
+(2000,)
+[Test] Step: 30000, acc: 0.81400
+[Train] Step: 30500, loss:0.29999, acc: 0.70000
+[Train] Step: 31000, loss:0.10000, acc: 0.90000
+[Train] Step: 31500, loss:0.28020, acc: 0.70000
+[Train] Step: 32000, loss:0.23061, acc: 0.75000
+[Train] Step: 32500, loss:0.09479, acc: 0.90000
+[Train] Step: 33000, loss:0.15682, acc: 0.80000
+[Train] Step: 33500, loss:0.20000, acc: 0.80000
+[Train] Step: 34000, loss:0.10102, acc: 0.90000
+[Train] Step: 34500, loss:0.10090, acc: 0.90000
+[Train] Step: 35000, loss:0.20003, acc: 0.80000
+(2000, 3072)
+(2000,)
+[Test] Step: 35000, acc: 0.81150
+[Train] Step: 35500, loss:0.20290, acc: 0.80000
+[Train] Step: 36000, loss:0.05014, acc: 0.95000
+[Train] Step: 36500, loss:0.20018, acc: 0.80000
+[Train] Step: 37000, loss:0.25043, acc: 0.75000
+[Train] Step: 37500, loss:0.11776, acc: 0.85000
+[Train] Step: 38000, loss:0.20055, acc: 0.80000
+[Train] Step: 38500, loss:0.30000, acc: 0.70000
+[Train] Step: 39000, loss:0.20100, acc: 0.80000
+[Train] Step: 39500, loss:0.05023, acc: 0.95000
+[Train] Step: 40000, loss:0.05000, acc: 0.95000
+(2000, 3072)
+(2000,)
+[Test] Step: 40000, acc: 0.81500
+[Train] Step: 40500, loss:0.10000, acc: 0.90000
+[Train] Step: 41000, loss:0.29134, acc: 0.70000
+[Train] Step: 41500, loss:0.10074, acc: 0.90000
+[Train] Step: 42000, loss:0.34999, acc: 0.65000
+[Train] Step: 42500, loss:0.15017, acc: 0.85000
+[Train] Step: 43000, loss:0.10000, acc: 0.90000
+[Train] Step: 43500, loss:0.20008, acc: 0.80000
+[Train] Step: 44000, loss:0.34917, acc: 0.65000
+[Train] Step: 44500, loss:0.05077, acc: 0.95000
+[Train] Step: 45000, loss:0.16136, acc: 0.85000
+(2000, 3072)
+(2000,)
+[Test] Step: 45000, acc: 0.81750
+[Train] Step: 45500, loss:0.10502, acc: 0.90000
+[Train] Step: 46000, loss:0.10036, acc: 0.90000
+[Train] Step: 46500, loss:0.25016, acc: 0.75000
+[Train] Step: 47000, loss:0.25000, acc: 0.75000
+[Train] Step: 47500, loss:0.11138, acc: 0.90000
+[Train] Step: 48000, loss:0.15029, acc: 0.85000
+[Train] Step: 48500, loss:0.20625, acc: 0.80000
+[Train] Step: 49000, loss:0.15002, acc: 0.85000
+[Train] Step: 49500, loss:0.13137, acc: 0.85000
+[Train] Step: 50000, loss:0.20007, acc: 0.80000
+(2000, 3072)
+(2000,)
+[Test] Step: 50000, acc: 0.81350
+[Train] Step: 50500, loss:0.25050, acc: 0.75000
+[Train] Step: 51000, loss:0.16586, acc: 0.80000
+[Train] Step: 51500, loss:0.05447, acc: 0.95000
+[Train] Step: 52000, loss:0.09779, acc: 0.90000
+[Train] Step: 52500, loss:0.09993, acc: 0.90000
+[Train] Step: 53000, loss:0.10002, acc: 0.90000
+[Train] Step: 53500, loss:0.24999, acc: 0.75000
+[Train] Step: 54000, loss:0.09413, acc: 0.90000
+[Train] Step: 54500, loss:0.05066, acc: 0.95000
+[Train] Step: 55000, loss:0.06452, acc: 0.95000
+(2000, 3072)
+(2000,)
+[Test] Step: 55000, acc: 0.81650
+[Train] Step: 55500, loss:0.15000, acc: 0.85000
+[Train] Step: 56000, loss:0.10002, acc: 0.90000
+[Train] Step: 56500, loss:0.16470, acc: 0.80000
+[Train] Step: 57000, loss:0.15289, acc: 0.85000
+[Train] Step: 57500, loss:0.14925, acc: 0.85000
+[Train] Step: 58000, loss:0.00004, acc: 1.00000
+[Train] Step: 58500, loss:0.17873, acc: 0.80000
+[Train] Step: 59000, loss:0.10021, acc: 0.90000
+[Train] Step: 59500, loss:0.15005, acc: 0.85000
+[Train] Step: 60000, loss:0.25000, acc: 0.75000
+(2000, 3072)
+(2000,)
+[Test] Step: 60000, acc: 0.81350
+[Train] Step: 60500, loss:0.20056, acc: 0.80000
+[Train] Step: 61000, loss:0.18156, acc: 0.80000
+[Train] Step: 61500, loss:0.05029, acc: 0.95000
+[Train] Step: 62000, loss:0.19842, acc: 0.80000
+[Train] Step: 62500, loss:0.20000, acc: 0.80000
+[Train] Step: 63000, loss:0.15062, acc: 0.85000
+[Train] Step: 63500, loss:0.15000, acc: 0.85000
+[Train] Step: 64000, loss:0.15163, acc: 0.85000
+[Train] Step: 64500, loss:0.15050, acc: 0.85000
+[Train] Step: 65000, loss:0.24990, acc: 0.75000
+(2000, 3072)
+(2000,)
+[Test] Step: 65000, acc: 0.81650
+[Train] Step: 65500, loss:0.05177, acc: 0.95000
+[Train] Step: 66000, loss:0.25148, acc: 0.75000
+[Train] Step: 66500, loss:0.25219, acc: 0.75000
+[Train] Step: 67000, loss:0.01503, acc: 1.00000
+[Train] Step: 67500, loss:0.14373, acc: 0.85000
+[Train] Step: 68000, loss:0.10028, acc: 0.90000
+[Train] Step: 68500, loss:0.10000, acc: 0.90000
+[Train] Step: 69000, loss:0.15000, acc: 0.85000
+[Train] Step: 69500, loss:0.10036, acc: 0.90000
+[Train] Step: 70000, loss:0.20056, acc: 0.75000
+(2000, 3072)
+(2000,)
+[Test] Step: 70000, acc: 0.81350
+[Train] Step: 70500, loss:0.10613, acc: 0.90000
+[Train] Step: 71000, loss:0.20001, acc: 0.80000
+[Train] Step: 71500, loss:0.00083, acc: 1.00000
+[Train] Step: 72000, loss:0.05001, acc: 0.95000
+[Train] Step: 72500, loss:0.25088, acc: 0.75000
+[Train] Step: 73000, loss:0.05021, acc: 0.95000
+[Train] Step: 73500, loss:0.05031, acc: 0.95000
+[Train] Step: 74000, loss:0.23307, acc: 0.75000
+[Train] Step: 74500, loss:0.20002, acc: 0.80000
+[Train] Step: 75000, loss:0.15080, acc: 0.85000
+(2000, 3072)
+(2000,)
+[Test] Step: 75000, acc: 0.81400
+[Train] Step: 75500, loss:0.10167, acc: 0.90000
+[Train] Step: 76000, loss:0.14995, acc: 0.85000
+[Train] Step: 76500, loss:0.15019, acc: 0.85000
+[Train] Step: 77000, loss:0.10022, acc: 0.90000
+[Train] Step: 77500, loss:0.00061, acc: 1.00000
+[Train] Step: 78000, loss:0.20023, acc: 0.80000
+[Train] Step: 78500, loss:0.22279, acc: 0.75000
+[Train] Step: 79000, loss:0.20009, acc: 0.80000
+[Train] Step: 79500, loss:0.10502, acc: 0.90000
+[Train] Step: 80000, loss:0.21905, acc: 0.75000
+(2000, 3072)
+(2000,)
+[Test] Step: 80000, acc: 0.81250
+[Train] Step: 80500, loss:0.20000, acc: 0.80000
+[Train] Step: 81000, loss:0.10098, acc: 0.90000
+[Train] Step: 81500, loss:0.15061, acc: 0.85000
+[Train] Step: 82000, loss:0.00301, acc: 1.00000
+[Train] Step: 82500, loss:0.05492, acc: 0.95000
+[Train] Step: 83000, loss:0.10396, acc: 0.90000
+[Train] Step: 83500, loss:0.16083, acc: 0.85000
+[Train] Step: 84000, loss:0.14995, acc: 0.85000
+[Train] Step: 84500, loss:0.10011, acc: 0.90000
+[Train] Step: 85000, loss:0.14943, acc: 0.85000
+(2000, 3072)
+(2000,)
+[Test] Step: 85000, acc: 0.80850
+[Train] Step: 85500, loss:0.15764, acc: 0.85000
+[Train] Step: 86000, loss:0.10340, acc: 0.90000
+[Train] Step: 86500, loss:0.09898, acc: 0.90000
+[Train] Step: 87000, loss:0.20000, acc: 0.80000
+[Train] Step: 87500, loss:0.10002, acc: 0.90000
+[Train] Step: 88000, loss:0.05000, acc: 0.95000
+[Train] Step: 88500, loss:0.15000, acc: 0.85000
+[Train] Step: 89000, loss:0.20583, acc: 0.80000
+[Train] Step: 89500, loss:0.15086, acc: 0.85000
+[Train] Step: 90000, loss:0.19963, acc: 0.80000
+(2000, 3072)
+(2000,)
+[Test] Step: 90000, acc: 0.80950
+[Train] Step: 90500, loss:0.20024, acc: 0.80000
+[Train] Step: 91000, loss:0.20210, acc: 0.80000
+[Train] Step: 91500, loss:0.10000, acc: 0.90000
+[Train] Step: 92000, loss:0.20000, acc: 0.80000
+[Train] Step: 92500, loss:0.10005, acc: 0.90000
+[Train] Step: 93000, loss:0.34990, acc: 0.65000
+[Train] Step: 93500, loss:0.12632, acc: 0.85000
+[Train] Step: 94000, loss:0.20098, acc: 0.80000
+[Train] Step: 94500, loss:0.15001, acc: 0.85000
+[Train] Step: 95000, loss:0.15000, acc: 0.85000
+(2000, 3072)
+(2000,)
+[Test] Step: 95000, acc: 0.81250
+[Train] Step: 95500, loss:0.15014, acc: 0.85000
+[Train] Step: 96000, loss:0.20001, acc: 0.80000
+[Train] Step: 96500, loss:0.20008, acc: 0.80000
+[Train] Step: 97000, loss:0.09981, acc: 0.90000
+[Train] Step: 97500, loss:0.10011, acc: 0.90000
+[Train] Step: 98000, loss:0.10008, acc: 0.90000
+[Train] Step: 98500, loss:0.15029, acc: 0.85000
+[Train] Step: 99000, loss:0.10099, acc: 0.90000
+[Train] Step: 99500, loss:0.05000, acc: 0.95000
+[Train] Step: 100000, loss:0.05000, acc: 0.95000
+(2000, 3072)
+(2000,)
+[Test] Step: 100000, acc: 0.81150
+</code></pre>
 
-LDA算法的定义
-LDA算法应用范围
-LDA算法的原理
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/11/13/数据处理与模型图构建(1)/" title= 数据处理与模型图构建（1） >
+                    <div class="prevTitle">数据处理与模型图构建（1）</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
 
- LDA算法的定义
-隐式狄利克雷分布（Latent Dirichlet Allocation,简称LDA）是一种概率主题模型。
-LDA是2003年提出的一种主题模型，它可以将文档集中每篇文档的主题以概率分布的形式给出。LDA通过分析一些文档可以从中抽取出它们的主题分布，根据主题分布进行主题聚类或文本聚类。
- LDA算法的特点
-LDA是一种典型的词袋模型，即一篇文档是由一组词构成，词与词之间没有先后顺序的关系。一篇文档可以包含多个主题，文档中每一个词都由其中的一个主题生成。
- LDA算法的作用
-将文档集中每篇文...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/30</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
+<!-- City版安装代码已完成 -->
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "主题模型">主题模型</a>
+    <!--PC版-->
+
+    <!--PC版-->
+
+
     
-</div>
-                
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -434,6 +721,24 @@ LDA是一种典型的词袋模型，即一篇文档是由一组词构成，词�
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据集的测试代码"><span class="toc-number">1.</span> <span class="toc-text"> 数据集的测试代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#新增了训练的测试代码"><span class="toc-number">2.</span> <span class="toc-text"> 新增了训练的测试代码</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -2083,6 +2388,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
     
     </body>
 </html>

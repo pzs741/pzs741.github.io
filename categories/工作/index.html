@@ -302,24 +302,17 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >
+            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >
                 
-                    <span>神经元实现（二分类logistic回归模型实现）（1）</span>
+                    <span>神经元实现（二分类logistic回归模型实现）（2）</span>
             </a>
             <div class="abstract-content">
                 
-数据加载部分没有发生改变
-使用CifarDta数据进行训练的模块（改变）
-图模型构建模块没有改变
-模型训练(新增)
+调整了数据集的测试代码
+新增了训练的测试代码
 
-
-只放出新增和改变的代码
-
- 模型训练(新增)
-123init = tf.global_variables_initializer()with tf.Session() as sess:    sess.run([loss,accuracy,train_op],feed_dict=&#123;x:,y:&#125;)
- 使用CifarDta数据进行训练的模块（改变）
-1234567891011121314151617181920212223242526272829303...
+ 数据集的测试代码
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960def load_data(filename):    &quot;&quot;&quot;read date from data file.&quot;&quot;&quot;    with open(filename,&apos;rb&apos;) as f:        data = pic...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -333,6 +326,43 @@
         <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建（2）/" >
+                
+                    <span>数据处理与模型图构建（2）</span>
+            </a>
+            <div class="abstract-content">
+                 模型图构建流程
+
+导包
+读数据模块
+模型图构建
+
+ 导包
+1234567import tensorflow as tfimport osimport pickleimport numpy as npCIFAR_DIR = &apos;cifar-10-batches-py&apos;print(os.listdir(CIFAR_DIR))
+
+[‘batches.meta’, ‘test_batch’, ‘data_batch_1’, ‘data_batch_4’, ‘data_batch_5’, ‘readme.html’, ‘data_batch_2’, ‘data_batch_3’...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
     
 </div>
                 
@@ -384,21 +414,24 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建（2）/" >
+            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >
                 
-                    <span>数据处理与模型图构建（2）</span>
+                    <span>神经元实现（二分类logistic回归模型实现）（1）</span>
             </a>
             <div class="abstract-content">
-                 模型图构建流程
+                
+数据加载部分没有发生改变
+使用CifarDta数据进行训练的模块（改变）
+图模型构建模块没有改变
+模型训练(新增)
 
-导包
-读数据模块
-模型图构建
 
- 导包
-1234567import tensorflow as tfimport osimport pickleimport numpy as npCIFAR_DIR = &apos;cifar-10-batches-py&apos;print(os.listdir(CIFAR_DIR))
+只放出新增和改变的代码
 
-[‘batches.meta’, ‘test_batch’, ‘data_batch_1’, ‘data_batch_4’, ‘data_batch_5’, ‘readme.html’, ‘data_batch_2’, ‘data_batch_3’...
+ 模型训练(新增)
+123init = tf.global_variables_initializer()with tf.Session() as sess:    sess.run([loss,accuracy,train_op],feed_dict=&#123;x:,y:&#125;)
+ 使用CifarDta数据进行训练的模块（改变）
+1234567891011121314151617181920212223242526272829303...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -409,9 +442,9 @@
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
     
 </div>
                 
@@ -721,45 +754,6 @@ OptiPNG –...
         <a class="post-tag" href="javascript:void(0);" data-tags = "jpegoptim">jpegoptim</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "optipng">optipng</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/07/25/更方便的操作云服务器/" >
-                
-                    <span>云服务器基础操作</span>
-            </a>
-            <div class="abstract-content">
-                 云服务器上传、下载与后台运行
-
-随心所欲将PC端的文件、目录上传至云服务器
-下载云服务器中的文件或者目录
-通过SSH在云服务器的后台运行文件，比如跑代码
-
- 上传文件、目录至云服务器
-1234#上传文件pzs741@Ex-treme:~/PycharmProjects/QGDT-branch (cpu)/dist$ scp -i /home/pzs741/IQAS.pem  QGDT_cpu-0.3.4-py2.py3-none-any.whl  root@39.105.124.151:/home/admin/#上传目录pzs741@Ex-treme:~/PycharmProjects...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/25</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "云服务器">云服务器</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "上传">上传</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "下载">下载</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "挂起">挂起</a>
     
 </div>
                 
@@ -1804,7 +1798,26 @@ OptiPNG –...
     
     
     
-    <div class="total-archive"> Total : 62 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 63 </div>
     
     <div class="post-archive">
     
@@ -1813,11 +1826,6 @@ OptiPNG –...
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
-        </li>
     
     
         <li class="archive-post-item">
@@ -1831,7 +1839,17 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
         </li>
     
     
@@ -1841,12 +1859,12 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     

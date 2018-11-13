@@ -302,6 +302,43 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/06/02/pytorch/" >
+                
+                    <span>pytorch环境配置</span>
+            </a>
+            <div class="abstract-content">
+                 pytorch环境配置
+ 显卡驱动
+更新显卡驱动
+1系统设置-&gt;软件更新-&gt;附加驱动-&gt;选择nvidia最新驱动(361)-&gt;应用更改
+显卡驱动测试
+1234567重启nvidia-settingsOperating System:Linux-x86_64NVIDIA Driver Version:384.130Graphics Processor:GeForce GTX 1060CUDA Cores:1280Total Memory:6144 MB
+版本号查看
+123$ cat /proc/driver/nvidia/versionNVRM version: ...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/02</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "pytorch">pytorch</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "语言模型">语言模型</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/05/22/django搜索接口实现/" >
                 
                     <span>django搜索接口的实现</span>
@@ -326,40 +363,6 @@
         <a class="post-tag" href="javascript:void(0);" data-tags = "api">api</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "接口">接口</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
-                
-                    <span>xadmin快速开发后台管理系统</span>
-            </a>
-            <div class="abstract-content">
-                 xadmin快速开发数据管理后台
-主要流程就是加载xadmin这个app，就像使用其它app一样使用xadmin，它继承了django自带的admin的所有功能，所以开发非常方便。
- xadmind源码导入
-这里我们使用源码包直接放在工程目录下，而后注册app。
-1234567891011121314151617181920setting:sys.path.insert(0,os.path.join(BASE_DIR,&apos;extra_apps&apos;))INSTALLED_APPS = [    &apos;django.contrib.admin&apos;,    &a...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
     
 </div>
                 
@@ -397,6 +400,40 @@ age是任务有效期限，...
         <a class="post-tag" href="javascript:void(0);" data-tags = "爬虫">爬虫</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "self.crwal">self.crwal</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
+                
+                    <span>xadmin快速开发后台管理系统</span>
+            </a>
+            <div class="abstract-content">
+                 xadmin快速开发数据管理后台
+主要流程就是加载xadmin这个app，就像使用其它app一样使用xadmin，它继承了django自带的admin的所有功能，所以开发非常方便。
+ xadmind源码导入
+这里我们使用源码包直接放在工程目录下，而后注册app。
+1234567891011121314151617181920setting:sys.path.insert(0,os.path.join(BASE_DIR,&apos;extra_apps&apos;))INSTALLED_APPS = [    &apos;django.contrib.admin&apos;,    &a...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
     
 </div>
                 
@@ -663,43 +700,10 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
             </div>
         </article>
     
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/29/elasticsearch/" >
-                
-                    <span>elasticsearch基础</span>
-            </a>
-            <div class="abstract-content">
-                 安装elasticsearch
-1234$ git clone git://github.com/medcl/elasticsearch-rtf.git -b master --depth 1$ cd elasticsearch-rtf/bin$ ./elasticsearch$ open http://localhost:9200/
- head插件和kibana的安装
-12345$ git clone git://github.com/mobz/elasticsearch-head.git$ cd elasticsearch-head$ cnpm install(从淘宝镜像仓库下载第...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/29</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "elasticsearch">elasticsearch</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "kibana">kibana</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CUDR">CUDR</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/2018/page/2/">&#60; PREV</a><a class="page-number" href="/archives/2018/">1</a><a class="page-number" href="/archives/2018/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2018/page/4/">4</a><a class="page-number" href="/archives/2018/page/5/">5</a><a class="page-number" href="/archives/2018/page/6/">6</a><a class="extend next" rel="next" href="/archives/2018/page/4/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/archives/2018/page/2/">&#60; PREV</a><a class="page-number" href="/archives/2018/">1</a><a class="page-number" href="/archives/2018/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2018/page/4/">4</a><a class="page-number" href="/archives/2018/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2018/page/7/">7</a><a class="extend next" rel="next" href="/archives/2018/page/4/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -1678,7 +1682,58 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
     
-    <div class="total-archive"> Total : 60 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 61 </div>
     
     <div class="post-archive">
     
@@ -1691,6 +1746,11 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
         </li>
     
     
@@ -1795,12 +1855,12 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
@@ -1840,12 +1900,12 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
         </li>
     
     

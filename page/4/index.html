@@ -317,6 +317,73 @@ height:50vh;
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/04/29/elasticsearch/" >
+                
+                    <span>elasticsearch基础</span>
+            </a>
+            <div class="abstract-content">
+                 安装elasticsearch
+1234$ git clone git://github.com/medcl/elasticsearch-rtf.git -b master --depth 1$ cd elasticsearch-rtf/bin$ ./elasticsearch$ open http://localhost:9200/
+ head插件和kibana的安装
+12345$ git clone git://github.com/mobz/elasticsearch-head.git$ cd elasticsearch-head$ cnpm install(从淘宝镜像仓库下载第...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/29</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "elasticsearch">elasticsearch</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "kibana">kibana</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "CUDR">CUDR</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/04/04/SAS4/" >
+                
+                    <span>文章搜索引擎————LDA算法整合</span>
+            </a>
+            <div class="abstract-content">
+                 文章搜索引擎（四）
+这一章主要是把LDA算法整合进去，非常简单，而后是对前端整体的一个实现和展示。
+ 整合LDA算法
+LDA算法实现
+1234567891011121314151617181920import jsonimport gensimfrom article.models import ArticleModel# relist 文章id的listdef getTheme(reslist):    fencelist = list()    for res in reslist:        id = res[0]        articles = ArticleModel...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/04</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "前端展示">前端展示</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/04/04/xadmin/" >
                 
                     <span>文章搜索引擎——后台和总结</span>
@@ -359,40 +426,6 @@ xadmin是一款全面的后台系统框架，提供很多功能
         <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "后台">后台</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/04/SAS4/" >
-                
-                    <span>文章搜索引擎————LDA算法整合</span>
-            </a>
-            <div class="abstract-content">
-                 文章搜索引擎（四）
-这一章主要是把LDA算法整合进去，非常简单，而后是对前端整体的一个实现和展示。
- 整合LDA算法
-LDA算法实现
-1234567891011121314151617181920import jsonimport gensimfrom article.models import ArticleModel# relist 文章id的listdef getTheme(reslist):    fencelist = list()    for res in reslist:        id = res[0]        articles = ArticleModel...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/04</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "前端展示">前端展示</a>
     
 </div>
                 
@@ -667,64 +700,10 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
             </div>
         </article>
     
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/03/28/jieba/" >
-                
-                    <span>jieba————做最好的Python中文分词组件</span>
-            </a>
-            <div class="abstract-content">
-                 jieba的使用和算法详解
-
-jieba分词工具的介绍
-jieba分词工具的使用
-TextRank算法原理
-jieba去除停用词
-
- 结巴中文分词
-
-目标与愿望：做最好的Python中文分词组件
-普及读：有很多不同语言版本的jieba，R语言、GO语言、.NET版本等。
-
- 特点
-
-支持三种分词模式（精确模式，全模式[cut_all=True]，搜索引擎模式[.cut_for_search]]）
-支持繁体分词
-支持自定义词典
-
- 安装
-1$ pip3 install jieba
- 加载词典
-
-载入自定义字典
-
-1jieba.load_userdict(&apos;filename&ap...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/28</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "jieba">jieba</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "PageRank">PageRank</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "TextRank">TextRank</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/3/">&#60; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/page/3/">&#60; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -1775,7 +1754,58 @@ jieba去除停用词
     
     
     
-    <div class="total-archive"> Total : 60 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 61 </div>
     
     <div class="post-archive">
     
@@ -1788,6 +1818,11 @@ jieba去除停用词
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
         </li>
     
     
@@ -1892,12 +1927,12 @@ jieba去除停用词
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
@@ -1937,12 +1972,12 @@ jieba去除停用词
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
         </li>
     
     

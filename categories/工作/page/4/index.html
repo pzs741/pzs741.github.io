@@ -302,6 +302,40 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/04/04/SAS4/" >
+                
+                    <span>文章搜索引擎————LDA算法整合</span>
+            </a>
+            <div class="abstract-content">
+                 文章搜索引擎（四）
+这一章主要是把LDA算法整合进去，非常简单，而后是对前端整体的一个实现和展示。
+ 整合LDA算法
+LDA算法实现
+1234567891011121314151617181920import jsonimport gensimfrom article.models import ArticleModel# relist 文章id的listdef getTheme(reslist):    fencelist = list()    for res in reslist:        id = res[0]        articles = ArticleModel...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/04</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "前端展示">前端展示</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/04/03/SAS3/" >
                 
                     <span>文章搜索引擎————TF-IDF算法整合</span>
@@ -668,75 +702,6 @@ NLP(Natural Language Processing)自然语言初六，用计算机来处理、理
         <a class="post-tag" href="javascript:void(0);" data-tags = "github">github</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "迁移">迁移</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/03/23/从NLP讲到神经网络————词向量word2vec原理浅析/" >
-                
-                    <span>从NLP讲到神经网络————词向量word2vec原理浅析</span>
-            </a>
-            <div class="abstract-content">
-                 自然语言处理
-
-检查拼写、关键词检索……
-文本挖掘（产评价格、日期、时间、地点、地点、人民、公司名）
-文本分类
-机器翻译
-客服系统
-复杂对话系统（微软小冰）
-
- 深度学习
-基础模型&gt;&gt;神经网络&gt;&gt;优化目标&gt;&gt;效果最优
- 为什么需要研究深度学习
-
-手工特征耗时耗力，还不易拓展
-自动特征学习快，方便拓展
-深度学习提供了一种通用的学习框架，可用来表示世界、视觉和语言学信息
-深度学习既可以无监督学习，也可以监督学习（强化学习是无监督的）
-
- 语言模型
-
-机器翻译
-
-
-算概率最可能的翻译
-
-
-拼写纠错
-
-
-算概率标注红线
-
-
-智能问答
-
- Example
-我 ...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/23</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "NLP">NLP</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "词向量">词向量</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Wordvec">Wordvec</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
     
 </div>
                 
@@ -1725,10 +1690,7 @@ NLP(Natural Language Processing)自然语言初六，用计算机来处理、理
     
     
     
-    
-    
-    
-    <div class="total-archive"> Total : 59 </div>
+    <div class="total-archive"> Total : 60 </div>
     
     <div class="post-archive">
     
@@ -1740,7 +1702,12 @@ NLP(Natural Language Processing)自然语言初六，用计算机来处理、理
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
@@ -1755,7 +1722,7 @@ NLP(Natural Language Processing)自然语言初六，用计算机来处理、理
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
@@ -1900,22 +1867,22 @@ NLP(Natural Language Processing)自然语言初六，用计算机来处理、理
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
         </li>
     
     
@@ -2297,6 +2264,8 @@ NLP(Natural Language Processing)自然语言初六，用计算机来处理、理
         <span class="sidebar-tag-name" data-tags="训练"><span class="iconfont-archer">&#xe606;</span>训练</span>
     
         <span class="sidebar-tag-name" data-tags="梯度下降"><span class="iconfont-archer">&#xe606;</span>梯度下降</span>
+    
+        <span class="sidebar-tag-name" data-tags="Tensorflow"><span class="iconfont-archer">&#xe606;</span>Tensorflow</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

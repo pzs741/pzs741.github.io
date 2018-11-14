@@ -317,6 +317,43 @@ height:50vh;
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/05/19/爬虫前台/" >
+                
+                    <span>pyspider快速部署爬虫前台</span>
+            </a>
+            <div class="abstract-content">
+                 Pyspider的self.crwal使用
+本文绍一下Pyspider的基本知识和原理
+ self.crawl(url, **kwargs)
+12def on_start(self):        self.crawl(&apos;http://localhost:8000/gys/0/&apos;, callback=self.index_page)
+url是起始地址，callback一个回调函数解析网页。
+ age
+123@config(age=10 * 24 * 60 * 60)def index_page(self, response):    ...
+age是任务有效期限，...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "pyspider">pyspider</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "爬虫">爬虫</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "self.crwal">self.crwal</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
                 
                     <span>xadmin快速开发后台管理系统</span>
@@ -686,40 +723,6 @@ xadmin是一款全面的后台系统框架，提供很多功能
         <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "后台">后台</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/04/SAS4/" >
-                
-                    <span>文章搜索引擎————LDA算法整合</span>
-            </a>
-            <div class="abstract-content">
-                 文章搜索引擎（四）
-这一章主要是把LDA算法整合进去，非常简单，而后是对前端整体的一个实现和展示。
- 整合LDA算法
-LDA算法实现
-1234567891011121314151617181920import jsonimport gensimfrom article.models import ArticleModel# relist 文章id的listdef getTheme(reslist):    fencelist = list()    for res in reslist:        id = res[0]        articles = ArticleModel...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/04</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "前端展示">前端展示</a>
     
 </div>
                 
@@ -1910,7 +1913,16 @@ LDA算法实现
     
     
     
-    <div class="total-archive"> Total : 68 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 69 </div>
     
     <div class="post-archive">
     
@@ -1919,6 +1931,16 @@ LDA算法实现
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1932,12 +1954,7 @@ LDA算法实现
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
         </li>
     
     
@@ -1947,17 +1964,7 @@ LDA算法实现
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -1967,7 +1974,22 @@ LDA算法实现
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
         </li>
     
     
@@ -1978,11 +2000,6 @@ LDA算法实现
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
         </li>
     
     
@@ -2067,12 +2084,12 @@ LDA算法实现
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     

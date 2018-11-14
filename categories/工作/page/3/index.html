@@ -302,6 +302,48 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/06/19/折腾之旅3/" >
+                
+                    <span>填坑之旅（三）---NGINX配置</span>
+            </a>
+            <div class="abstract-content">
+                 填坑之旅—云服务器生产环境
+在即将大功告成之际，uwsgi出来搅了个局，nginx很正常的泡在80端口，uwsgi跑出来了却没办法路由导80端口，唉…填坑之旅路漫漫
+ 填坑必备技能
+123456#查看端口占用情况lsof -i:端口号#查看进程ps aux|grep 进程名#推出进程kill -QUIT PID
+ 直接启动django
+
+对外开启8000端口
+python manager.py runserver 0.0.0.0:8000
+http://39.105.124.151:8000/
+
+ 通过uwsgi启动django
+
+uwsgi --http :8000 --module...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/19</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "uwsgi">uwsgi</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "静态文件">静态文件</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/06/18/cpu/" >
                 
                     <span>填坑之旅（二）---QGDT(CPU版)</span>
@@ -639,40 +681,6 @@ age是任务有效期限，...
         <a class="post-tag" href="javascript:void(0);" data-tags = "爬虫">爬虫</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "self.crwal">self.crwal</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
-                
-                    <span>xadmin快速开发后台管理系统</span>
-            </a>
-            <div class="abstract-content">
-                 xadmin快速开发数据管理后台
-主要流程就是加载xadmin这个app，就像使用其它app一样使用xadmin，它继承了django自带的admin的所有功能，所以开发非常方便。
- xadmind源码导入
-这里我们使用源码包直接放在工程目录下，而后注册app。
-1234567891011121314151617181920setting:sys.path.insert(0,os.path.join(BASE_DIR,&apos;extra_apps&apos;))INSTALLED_APPS = [    &apos;django.contrib.admin&apos;,    &a...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
     
 </div>
                 
@@ -1791,7 +1799,16 @@ age是任务有效期限，...
     
     
     
-    <div class="total-archive"> Total : 68 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 69 </div>
     
     <div class="post-archive">
     
@@ -1800,6 +1817,16 @@ age是任务有效期限，...
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1813,12 +1840,7 @@ age是任务有效期限，...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
         </li>
     
     
@@ -1828,17 +1850,7 @@ age是任务有效期限，...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -1848,7 +1860,22 @@ age是任务有效期限，...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
         </li>
     
     
@@ -1859,11 +1886,6 @@ age是任务有效期限，...
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
         </li>
     
     
@@ -1948,12 +1970,12 @@ age是任务有效期限，...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     

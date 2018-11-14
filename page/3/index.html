@@ -317,6 +317,44 @@ height:50vh;
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/06/17/阿里云二次部署/" >
+                
+                    <span>添坑之旅（一）---阿里云二次部署</span>
+            </a>
+            <div class="abstract-content">
+                 大赛初稿———智能问答系统云部署（升级版）
+ 云服务器升级
+**控制台：**快照–&gt;升级–&gt;重置密码–&gt;密钥管理（下载新密钥）
+12345客户端操作：#删除以前的密钥nano ~/.ssh/known_hosts#使用密钥进行SSH登录ssh root@ssh root@39.105.124.151 -i xxx.pem。
+ ES后台启动
+123456#切换用户（低权限）su admin#后台启动./elasticsearch &amp;#验证curl -XGET &apos;http://localhost:9200&apos;
+ 测试mysql
+
+mysql -u...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/17</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "IQAS">IQAS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "阿里云">阿里云</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "环境部署">环境部署</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/06/13/发布算法库/" >
                 
                     <span>发布我的第二个算法库---EWDT</span>
@@ -643,77 +681,6 @@ age是任务有效期限，...
         <a class="post-tag" href="javascript:void(0);" data-tags = "前端">前端</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "快速部署">快速部署</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/17/conda常用命令大全/" >
-                
-                    <span>conda常用命令</span>
-            </a>
-            <div class="abstract-content">
-                 Conda常用命令
-
-下载地址
-
-
-https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive
-
-
-获取版本号
-
-
-conda -v
-
-
-创建虚拟环境
-
-
-conda create --name your_env_name python=2.7
-
-
-创建时附加包
-
-
-conda create --name your_env_name python=3.5 numpy sklearn pandas
-
-
-进入环境
-
-
-activate your_env_name
-
-
-退出环境
-
-
-deactivate
-
-
-删除环境
-
-
-conda remov...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/17</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "conda">conda</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "pip">pip</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "虚拟环境">虚拟环境</a>
     
 </div>
                 
@@ -1877,7 +1844,56 @@ conda remov...
     
     
     
-    <div class="total-archive"> Total : 65 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 66 </div>
     
     <div class="post-archive">
     
@@ -1894,7 +1910,12 @@ conda remov...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理开发环境介绍/" >自然语言处理开发环境介绍</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
         </li>
     
     
@@ -1904,7 +1925,7 @@ conda remov...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -1915,11 +1936,6 @@ conda remov...
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
@@ -1935,6 +1951,11 @@ conda remov...
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
@@ -2079,22 +2100,22 @@ conda remov...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
         </li>
     
     
@@ -2484,6 +2505,8 @@ conda remov...
         <span class="sidebar-tag-name" data-tags="logistic"><span class="iconfont-archer">&#xe606;</span>logistic</span>
     
         <span class="sidebar-tag-name" data-tags="自然语言处理"><span class="iconfont-archer">&#xe606;</span>自然语言处理</span>
+    
+        <span class="sidebar-tag-name" data-tags="自然语言处理，开发环境"><span class="iconfont-archer">&#xe606;</span>自然语言处理，开发环境</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

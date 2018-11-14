@@ -317,6 +317,40 @@ height:50vh;
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/07/20/复赛笔记（一）：EXCLE和集合SET的处理/" >
+                
+                    <span>复赛笔记（一）：EXCLE和集合SET的处理</span>
+            </a>
+            <div class="abstract-content">
+                主要是对EXCLE进行读取和写入，以及利用SET进行过滤操作，完成了EMDT原始输出记录和进一步利用QGDT处理数据再次写入EXCLE。
+ EXCLE的基本操作
+EXCLE的操作使用了两个库，读取使用xlrd，写入使用xlwt。
+ EXCLE读取操作
+1234567891011121314151617181920212223242526272829303132333435# -*- coding: utf-8 -*-import xlrdimport xlwtfrom datetime import date,datetimedef read_excel():  # 打开文件  work...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/20</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "xlrd">xlrd</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "xlwt">xlwt</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "set">set</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/06/30/演示文档/" >
                 
                     <span>知识库构建算法（图文版）</span>
@@ -667,42 +701,6 @@ list可变长，两次循环做频率统计
         <a class="post-tag" href="javascript:void(0);" data-tags = "excle">excle</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "数据处理">数据处理</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/06/07/基于深度学习和模板的问句生成算法/" >
-                
-                    <span>基于深度学习和模板的问句生成算法</span>
-            </a>
-            <div class="abstract-content">
-                 基于深度学习和模板的问句生成算法（Question Generation Algorithm Based on Depth Learning and Template,QGDT）
- QGDT算法库入口：算法库已经在Github上开源啦～求个Star增强影响力
- 算法功能简介
-基于深度学习和模板的问句生成算法完成了：通过训练好的SVM分类器对查询词（一至三个，可以是关键词、短语、句子）去重（查询词冗余）生成最终检索词，检索词通过排序算法（Word2Vec词向量模型+RNNLM语言模型）得到与预定义的模板的匹配得分，根据得分最高的模板生成最终的问句。
- 算法库组成
-
-templates —...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/07</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "问句生成">问句生成</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "WMD">WMD</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "RNNLM">RNNLM</a>
     
 </div>
                 
@@ -1964,7 +1962,46 @@ templates —...
     
     
     
-    <div class="total-archive"> Total : 71 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 72 </div>
     
     <div class="post-archive">
     
@@ -1981,7 +2018,7 @@ templates —...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理开发环境介绍/" >自然语言处理开发环境介绍</a>
         </li>
     
     
@@ -1991,7 +2028,7 @@ templates —...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理开发环境介绍/" >自然语言处理开发环境介绍</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
         </li>
     
     
@@ -2006,7 +2043,12 @@ templates —...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
         </li>
     
     
@@ -2026,22 +2068,12 @@ templates —...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
         </li>
     
     
@@ -2056,12 +2088,22 @@ templates —...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/本地连接/" >解决本地无法连接和图片压缩问题</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
         </li>
     
     
@@ -2206,12 +2248,12 @@ templates —...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
         </li>
     
     
@@ -2609,6 +2651,8 @@ templates —...
         <span class="sidebar-tag-name" data-tags="欧式距离，KNN"><span class="iconfont-archer">&#xe606;</span>欧式距离，KNN</span>
     
         <span class="sidebar-tag-name" data-tags="分类器，KNN"><span class="iconfont-archer">&#xe606;</span>分类器，KNN</span>
+    
+        <span class="sidebar-tag-name" data-tags="NLP，KNN"><span class="iconfont-archer">&#xe606;</span>NLP，KNN</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

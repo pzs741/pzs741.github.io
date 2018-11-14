@@ -10,7 +10,7 @@
     <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>Ex_treme&#39;s blog</title>
+    <title>案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1） · Ex_treme&#39;s blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -66,6 +66,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180317 as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" type="text/css" href= /css/mobile.css?v=20180317 media="(max-width: 980px)"/>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         
     <link rel="icon" href= /assets/bitbug_favicon.ico>
     <script>
@@ -177,12 +179,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Ex_treme&#39;s blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Ex_treme's blog.</a>
 </header>
@@ -196,24 +209,67 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "欧式距离，KNN">欧式距离，KNN</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/11/14</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -297,182 +353,52 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="欧式距离一般形式"><a class="markdownIt-Anchor" href="#欧式距离一般形式"></a> 欧式距离一般形式</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def ComputeEuclideanDistance(x1, y1, x2, y2):</span><br><span class="line">    &quot;&quot;&quot;欧式距离计算：d=(x1-x2)^2+(y1-y2)^2&quot;&quot;&quot;</span><br><span class="line">    d = math.sqrt(math.pow(x1 - x2, 2) + math.pow(y1 - y2, 2))</span><br><span class="line">    return d</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>即求两个向量之间的距离（二维）</p>
+</blockquote>
+<h1 id="欧式距离拓展形式"><a class="markdownIt-Anchor" href="#欧式距离拓展形式"></a> 欧式距离拓展形式</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def EuclideanDistance(instance1, instance2, length):</span><br><span class="line">    &quot;&quot;&quot;欧式距离计算拓展&quot;&quot;&quot;</span><br><span class="line">    d = 0</span><br><span class="line">    for x in range(length):</span><br><span class="line">        d += pow((instance1[x] - instance2[x]), 2)</span><br><span class="line">    return math.sqrt(d)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>求两个向量之间的距离（任意维度）</p>
+</blockquote>
+<h1 id="欧式距离通用形式"><a class="markdownIt-Anchor" href="#欧式距离通用形式"></a> 欧式距离通用形式</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def EuclideanDistance3(newV, dataset):</span><br><span class="line">    &quot;&quot;&quot;欧式距离计算拓展&quot;&quot;&quot;</span><br><span class="line">    rowsize, colsize = dataset.shape  # 获取数据集维度值</span><br><span class="line">    diffMat = tile(newV, (rowsize, 1)) - dataset  # 矩阵化</span><br><span class="line">    sqDiffMat = diffMat ** 2  # 平方</span><br><span class="line">    SqrtDist = sqDiffMat.sum(axis=1) ** 0.5  # 求和取平均</span><br><span class="line">    return SqrtDist</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>新的向量与数据集中的所有向量求欧式距离</p>
+</blockquote>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" title= 案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备） >
+                    <div class="prevTitle">案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
     
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/机器学习、深度学习简介/" >
-                
-                    <span>机器学习、深度学习简介</span>
-            </a>
-            <div class="abstract-content">
-                 神经网络入门
-
-机器学习简介
-深度学习简介
-神经网络
-Tensorflow基础
-神经网络Tensorflow实战
-
- 机器学习是什么
-
-机器学习是什么——无序数据转化为价值的方法
-
-
-机器学习价值——从数据中抽取规律，并用来预测未来
-
- 机器学习应用距离
-
-分类问题——图像识别、垃圾邮件识别
-
-
-回归问题——股价预测、房价预测
-
-
-排序问题——点击率预估、推荐
-
-
-生成问题——图像生成、图像风格转换、图像文字描述生成
-
- 机器学习简介
-
-
-机器学习应用流程
-
- 机器学习岗位职责
-
-数据处理（采集+去噪）
-模型训练（特征+模型）
-模型评估与优化（MSE、F1-score、AUC+调参）
-...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "机器学习">机器学习</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/06/02/pytorch/" >
-                
-                    <span>pytorch环境配置</span>
-            </a>
-            <div class="abstract-content">
-                 pytorch环境配置
- 显卡驱动
-更新显卡驱动
-1系统设置-&gt;软件更新-&gt;附加驱动-&gt;选择nvidia最新驱动(361)-&gt;应用更改
-显卡驱动测试
-1234567重启nvidia-settingsOperating System:Linux-x86_64NVIDIA Driver Version:384.130Graphics Processor:GeForce GTX 1060CUDA Cores:1280Total Memory:6144 MB
-版本号查看
-123$ cat /proc/driver/nvidia/versionNVRM version: ...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/02</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "pytorch">pytorch</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "语言模型">语言模型</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/03/23/从NLP讲到神经网络————词向量word2vec原理浅析/" >
-                
-                    <span>从NLP讲到神经网络————词向量word2vec原理浅析</span>
-            </a>
-            <div class="abstract-content">
-                 自然语言处理
-
-检查拼写、关键词检索……
-文本挖掘（产评价格、日期、时间、地点、地点、人民、公司名）
-文本分类
-机器翻译
-客服系统
-复杂对话系统（微软小冰）
-
- 深度学习
-基础模型&gt;&gt;神经网络&gt;&gt;优化目标&gt;&gt;效果最优
- 为什么需要研究深度学习
-
-手工特征耗时耗力，还不易拓展
-自动特征学习快，方便拓展
-深度学习提供了一种通用的学习框架，可用来表示世界、视觉和语言学信息
-深度学习既可以无监督学习，也可以监督学习（强化学习是无监督的）
-
- 语言模型
-
-机器翻译
-
-
-算概率最可能的翻译
-
-
-拼写纠错
-
-
-算概率标注红线
-
-
-智能问答
-
- Example
-我 ...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/23</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "NLP">NLP</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "词向量">词向量</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Wordvec">Wordvec</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -532,6 +458,24 @@ Tensorflow基础
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#欧式距离一般形式"><span class="toc-number">1.</span> <span class="toc-text"> 欧式距离一般形式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#欧式距离拓展形式"><span class="toc-number">2.</span> <span class="toc-text"> 欧式距离拓展形式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#欧式距离通用形式"><span class="toc-number">3.</span> <span class="toc-text"> 欧式距离通用形式</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -2331,6 +2275,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
     
     </body>
 </html>

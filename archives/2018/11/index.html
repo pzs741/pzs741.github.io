@@ -302,27 +302,18 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >
+            <a class="abstract-title" href = "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >
                 
-                    <span>案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</span>
+                    <span>案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</span>
             </a>
             <div class="abstract-content">
-                 小节内容
+                 欧式距离一般形式
+1234def ComputeEuclideanDistance(x1, y1, x2, y2):    &quot;&quot;&quot;欧式距离计算：d=(x1-x2)^2+(y1-y2)^2&quot;&quot;&quot;    d = math.sqrt(math.pow(x1 - x2, 2) + math.pow(y1 - y2, 2))    return d
 
-什么是KNN算法模型
-KNN工作原理
-KNN算法思想
-KNN算法流程
+即求两个向量之间的距离（二维）
 
- 什么是KNN算法模型
-
-K-近邻（kNN，K-NearestNeighbor）算法是一种基本分类与回归方法，我们这里只讨论分类问题中的k-近邻算法。
-
-
-其目标：K-近邻算法的输入为实例的特征向量（吃冰淇淋/喝水/活动时间），对应于特征工控的点，输出为实例的类别（非常热/一般热），可以取多累（非常热/一般热/舒适/一般冷/非常冷）。
-
-
-K-近邻算法假设给定一个训练数据集（随机访客），其中的实例类别已定（访客感受）。分类时，对新的实例（新游客），根据其k个最近邻的训练实例的类别，通过多数表决等方式进行...
+ 欧式距离拓展形式
+123456def EuclideanDistance(instance1, instance2, length):    &quot...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -333,7 +324,7 @@ K-近邻算法假设给定一个训练数据集（随机访客），其中的实
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "NLP，预测">NLP，预测</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "欧式距离，KNN">欧式距离，KNN</a>
     
 </div>
                 
@@ -498,18 +489,67 @@ Sublime Text和Anaconda介绍
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >
+            <a class="abstract-title" href = "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >
                 
-                    <span>神经网络实现（多分类logistic回归模型实现）</span>
+                    <span>案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</span>
             </a>
             <div class="abstract-content">
-                 改动
+                 小节内容
 
-数据集输入
-图模型
+什么是KNN算法模型
+KNN工作原理
+KNN算法思想
+KNN算法流程
 
- 数据集输入
-123456789101112131415161718192021222324252627282930313233343536373839404142class CifarData:    def __init__(self,filenames,need_shuffle):        all_data = []        all_labels = []        for filename in filenames:            data,labels = load_data(filename)            al...
+ 什么是KNN算法模型
+
+K-近邻（kNN，K-NearestNeighbor）算法是一种基本分类与回归方法，我们这里只讨论分类问题中的k-近邻算法。
+
+
+其目标：K-近邻算法的输入为实例的特征向量（吃冰淇淋/喝水/活动时间），对应于特征工控的点，输出为实例的类别（非常热/一般热），可以取多累（非常热/一般热/舒适/一般冷/非常冷）。
+
+
+K-近邻算法假设给定一个训练数据集（随机访客），其中的实例类别已定（访客感受）。分类时，对新的实例（新游客），根据其k个最近邻的训练实例的类别，通过多数表决等方式进行...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "NLP，预测">NLP，预测</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建(1)/" >
+                
+                    <span>数据处理与模型图构建（1）</span>
+            </a>
+            <div class="abstract-content">
+                 多层神经网络的Tensorflow实战
+
+神经元的Tensorflow实现
+神经网络的Tensorflow实现
+
+ Tensorflow环境搭建
+1234conda install tensorflow==1.8.0下载数据集CIFAR-10 python version conda install jupyter jupyter notebook
+ 数据预处理
+
+加载数据集
+查看数据类型
+验证图片输出
+
+ 加载数据集
+123456import pickleimport numpy as npimport osCIFAR_DIR = &apos;cifar-10-batches-py&...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -520,9 +560,9 @@ Sublime Text和Anaconda介绍
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
     
 </div>
                 
@@ -620,48 +660,6 @@ Sublime Text和Anaconda介绍
 1234567import tensorflow as tfimport osimport pickleimport numpy as npCIFAR_DIR = &apos;cifar-10-batches-py&apos;print(os.listdir(CIFAR_DIR))
 
 [‘batches.meta’, ‘test_batch’, ‘data_batch_1’, ‘data_batch_4’, ‘data_batch_5’, ‘readme.html’, ‘data_batch_2’, ‘data_batch_3’...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建(1)/" >
-                
-                    <span>数据处理与模型图构建（1）</span>
-            </a>
-            <div class="abstract-content">
-                 多层神经网络的Tensorflow实战
-
-神经元的Tensorflow实现
-神经网络的Tensorflow实现
-
- Tensorflow环境搭建
-1234conda install tensorflow==1.8.0下载数据集CIFAR-10 python version conda install jupyter jupyter notebook
- 数据预处理
-
-加载数据集
-查看数据类型
-验证图片输出
-
- 加载数据集
-123456import pickleimport numpy as npimport osCIFAR_DIR = &apos;cifar-10-batches-py&...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -1802,7 +1800,50 @@ Sublime Text和Anaconda介绍
     
     
     
-    <div class="total-archive"> Total : 69 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 70 </div>
     
     <div class="post-archive">
     
@@ -1811,6 +1852,16 @@ Sublime Text和Anaconda介绍
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1834,7 +1885,7 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
         </li>
     
     
@@ -1849,7 +1900,7 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -1859,12 +1910,7 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
@@ -1874,7 +1920,7 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
         </li>
     
     
@@ -1964,12 +2010,12 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
@@ -2034,12 +2080,12 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
         </li>
     
     
@@ -2433,6 +2479,8 @@ Sublime Text和Anaconda介绍
         <span class="sidebar-tag-name" data-tags="自然语言处理，开发环境"><span class="iconfont-archer">&#xe606;</span>自然语言处理，开发环境</span>
     
         <span class="sidebar-tag-name" data-tags="NLP，预测"><span class="iconfont-archer">&#xe606;</span>NLP，预测</span>
+    
+        <span class="sidebar-tag-name" data-tags="欧式距离，KNN"><span class="iconfont-archer">&#xe606;</span>欧式距离，KNN</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

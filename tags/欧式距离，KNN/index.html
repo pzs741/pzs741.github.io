@@ -302,169 +302,29 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/机器学习、深度学习简介/" >
+            <a class="abstract-title" href = "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >
                 
-                    <span>机器学习、深度学习简介</span>
+                    <span>案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</span>
             </a>
             <div class="abstract-content">
-                 神经网络入门
+                 欧式距离一般形式
+1234def ComputeEuclideanDistance(x1, y1, x2, y2):    &quot;&quot;&quot;欧式距离计算：d=(x1-x2)^2+(y1-y2)^2&quot;&quot;&quot;    d = math.sqrt(math.pow(x1 - x2, 2) + math.pow(y1 - y2, 2))    return d
 
-机器学习简介
-深度学习简介
-神经网络
-Tensorflow基础
-神经网络Tensorflow实战
+即求两个向量之间的距离（二维）
 
- 机器学习是什么
-
-机器学习是什么——无序数据转化为价值的方法
-
-
-机器学习价值——从数据中抽取规律，并用来预测未来
-
- 机器学习应用距离
-
-分类问题——图像识别、垃圾邮件识别
-
-
-回归问题——股价预测、房价预测
-
-
-排序问题——点击率预估、推荐
-
-
-生成问题——图像生成、图像风格转换、图像文字描述生成
-
- 机器学习简介
-
-
-机器学习应用流程
-
- 机器学习岗位职责
-
-数据处理（采集+去噪）
-模型训练（特征+模型）
-模型评估与优化（MSE、F1-score、AUC+调参）
-...
+ 欧式距离拓展形式
+123456def EuclideanDistance(instance1, instance2, length):    &quot...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
                 </div>
                 <!-- tags  -->
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "机器学习">机器学习</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/06/02/pytorch/" >
-                
-                    <span>pytorch环境配置</span>
-            </a>
-            <div class="abstract-content">
-                 pytorch环境配置
- 显卡驱动
-更新显卡驱动
-1系统设置-&gt;软件更新-&gt;附加驱动-&gt;选择nvidia最新驱动(361)-&gt;应用更改
-显卡驱动测试
-1234567重启nvidia-settingsOperating System:Linux-x86_64NVIDIA Driver Version:384.130Graphics Processor:GeForce GTX 1060CUDA Cores:1280Total Memory:6144 MB
-版本号查看
-123$ cat /proc/driver/nvidia/versionNVRM version: ...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/02</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "pytorch">pytorch</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "语言模型">语言模型</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/03/23/从NLP讲到神经网络————词向量word2vec原理浅析/" >
-                
-                    <span>从NLP讲到神经网络————词向量word2vec原理浅析</span>
-            </a>
-            <div class="abstract-content">
-                 自然语言处理
-
-检查拼写、关键词检索……
-文本挖掘（产评价格、日期、时间、地点、地点、人民、公司名）
-文本分类
-机器翻译
-客服系统
-复杂对话系统（微软小冰）
-
- 深度学习
-基础模型&gt;&gt;神经网络&gt;&gt;优化目标&gt;&gt;效果最优
- 为什么需要研究深度学习
-
-手工特征耗时耗力，还不易拓展
-自动特征学习快，方便拓展
-深度学习提供了一种通用的学习框架，可用来表示世界、视觉和语言学信息
-深度学习既可以无监督学习，也可以监督学习（强化学习是无监督的）
-
- 语言模型
-
-机器翻译
-
-
-算概率最可能的翻译
-
-
-拼写纠错
-
-
-算概率标注红线
-
-
-智能问答
-
- Example
-我 ...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/23</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "NLP">NLP</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "词向量">词向量</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Wordvec">Wordvec</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "欧式距离，KNN">欧式距离，KNN</a>
     
 </div>
                 

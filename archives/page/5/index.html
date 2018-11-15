@@ -302,31 +302,30 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
+            <a class="abstract-title" href = "/2018/05/22/django搜索接口实现/" >
                 
-                    <span>xadmin快速开发后台管理系统</span>
+                    <span>django搜索接口的实现</span>
             </a>
             <div class="abstract-content">
-                 xadmin快速开发数据管理后台
-主要流程就是加载xadmin这个app，就像使用其它app一样使用xadmin，它继承了django自带的admin的所有功能，所以开发非常方便。
- xadmind源码导入
-这里我们使用源码包直接放在工程目录下，而后注册app。
-1234567891011121314151617181920setting:sys.path.insert(0,os.path.join(BASE_DIR,&apos;extra_apps&apos;))INSTALLED_APPS = [    &apos;django.contrib.admin&apos;,    &a...
+                 Django为ES写搜索建议和多段匹配检索接口
+最终达到的效果就是用浏览器访问suggest和search地址并附带一个参数，返回搜索建议和多段匹配结果。
+ views
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546def suggest(request,key_words):    re_datas = []    if key_words:        s = QAType.search()        s = s.suggest(&apos;my_sugge...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/22</span>
                 </div>
                 <!-- tags  -->
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "django">django</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "api">api</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "接口">接口</a>
     
 </div>
                 
@@ -364,6 +363,40 @@ age是任务有效期限，...
         <a class="post-tag" href="javascript:void(0);" data-tags = "爬虫">爬虫</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "self.crwal">self.crwal</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
+                
+                    <span>xadmin快速开发后台管理系统</span>
+            </a>
+            <div class="abstract-content">
+                 xadmin快速开发数据管理后台
+主要流程就是加载xadmin这个app，就像使用其它app一样使用xadmin，它继承了django自带的admin的所有功能，所以开发非常方便。
+ xadmind源码导入
+这里我们使用源码包直接放在工程目录下，而后注册app。
+1234567891011121314151617181920setting:sys.path.insert(0,os.path.join(BASE_DIR,&apos;extra_apps&apos;))INSTALLED_APPS = [    &apos;django.contrib.admin&apos;,    &a...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
     
 </div>
                 
@@ -657,57 +690,6 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
         <a class="post-tag" href="javascript:void(0);" data-tags = "kibana">kibana</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "CUDR">CUDR</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/04/xadmin/" >
-                
-                    <span>文章搜索引擎——后台和总结</span>
-            </a>
-            <div class="abstract-content">
-                 文章搜索引擎（终）
-这一章主要是使用第三方的管理工具xadmin来添加管理文章的增删改查功能。
- 使用Xamdin
-
-xadmin介绍
-
-
-xadmin是由python编写的基于Django的后台管理框架
-使用xadmin只需要定义您数据字段等信息，就可以获得一个功能全面的管理系统
-
-xadmin的特点
-
-基于Bootstrap3,支持多主题哦，支持多屏幕
-xadmin是一款全面的后台系统框架，提供很多功能
-拥有强大的插件系统
-只实现了数据库的增删改查
-
- py3安装xadmin
-
-注意一定要区分jango的版本，python&gt;3 django&gt;2.0的安装比较麻烦
-
-12...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/04</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "后台">后台</a>
     
 </div>
                 
@@ -2029,7 +2011,60 @@ xadmin是一款全面的后台系统框架，提供很多功能
     
     
     
-    <div class="total-archive"> Total : 79 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 80 </div>
     
     <div class="post-archive">
     
@@ -2041,17 +2076,17 @@ xadmin是一款全面的后台系统框架，提供很多功能
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（总结）/" >区块链技术核心概念与原理讲解（总结）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
@@ -2061,22 +2096,12 @@ xadmin是一款全面的后台系统框架，提供很多功能
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
         </li>
     
     
@@ -2091,12 +2116,7 @@ xadmin是一款全面的后台系统框架，提供很多功能
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
         </li>
     
     
@@ -2106,17 +2126,32 @@ xadmin是一款全面的后台系统框架，提供很多功能
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
         </li>
     
     
@@ -2131,17 +2166,22 @@ xadmin是一款全面的后台系统框架，提供很多功能
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
         </li>
     
     
@@ -2151,7 +2191,7 @@ xadmin是一款全面的后台系统框架，提供很多功能
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
@@ -2241,12 +2281,12 @@ xadmin是一款全面的后台系统框架，提供很多功能
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
@@ -2301,22 +2341,22 @@ xadmin是一款全面的后台系统框架，提供很多功能
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
         </li>
     
     
@@ -2728,6 +2768,8 @@ xadmin是一款全面的后台系统框架，提供很多功能
         <span class="sidebar-tag-name" data-tags="区块链，比特币，挖矿"><span class="iconfont-archer">&#xe606;</span>区块链，比特币，挖矿</span>
     
         <span class="sidebar-tag-name" data-tags="区块链，比特币，共识机制"><span class="iconfont-archer">&#xe606;</span>区块链，比特币，共识机制</span>
+    
+        <span class="sidebar-tag-name" data-tags="区块链，比特币，总结"><span class="iconfont-archer">&#xe606;</span>区块链，比特币，总结</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

@@ -302,6 +302,33 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >
+                
+                    <span>案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</span>
+            </a>
+            <div class="abstract-content">
+                 数据可视化分析模块
+123456789101112def analyze_data_plot(x, y):    &quot;&quot;&quot;可视化数据分析&quot;&quot;&quot;    fig = plt.figure()    ax = fig.add_subplot(111)  # 将画布划分为1行1列1块    plt.scatter(x, y)    # 设置散点图标题和横纵坐标    plt.title(&apos;游客冷热感知点散点图&apos;, fontproperties=myfont)    plt.xlabel(&apos;冰淇淋数（单位：个...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "NLP，预测">NLP，预测</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >
                 
                     <span>案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</span>
@@ -333,47 +360,6 @@
                 <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "NLP，预测">NLP，预测</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/14/自然语言处理开发环境介绍/" >
-                
-                    <span>自然语言处理开发环境介绍</span>
-            </a>
-            <div class="abstract-content">
-                 Sublime Text
-
-主流前端开发编辑器
-体积较小，运行速度快，文本功能强大
-支持编译功能且可在控制台看到输出。
-内嵌python解释器支持插件开发以达到可拓展目的。
-Package Control：ST支持的大量插件可通过其进行管理。
-
- Anaconda
-
-用于科学计算的Python发行版，支持Linux，Mac，Windows系统
-包括了Python和相关的配套工具
-Conda核心功能是包管理与环境管理。与pip的使用类似。
-Anaconda是打包的集合，预装conda、python、packages等。
-
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "自然语言处理，开发环境">自然语言处理，开发环境</a>
     
 </div>
                 
@@ -430,6 +416,127 @@ Sublime Text和Anaconda介绍
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >
+                
+                    <span>案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</span>
+            </a>
+            <div class="abstract-content">
+                 构造KNN分类器
+
+获取新的样本数据
+获取样本库的数
+选择K值
+计算样本数据与样本库之间的距离
+根据距离进行排序
+针对K个点，统计各个类别的数量
+投票机制，少数服从多数原则
+
+ 初始化
+
+获取新的样本数据
+获取样本库的数
+选择K值
+
+123456789class knn_Classifier(object):    &quot;&quot;&quot;构造KNN分类器&quot;&quot;&quot;    def __init__(self, newV, dataset, labels):        self.newV = newV  # 1 获取新的样本数据        s...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "分类器，KNN">分类器，KNN</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建(1)/" >
+                
+                    <span>数据处理与模型图构建（1）</span>
+            </a>
+            <div class="abstract-content">
+                 多层神经网络的Tensorflow实战
+
+神经元的Tensorflow实现
+神经网络的Tensorflow实现
+
+ Tensorflow环境搭建
+1234conda install tensorflow==1.8.0下载数据集CIFAR-10 python version conda install jupyter jupyter notebook
+ 数据预处理
+
+加载数据集
+查看数据类型
+验证图片输出
+
+ 加载数据集
+123456import pickleimport numpy as npimport osCIFAR_DIR = &apos;cifar-10-batches-py&...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建（2）/" >
+                
+                    <span>数据处理与模型图构建（2）</span>
+            </a>
+            <div class="abstract-content">
+                 模型图构建流程
+
+导包
+读数据模块
+模型图构建
+
+ 导包
+1234567import tensorflow as tfimport osimport pickleimport numpy as npCIFAR_DIR = &apos;cifar-10-batches-py&apos;print(os.listdir(CIFAR_DIR))
+
+[‘batches.meta’, ‘test_batch’, ‘data_batch_1’, ‘data_batch_4’, ‘data_batch_5’, ‘readme.html’, ‘data_batch_2’, ‘data_batch_3’...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >
                 
                     <span>神经网络实现（多分类logistic回归模型实现）</span>
@@ -442,6 +549,39 @@ Sublime Text和Anaconda介绍
 
  数据集输入
 123456789101112131415161718192021222324252627282930313233343536373839404142class CifarData:    def __init__(self,filenames,need_shuffle):        all_data = []        all_labels = []        for filename in filenames:            data,labels = load_data(filename)            al...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >
+                
+                    <span>神经元实现（二分类logistic回归模型实现）（2）</span>
+            </a>
+            <div class="abstract-content">
+                
+调整了数据集的测试代码
+新增了训练的测试代码
+
+ 数据集的测试代码
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960def load_data(filename):    &quot;&quot;&quot;read date from data file.&quot;&quot;&quot;    with open(filename,&apos;rb&apos;) as f:        data = pic...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -504,150 +644,50 @@ Sublime Text和Anaconda介绍
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建（2）/" >
+            <a class="abstract-title" href = "/2018/11/12/机器学习、深度学习简介/" >
                 
-                    <span>数据处理与模型图构建（2）</span>
+                    <span>机器学习、深度学习简介</span>
             </a>
             <div class="abstract-content">
-                 模型图构建流程
+                 神经网络入门
 
-导包
-读数据模块
-模型图构建
+机器学习简介
+深度学习简介
+神经网络
+Tensorflow基础
+神经网络Tensorflow实战
 
- 导包
-1234567import tensorflow as tfimport osimport pickleimport numpy as npCIFAR_DIR = &apos;cifar-10-batches-py&apos;print(os.listdir(CIFAR_DIR))
+ 机器学习是什么
 
-[‘batches.meta’, ‘test_batch’, ‘data_batch_1’, ‘data_batch_4’, ‘data_batch_5’, ‘readme.html’, ‘data_batch_2’, ‘data_batch_3’...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建(1)/" >
-                
-                    <span>数据处理与模型图构建（1）</span>
-            </a>
-            <div class="abstract-content">
-                 多层神经网络的Tensorflow实战
-
-神经元的Tensorflow实现
-神经网络的Tensorflow实现
-
- Tensorflow环境搭建
-1234conda install tensorflow==1.8.0下载数据集CIFAR-10 python version conda install jupyter jupyter notebook
- 数据预处理
-
-加载数据集
-查看数据类型
-验证图片输出
-
- 加载数据集
-123456import pickleimport numpy as npimport osCIFAR_DIR = &apos;cifar-10-batches-py&...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >
-                
-                    <span>神经元实现（二分类logistic回归模型实现）（2）</span>
-            </a>
-            <div class="abstract-content">
-                
-调整了数据集的测试代码
-新增了训练的测试代码
-
- 数据集的测试代码
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960def load_data(filename):    &quot;&quot;&quot;read date from data file.&quot;&quot;&quot;    with open(filename,&apos;rb&apos;) as f:        data = pic...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/梯度下降/" >
-                
-                    <span>梯度下降</span>
-            </a>
-            <div class="abstract-content">
-                 神经网络训练
-下山算法
-
-找到方向
-走一步
-
- 梯度下降算法
+机器学习是什么——无序数据转化为价值的方法
 
 
-参数=参数-学习率（步长×学习率）
+机器学习价值——从数据中抽取规律，并用来预测未来
 
- Tensorflow基础
- Tensorflow介绍
+ 机器学习应用距离
 
-google brain的第二代机器学习框架
-开源社区活跃
-可拓展性好
-API健全，对用户友好
-
- 计算图模型
+分类问题——图像识别、垃圾邮件识别
 
 
+回归问题——股价预测、房价预测
 
 
-声明式编程不需要知道数据是什么
+排序问题——点击率预估、推荐
 
 
+生成问题——图像生成、图像风格转换、图像文字描述生成
+
+ 机器学习简介
+
+
+机器学习应用流程
+
+ 机器学习岗位职责
+
+数据处理（采集+去噪）
+模型训练（特征+模型）
+模型评估与优化（MSE、F1-score、AUC+调参）
+...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -658,73 +698,9 @@ API健全，对用户友好
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "训练">训练</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "梯度下降">梯度下降</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/神经元的多输出/" >
-                
-                    <span>神经元多输出模型</span>
-            </a>
-            <div class="abstract-content">
-                 神经元的多输出模型
-
-
-增加神经元的个数，输出也就相应增多
-
- 从二分类到多分类
-
-
-激活函数的归一化处理
-
- 多分类例子
-
-
-多分类问题用到多个神经元，下面介绍如何去调整神经网络
-
- 目标函数
-
-目标函数是用来衡量数据的符合程度，也叫损失函数
-
- 二分类目标函数
-
-
-y = 真实值-预测值
-
- 多分类目标函数
-
-
-这个时候的预测值已经是一个概率分布了，因此需要将多类别也就是预测输出值进行one-hot编码，也就是把单个值向01向量编码的转换过程，这里的目标函数是向量差的绝对值的和。
-
- 一般的目标函数
-
-
-统计学中的平方差、信息论中的交叉熵（衡量两个分布的差）
-
- 多分类例子
-
-多分...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "多输出">多输出</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "机器学习">机器学习</a>
     
 </div>
                 
@@ -2030,7 +2006,60 @@ y = 真实值-预测值
     
     
     
-    <div class="total-archive"> Total : 77 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 78 </div>
     
     <div class="post-archive">
     
@@ -2039,6 +2068,11 @@ y = 真实值-预测值
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -2052,32 +2086,12 @@ y = 真实值-预测值
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理开发环境介绍/" >自然语言处理开发环境介绍</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</a>
         </li>
     
     
@@ -2102,17 +2116,32 @@ y = 真实值-预测值
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理开发环境介绍/" >自然语言处理开发环境介绍</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
         </li>
     
     
@@ -2132,17 +2161,7 @@ y = 真实值-预测值
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
         </li>
     
     
@@ -2152,12 +2171,27 @@ y = 真实值-预测值
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/本地连接/" >解决本地无法连接和图片压缩问题</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
         </li>
     
     
@@ -2292,22 +2326,22 @@ y = 真实值-预测值
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
         </li>
     
     
@@ -2715,6 +2749,8 @@ y = 真实值-预测值
         <span class="sidebar-tag-name" data-tags="区块链"><span class="iconfont-archer">&#xe606;</span>区块链</span>
     
         <span class="sidebar-tag-name" data-tags="区块链，比特币"><span class="iconfont-archer">&#xe606;</span>区块链，比特币</span>
+    
+        <span class="sidebar-tag-name" data-tags="区块链，比特币，挖矿"><span class="iconfont-archer">&#xe606;</span>区块链，比特币，挖矿</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

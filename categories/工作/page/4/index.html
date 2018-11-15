@@ -302,6 +302,44 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/06/17/阿里云二次部署/" >
+                
+                    <span>添坑之旅（一）---阿里云二次部署</span>
+            </a>
+            <div class="abstract-content">
+                 大赛初稿———智能问答系统云部署（升级版）
+ 云服务器升级
+**控制台：**快照–&gt;升级–&gt;重置密码–&gt;密钥管理（下载新密钥）
+12345客户端操作：#删除以前的密钥nano ~/.ssh/known_hosts#使用密钥进行SSH登录ssh root@ssh root@39.105.124.151 -i xxx.pem。
+ ES后台启动
+123456#切换用户（低权限）su admin#后台启动./elasticsearch &amp;#验证curl -XGET &apos;http://localhost:9200&apos;
+ 测试mysql
+
+mysql -u...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/17</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "IQAS">IQAS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "阿里云">阿里云</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "环境部署">环境部署</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/06/13/发布算法库/" >
                 
                     <span>发布我的第二个算法库---EWDT</span>
@@ -534,6 +572,40 @@ templates —...
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
+                
+                    <span>xadmin快速开发后台管理系统</span>
+            </a>
+            <div class="abstract-content">
+                 xadmin快速开发数据管理后台
+主要流程就是加载xadmin这个app，就像使用其它app一样使用xadmin，它继承了django自带的admin的所有功能，所以开发非常方便。
+ xadmind源码导入
+这里我们使用源码包直接放在工程目录下，而后注册app。
+1234567891011121314151617181920setting:sys.path.insert(0,os.path.join(BASE_DIR,&apos;extra_apps&apos;))INSTALLED_APPS = [    &apos;django.contrib.admin&apos;,    &a...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/05/19/爬虫前台/" >
                 
                     <span>pyspider快速部署爬虫前台</span>
@@ -571,40 +643,6 @@ age是任务有效期限，...
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
-                
-                    <span>xadmin快速开发后台管理系统</span>
-            </a>
-            <div class="abstract-content">
-                 xadmin快速开发数据管理后台
-主要流程就是加载xadmin这个app，就像使用其它app一样使用xadmin，它继承了django自带的admin的所有功能，所以开发非常方便。
- xadmind源码导入
-这里我们使用源码包直接放在工程目录下，而后注册app。
-1234567891011121314151617181920setting:sys.path.insert(0,os.path.join(BASE_DIR,&apos;extra_apps&apos;))INSTALLED_APPS = [    &apos;django.contrib.admin&apos;,    &a...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
             <a class="abstract-title" href = "/2018/05/18/django前端快速部署/" >
                 
                     <span>django前端快速部署</span>
@@ -628,77 +666,6 @@ age是任务有效期限，...
         <a class="post-tag" href="javascript:void(0);" data-tags = "前端">前端</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "快速部署">快速部署</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/17/conda常用命令大全/" >
-                
-                    <span>conda常用命令</span>
-            </a>
-            <div class="abstract-content">
-                 Conda常用命令
-
-下载地址
-
-
-https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive
-
-
-获取版本号
-
-
-conda -v
-
-
-创建虚拟环境
-
-
-conda create --name your_env_name python=2.7
-
-
-创建时附加包
-
-
-conda create --name your_env_name python=3.5 numpy sklearn pandas
-
-
-进入环境
-
-
-activate your_env_name
-
-
-退出环境
-
-
-deactivate
-
-
-删除环境
-
-
-conda remov...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/17</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "conda">conda</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "pip">pip</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "虚拟环境">虚拟环境</a>
     
 </div>
                 
@@ -1991,7 +1958,20 @@ conda remov...
     
     
     
-    <div class="total-archive"> Total : 76 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 77 </div>
     
     <div class="post-archive">
     
@@ -2003,12 +1983,17 @@ conda remov...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
         </li>
     
     
@@ -2248,12 +2233,12 @@ conda remov...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     

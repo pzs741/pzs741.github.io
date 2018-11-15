@@ -302,50 +302,48 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/机器学习、深度学习简介/" >
+            <a class="abstract-title" href = "/2018/11/12/神经元的多输出/" >
                 
-                    <span>机器学习、深度学习简介</span>
+                    <span>神经元多输出模型</span>
             </a>
             <div class="abstract-content">
-                 神经网络入门
-
-机器学习简介
-深度学习简介
-神经网络
-Tensorflow基础
-神经网络Tensorflow实战
-
- 机器学习是什么
-
-机器学习是什么——无序数据转化为价值的方法
+                 神经元的多输出模型
 
 
-机器学习价值——从数据中抽取规律，并用来预测未来
+增加神经元的个数，输出也就相应增多
 
- 机器学习应用距离
-
-分类问题——图像识别、垃圾邮件识别
+ 从二分类到多分类
 
 
-回归问题——股价预测、房价预测
+激活函数的归一化处理
+
+ 多分类例子
 
 
-排序问题——点击率预估、推荐
+多分类问题用到多个神经元，下面介绍如何去调整神经网络
+
+ 目标函数
+
+目标函数是用来衡量数据的符合程度，也叫损失函数
+
+ 二分类目标函数
 
 
-生成问题——图像生成、图像风格转换、图像文字描述生成
+y = 真实值-预测值
 
- 机器学习简介
+ 多分类目标函数
 
 
-机器学习应用流程
+这个时候的预测值已经是一个概率分布了，因此需要将多类别也就是预测输出值进行one-hot编码，也就是把单个值向01向量编码的转换过程，这里的目标函数是向量差的绝对值的和。
 
- 机器学习岗位职责
+ 一般的目标函数
 
-数据处理（采集+去噪）
-模型训练（特征+模型）
-模型评估与优化（MSE、F1-score、AUC+调参）
-...
+
+统计学中的平方差、信息论中的交叉熵（衡量两个分布的差）
+
+ 多分类例子
+
+多分...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -356,9 +354,48 @@ Tensorflow基础
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "机器学习">机器学习</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "多输出">多输出</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/12/逻辑回归模型/" >
+                
+                    <span>逻辑回归模型</span>
+            </a>
+            <div class="abstract-content">
+                 神经元——Logits回归模型
+ 神经网络
+
+神经元
+逻辑回归模型
+神经网络训练
+
+ 神经元结构
+
+ 神经元计算
+
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经元">神经元</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "逻辑回归">逻辑回归</a>
     
 </div>
                 
@@ -679,44 +716,6 @@ $ conda install pytorch-cpu torchvision-cpu -c pytorch
         <a class="post-tag" href="javascript:void(0);" data-tags = "cpu">cpu</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "云服务器">云服务器</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/06/17/阿里云二次部署/" >
-                
-                    <span>添坑之旅（一）---阿里云二次部署</span>
-            </a>
-            <div class="abstract-content">
-                 大赛初稿———智能问答系统云部署（升级版）
- 云服务器升级
-**控制台：**快照–&gt;升级–&gt;重置密码–&gt;密钥管理（下载新密钥）
-12345客户端操作：#删除以前的密钥nano ~/.ssh/known_hosts#使用密钥进行SSH登录ssh root@ssh root@39.105.124.151 -i xxx.pem。
- ES后台启动
-123456#切换用户（低权限）su admin#后台启动./elasticsearch &amp;#验证curl -XGET &apos;http://localhost:9200&apos;
- 测试mysql
-
-mysql -u...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/17</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "IQAS">IQAS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "阿里云">阿里云</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "环境部署">环境部署</a>
     
 </div>
                 
@@ -2009,7 +2008,20 @@ mysql -u...
     
     
     
-    <div class="total-archive"> Total : 76 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 77 </div>
     
     <div class="post-archive">
     
@@ -2021,12 +2033,17 @@ mysql -u...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
         </li>
     
     
@@ -2266,12 +2283,12 @@ mysql -u...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     

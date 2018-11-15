@@ -302,6 +302,77 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/05/17/conda常用命令大全/" >
+                
+                    <span>conda常用命令</span>
+            </a>
+            <div class="abstract-content">
+                 Conda常用命令
+
+下载地址
+
+
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive
+
+
+获取版本号
+
+
+conda -v
+
+
+创建虚拟环境
+
+
+conda create --name your_env_name python=2.7
+
+
+创建时附加包
+
+
+conda create --name your_env_name python=3.5 numpy sklearn pandas
+
+
+进入环境
+
+
+activate your_env_name
+
+
+退出环境
+
+
+deactivate
+
+
+删除环境
+
+
+conda remov...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/17</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "conda">conda</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "pip">pip</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "虚拟环境">虚拟环境</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/05/12/阿里云部署/" >
                 
                     <span>阿里云部署实战</span>
@@ -492,6 +563,40 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/04/04/SAS4/" >
+                
+                    <span>文章搜索引擎————LDA算法整合</span>
+            </a>
+            <div class="abstract-content">
+                 文章搜索引擎（四）
+这一章主要是把LDA算法整合进去，非常简单，而后是对前端整体的一个实现和展示。
+ 整合LDA算法
+LDA算法实现
+1234567891011121314151617181920import jsonimport gensimfrom article.models import ArticleModel# relist 文章id的listdef getTheme(reslist):    fencelist = list()    for res in reslist:        id = res[0]        articles = ArticleModel...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/04</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "前端展示">前端展示</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/04/04/xadmin/" >
                 
                     <span>文章搜索引擎——后台和总结</span>
@@ -534,40 +639,6 @@ xadmin是一款全面的后台系统框架，提供很多功能
         <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "后台">后台</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/04/SAS4/" >
-                
-                    <span>文章搜索引擎————LDA算法整合</span>
-            </a>
-            <div class="abstract-content">
-                 文章搜索引擎（四）
-这一章主要是把LDA算法整合进去，非常简单，而后是对前端整体的一个实现和展示。
- 整合LDA算法
-LDA算法实现
-1234567891011121314151617181920import jsonimport gensimfrom article.models import ArticleModel# relist 文章id的listdef getTheme(reslist):    fencelist = list()    for res in reslist:        id = res[0]        articles = ArticleModel...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/04</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "前端展示">前端展示</a>
     
 </div>
                 
@@ -636,55 +707,6 @@ models设计：
         <a class="post-tag" href="javascript:void(0);" data-tags = "数据库">数据库</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "前端">前端</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/01/SAS/" >
-                
-                    <span>文章搜索引擎————环境搭建</span>
-            </a>
-            <div class="abstract-content">
-                 实现文章搜索搜索引擎(一)
-实现功能：通过关键词检索文章，对检索出的文章做主题分析。
-开发思路
-
-搭建并配置Django开发环境
-前端界面的编写和数据库的设计
-编写TF-IDF算法，将与用户输入关键词最相关的5篇文章返回
-编写LDA算法，对返回的内容做主题概率运算
-使用Xadmin完成后台
-
- Django介绍和环境搭建
-
-Django介绍
-搭建开发环境
-
- Django介绍
-Django是由Python写成一个开放源代码的Web应用框架，采用了MVC的软件设计模式，使得开发复杂的、数据库驱动的网站变得简单。
-Django框架的核心包括：
-
-一个面向对象的映射器，用作数据模型和关系性数...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/01</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "django">django</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "搜索引擎">搜索引擎</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SAS">SAS</a>
     
 </div>
                 
@@ -1977,7 +1999,20 @@ Django框架的核心包括：
     
     
     
-    <div class="total-archive"> Total : 76 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 77 </div>
     
     <div class="post-archive">
     
@@ -1989,12 +2024,17 @@ Django框架的核心包括：
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
         </li>
     
     
@@ -2234,12 +2274,12 @@ Django框架的核心包括：
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     

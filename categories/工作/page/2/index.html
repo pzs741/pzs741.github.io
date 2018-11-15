@@ -302,27 +302,26 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/14/自然语言处理开发环境介绍/" >
+            <a class="abstract-title" href = "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >
                 
-                    <span>自然语言处理开发环境介绍</span>
+                    <span>案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</span>
             </a>
             <div class="abstract-content">
-                 Sublime Text
+                 小节内容
 
-主流前端开发编辑器
-体积较小，运行速度快，文本功能强大
-支持编译功能且可在控制台看到输出。
-内嵌python解释器支持插件开发以达到可拓展目的。
-Package Control：ST支持的大量插件可通过其进行管理。
+案例需求
+实验数据准备，代码演示
+数据分析与可视化，代码演示
+算法模型及原理讲解
+算法模型构建与实现，代码演示
+算法优化与应用
 
- Anaconda
+ 案例需求
+[需求]现在你来了一个新任务，任务其实非常简单，就是根据吃冰淇淋、喝水的数量、户外活动时长判断程度天气冷热程度。你现在要做的就是去成都街头采访记录一些游客吃了多少冰淇淋，又喝了几瓶水，他觉得程度天气怎么样（这里只考虑二分类问题，假设只有**‘非常热’和‘一般热’**）。其中特征向量包括两个分别是冰淇淋数t、喝水数t2、户外活动时间t3,标签类别分别是非常热A和一般热B。
+ 数据准备
 
-用于科学计算的Python发行版，支持Linux，Mac，Windows系统
-包括了Python和相关的配套工具
-Conda核心功能是包管理与环境管理。与pip的使用类似。
-Anaconda是打包的集合，预装conda、python、packages等。
-
-
+ 代码示例
+1234567891011121314...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -333,7 +332,7 @@ Anaconda是打包的集合，预装conda、python、packages等。
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "自然语言处理，开发环境">自然语言处理，开发环境</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "NLP，预测">NLP，预测</a>
     
 </div>
                 
@@ -390,71 +389,39 @@ Sublime Text和Anaconda介绍
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >
+            <a class="abstract-title" href = "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >
                 
-                    <span>神经网络实现（多分类logistic回归模型实现）</span>
+                    <span>案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</span>
             </a>
             <div class="abstract-content">
-                 改动
+                 构造KNN分类器
 
-数据集输入
-图模型
+获取新的样本数据
+获取样本库的数
+选择K值
+计算样本数据与样本库之间的距离
+根据距离进行排序
+针对K个点，统计各个类别的数量
+投票机制，少数服从多数原则
 
- 数据集输入
-123456789101112131415161718192021222324252627282930313233343536373839404142class CifarData:    def __init__(self,filenames,need_shuffle):        all_data = []        all_labels = []        for filename in filenames:            data,labels = load_data(filename)            al...
+ 初始化
+
+获取新的样本数据
+获取样本库的数
+选择K值
+
+123456789class knn_Classifier(object):    &quot;&quot;&quot;构造KNN分类器&quot;&quot;&quot;    def __init__(self, newV, dataset, labels):        self.newV = newV  # 1 获取新的样本数据        s...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
                 </div>
                 <!-- tags  -->
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >
-                
-                    <span>神经元实现（二分类logistic回归模型实现）（1）</span>
-            </a>
-            <div class="abstract-content">
-                
-数据加载部分没有发生改变
-使用CifarDta数据进行训练的模块（改变）
-图模型构建模块没有改变
-模型训练(新增)
-
-
-只放出新增和改变的代码
-
- 模型训练(新增)
-123init = tf.global_variables_initializer()with tf.Session() as sess:    sess.run([loss,accuracy,train_op],feed_dict=&#123;x:,y:&#125;)
- 使用CifarDta数据进行训练的模块（改变）
-1234567891011121314151617181920212223242526272829303...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "分类器，KNN">分类器，KNN</a>
     
 </div>
                 
@@ -543,6 +510,46 @@ Sublime Text和Anaconda介绍
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >
+                
+                    <span>神经元实现（二分类logistic回归模型实现）（1）</span>
+            </a>
+            <div class="abstract-content">
+                
+数据加载部分没有发生改变
+使用CifarDta数据进行训练的模块（改变）
+图模型构建模块没有改变
+模型训练(新增)
+
+
+只放出新增和改变的代码
+
+ 模型训练(新增)
+123init = tf.global_variables_initializer()with tf.Session() as sess:    sess.run([loss,accuracy,train_op],feed_dict=&#123;x:,y:&#125;)
+ 使用CifarDta数据进行训练的模块（改变）
+1234567891011121314151617181920212223242526272829303...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >
                 
                     <span>神经元实现（二分类logistic回归模型实现）（2）</span>
@@ -567,6 +574,106 @@ Sublime Text和Anaconda介绍
         <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >
+                
+                    <span>神经网络实现（多分类logistic回归模型实现）</span>
+            </a>
+            <div class="abstract-content">
+                 改动
+
+数据集输入
+图模型
+
+ 数据集输入
+123456789101112131415161718192021222324252627282930313233343536373839404142class CifarData:    def __init__(self,filenames,need_shuffle):        all_data = []        all_labels = []        for filename in filenames:            data,labels = load_data(filename)            al...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/12/机器学习、深度学习简介/" >
+                
+                    <span>机器学习、深度学习简介</span>
+            </a>
+            <div class="abstract-content">
+                 神经网络入门
+
+机器学习简介
+深度学习简介
+神经网络
+Tensorflow基础
+神经网络Tensorflow实战
+
+ 机器学习是什么
+
+机器学习是什么——无序数据转化为价值的方法
+
+
+机器学习价值——从数据中抽取规律，并用来预测未来
+
+ 机器学习应用距离
+
+分类问题——图像识别、垃圾邮件识别
+
+
+回归问题——股价预测、房价预测
+
+
+排序问题——点击率预估、推荐
+
+
+生成问题——图像生成、图像风格转换、图像文字描述生成
+
+ 机器学习简介
+
+
+机器学习应用流程
+
+ 机器学习岗位职责
+
+数据处理（采集+去噪）
+模型训练（特征+模型）
+模型评估与优化（MSE、F1-score、AUC+调参）
+...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "机器学习">机器学习</a>
     
 </div>
                 
@@ -621,109 +728,6 @@ API健全，对用户友好
         <a class="post-tag" href="javascript:void(0);" data-tags = "训练">训练</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "梯度下降">梯度下降</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/神经元的多输出/" >
-                
-                    <span>神经元多输出模型</span>
-            </a>
-            <div class="abstract-content">
-                 神经元的多输出模型
-
-
-增加神经元的个数，输出也就相应增多
-
- 从二分类到多分类
-
-
-激活函数的归一化处理
-
- 多分类例子
-
-
-多分类问题用到多个神经元，下面介绍如何去调整神经网络
-
- 目标函数
-
-目标函数是用来衡量数据的符合程度，也叫损失函数
-
- 二分类目标函数
-
-
-y = 真实值-预测值
-
- 多分类目标函数
-
-
-这个时候的预测值已经是一个概率分布了，因此需要将多类别也就是预测输出值进行one-hot编码，也就是把单个值向01向量编码的转换过程，这里的目标函数是向量差的绝对值的和。
-
- 一般的目标函数
-
-
-统计学中的平方差、信息论中的交叉熵（衡量两个分布的差）
-
- 多分类例子
-
-多分...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "多输出">多输出</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/逻辑回归模型/" >
-                
-                    <span>逻辑回归模型</span>
-            </a>
-            <div class="abstract-content">
-                 神经元——Logits回归模型
- 神经网络
-
-神经元
-逻辑回归模型
-神经网络训练
-
- 神经元结构
-
- 神经元计算
-
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经元">神经元</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "逻辑回归">逻辑回归</a>
     
 </div>
                 
@@ -2016,7 +2020,20 @@ y = 真实值-预测值
     
     
     
-    <div class="total-archive"> Total : 76 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 77 </div>
     
     <div class="post-archive">
     
@@ -2028,12 +2045,17 @@ y = 真实值-预测值
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
         </li>
     
     
@@ -2273,12 +2295,12 @@ y = 真实值-预测值
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     

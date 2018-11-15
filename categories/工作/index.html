@@ -302,6 +302,72 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >
+                
+                    <span>区块链技术核心概念与原理讲解（比特币原理）</span>
+            </a>
+            <div class="abstract-content">
+                 比特币原理
+
+账本如何验证？
+所有权问题？
+为什么记账？（挖矿）
+以谁的账本为准？（共识机制）
+
+ 账本如何验证
+
+对比摘要比直接对比账本来的高效的多
+
+
+方案1
+
+
+核对账本记录，少数服从多数（效率太低，不行）
+
+
+Hash
+
+
+哈希函数：Hash（原始信息） = 摘要信息
+特点：
+同样的原始信息用同一个哈希函数总能得到相同的摘要信息
+原始信息任何微小的变化都会哈希出面目全非的摘要信息
+从摘要信息无法逆向推出原始信息
+
+
+
+对比摘要比直接对比账本来的高效的多
+
+
+区块
+
+
+
+账本一般包括序号、时间戳和Hash值，称之为区块的头，交易记录这是区块的主体部分。
+
+
+
+前一个账本信息和当前...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/15</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "区块链，比特币">区块链，比特币</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >
                 
                     <span>区块链技术核心概念与原理讲解（比特币是什么）</span>
@@ -418,46 +484,6 @@ Haber/Stornetta提出了时间戳方法保证数字文件安全的协议
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >
-                
-                    <span>自然语言处理入门课程与模拟实战总结</span>
-            </a>
-            <div class="abstract-content">
-                 导读
-
-课程大纲
-适合人群
-课前技术储备
-
- 本届课程主要涉及的几个问题
-
-快速了解自然语言处理
-自然语言处理开发环境介绍
-案例：NLP技术实现预测天气冷暖感知度
-结尾与探讨
-
- 讨论总结
-t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫酷，结合了具体的自然语言处理以及数据挖掘的问题才能炫酷。机器学习好像内力一样，是一个武者的基础，而自然语言和数据挖掘的东西都是招式。如果你内功足够深厚，招式对你来说都是小意思。但机器学习同时也要求很高的数学基础，现在如果我们只讲工程实现，有很多的开源工具可以使用，你需要的只是知道这些工具都是干嘛用的就好，很多学生对机器学习特别的狂热，但对矩阵，概...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "自然语言处理，NLP，实战">自然语言处理，NLP，实战</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
             <a class="abstract-title" href = "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >
                 
                     <span>机器学习库sklearn实现预测天气冷暖感知度</span>
@@ -518,28 +544,27 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >
+            <a class="abstract-title" href = "/2018/11/14/自然语言处理开发环境介绍/" >
                 
-                    <span>案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</span>
+                    <span>自然语言处理开发环境介绍</span>
             </a>
             <div class="abstract-content">
-                 构造KNN分类器
+                 Sublime Text
 
-获取新的样本数据
-获取样本库的数
-选择K值
-计算样本数据与样本库之间的距离
-根据距离进行排序
-针对K个点，统计各个类别的数量
-投票机制，少数服从多数原则
+主流前端开发编辑器
+体积较小，运行速度快，文本功能强大
+支持编译功能且可在控制台看到输出。
+内嵌python解释器支持插件开发以达到可拓展目的。
+Package Control：ST支持的大量插件可通过其进行管理。
 
- 初始化
+ Anaconda
 
-获取新的样本数据
-获取样本库的数
-选择K值
+用于科学计算的Python发行版，支持Linux，Mac，Windows系统
+包括了Python和相关的配套工具
+Conda核心功能是包管理与环境管理。与pip的使用类似。
+Anaconda是打包的集合，预装conda、python、packages等。
 
-123456789class knn_Classifier(object):    &quot;&quot;&quot;构造KNN分类器&quot;&quot;&quot;    def __init__(self, newV, dataset, labels):        self.newV = newV  # 1 获取新的样本数据        s...
+
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -550,7 +575,47 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "分类器，KNN">分类器，KNN</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "自然语言处理，开发环境">自然语言处理，开发环境</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >
+                
+                    <span>自然语言处理入门课程与模拟实战总结</span>
+            </a>
+            <div class="abstract-content">
+                 导读
+
+课程大纲
+适合人群
+课前技术储备
+
+ 本届课程主要涉及的几个问题
+
+快速了解自然语言处理
+自然语言处理开发环境介绍
+案例：NLP技术实现预测天气冷暖感知度
+结尾与探讨
+
+ 讨论总结
+t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫酷，结合了具体的自然语言处理以及数据挖掘的问题才能炫酷。机器学习好像内力一样，是一个武者的基础，而自然语言和数据挖掘的东西都是招式。如果你内功足够深厚，招式对你来说都是小意思。但机器学习同时也要求很高的数学基础，现在如果我们只讲工程实现，有很多的开源工具可以使用，你需要的只是知道这些工具都是干嘛用的就好，很多学生对机器学习特别的狂热，但对矩阵，概...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "自然语言处理，NLP，实战">自然语言处理，NLP，实战</a>
     
 </div>
                 
@@ -640,46 +705,6 @@ K-近邻算法假设给定一个训练数据集（随机访客），其中的实
             <div class="abstract-content">
                  数据可视化分析模块
 123456789101112def analyze_data_plot(x, y):    &quot;&quot;&quot;可视化数据分析&quot;&quot;&quot;    fig = plt.figure()    ax = fig.add_subplot(111)  # 将画布划分为1行1列1块    plt.scatter(x, y)    # 设置散点图标题和横纵坐标    plt.title(&apos;游客冷热感知点散点图&apos;, fontproperties=myfont)    plt.xlabel(&apos;冰淇淋数（单位：个...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "NLP，预测">NLP，预测</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >
-                
-                    <span>案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</span>
-            </a>
-            <div class="abstract-content">
-                 小节内容
-
-案例需求
-实验数据准备，代码演示
-数据分析与可视化，代码演示
-算法模型及原理讲解
-算法模型构建与实现，代码演示
-算法优化与应用
-
- 案例需求
-[需求]现在你来了一个新任务，任务其实非常简单，就是根据吃冰淇淋、喝水的数量、户外活动时长判断程度天气冷热程度。你现在要做的就是去成都街头采访记录一些游客吃了多少冰淇淋，又喝了几瓶水，他觉得程度天气怎么样（这里只考虑二分类问题，假设只有**‘非常热’和‘一般热’**）。其中特征向量包括两个分别是冰淇淋数t、喝水数t2、户外活动时间t3,标签类别分别是非常热A和一般热B。
- 数据准备
-
- 代码示例
-1234567891011121314...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -1983,7 +2008,20 @@ K-近邻算法假设给定一个训练数据集（随机访客），其中的实
     
     
     
-    <div class="total-archive"> Total : 76 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 77 </div>
     
     <div class="post-archive">
     
@@ -1995,12 +2033,17 @@ K-近邻算法假设给定一个训练数据集（随机访客），其中的实
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
         </li>
     
     
@@ -2240,12 +2283,12 @@ K-近邻算法假设给定一个训练数据集（随机访客），其中的实
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     

@@ -302,6 +302,79 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/06/07/基于深度学习和模板的问句生成算法/" >
+                
+                    <span>基于深度学习和模板的问句生成算法</span>
+            </a>
+            <div class="abstract-content">
+                 基于深度学习和模板的问句生成算法（Question Generation Algorithm Based on Depth Learning and Template,QGDT）
+ QGDT算法库入口：算法库已经在Github上开源啦～求个Star增强影响力
+ 算法功能简介
+基于深度学习和模板的问句生成算法完成了：通过训练好的SVM分类器对查询词（一至三个，可以是关键词、短语、句子）去重（查询词冗余）生成最终检索词，检索词通过排序算法（Word2Vec词向量模型+RNNLM语言模型）得到与预定义的模板的匹配得分，根据得分最高的模板生成最终的问句。
+ 算法库组成
+
+templates —...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/07</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "问句生成">问句生成</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "WMD">WMD</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "RNNLM">RNNLM</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/06/02/pytorch/" >
+                
+                    <span>pytorch环境配置</span>
+            </a>
+            <div class="abstract-content">
+                 pytorch环境配置
+ 显卡驱动
+更新显卡驱动
+1系统设置-&gt;软件更新-&gt;附加驱动-&gt;选择nvidia最新驱动(361)-&gt;应用更改
+显卡驱动测试
+1234567重启nvidia-settingsOperating System:Linux-x86_64NVIDIA Driver Version:384.130Graphics Processor:GeForce GTX 1060CUDA Cores:1280Total Memory:6144 MB
+版本号查看
+123$ cat /proc/driver/nvidia/versionNVRM version: ...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/02</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "pytorch">pytorch</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "语言模型">语言模型</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/05/22/django搜索接口实现/" >
                 
                     <span>django搜索接口的实现</span>
@@ -326,6 +399,40 @@
         <a class="post-tag" href="javascript:void(0);" data-tags = "api">api</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "接口">接口</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
+                
+                    <span>xadmin快速开发后台管理系统</span>
+            </a>
+            <div class="abstract-content">
+                 xadmin快速开发数据管理后台
+主要流程就是加载xadmin这个app，就像使用其它app一样使用xadmin，它继承了django自带的admin的所有功能，所以开发非常方便。
+ xadmind源码导入
+这里我们使用源码包直接放在工程目录下，而后注册app。
+1234567891011121314151617181920setting:sys.path.insert(0,os.path.join(BASE_DIR,&apos;extra_apps&apos;))INSTALLED_APPS = [    &apos;django.contrib.admin&apos;,    &a...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
     
 </div>
                 
@@ -363,40 +470,6 @@ age是任务有效期限，...
         <a class="post-tag" href="javascript:void(0);" data-tags = "爬虫">爬虫</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "self.crwal">self.crwal</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
-                
-                    <span>xadmin快速开发后台管理系统</span>
-            </a>
-            <div class="abstract-content">
-                 xadmin快速开发数据管理后台
-主要流程就是加载xadmin这个app，就像使用其它app一样使用xadmin，它继承了django自带的admin的所有功能，所以开发非常方便。
- xadmind源码导入
-这里我们使用源码包直接放在工程目录下，而后注册app。
-1234567891011121314151617181920setting:sys.path.insert(0,os.path.join(BASE_DIR,&apos;extra_apps&apos;))INSTALLED_APPS = [    &apos;django.contrib.admin&apos;,    &a...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
     
 </div>
                 
@@ -620,76 +693,6 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
         <a class="post-tag" href="javascript:void(0);" data-tags = "restful">restful</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "API">API</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/01/elasticsearch查询/" >
-                
-                    <span>elasticsearch查询</span>
-            </a>
-            <div class="abstract-content">
-                 elasticsearch的简单查询
- 查询
-elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为了快速的查询需要的数据。
-查询分类：
-基本查询：使用elasticsearch内置查询条件进行查询
-组合查询：把多个查询组合在一起进行复合查询
-过滤：查询同时，通过filter条件在不影响打分的情况下筛选数据
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/01</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "elasticsearch">elasticsearch</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CUDR">CUDR</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "查询">查询</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/29/elasticsearch/" >
-                
-                    <span>elasticsearch基础</span>
-            </a>
-            <div class="abstract-content">
-                 安装elasticsearch
-1234$ git clone git://github.com/medcl/elasticsearch-rtf.git -b master --depth 1$ cd elasticsearch-rtf/bin$ ./elasticsearch$ open http://localhost:9200/
- head插件和kibana的安装
-12345$ git clone git://github.com/mobz/elasticsearch-head.git$ cd elasticsearch-head$ cnpm install(从淘宝镜像仓库下载第...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/29</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "elasticsearch">elasticsearch</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "kibana">kibana</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CUDR">CUDR</a>
     
 </div>
                 
@@ -2113,7 +2116,63 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
     
-    <div class="total-archive"> Total : 81 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 83 </div>
     
     <div class="post-archive">
     
@@ -2125,17 +2184,17 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（总结）/" >区块链技术核心概念与原理讲解（总结）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
         </li>
     
     
@@ -2150,6 +2209,11 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
         </li>
     
@@ -2160,17 +2224,7 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（总结）/" >区块链技术核心概念与原理讲解（总结）</a>
         </li>
     
     
@@ -2185,12 +2239,17 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
         </li>
     
     
@@ -2205,7 +2264,27 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -2225,12 +2304,7 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
@@ -2241,11 +2315,6 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
@@ -2380,12 +2449,12 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
         </li>
     
     
@@ -2395,22 +2464,22 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
         </li>
     
     
@@ -2826,6 +2895,8 @@ elasticsearch是功能非常强大的搜索引擎，使用它的目的就是为�
         <span class="sidebar-tag-name" data-tags="区块链，比特币，总结"><span class="iconfont-archer">&#xe606;</span>区块链，比特币，总结</span>
     
         <span class="sidebar-tag-name" data-tags="restful，api"><span class="iconfont-archer">&#xe606;</span>restful，api</span>
+    
+        <span class="sidebar-tag-name" data-tags="restful，HTTP"><span class="iconfont-archer">&#xe606;</span>restful，HTTP</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

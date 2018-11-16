@@ -302,39 +302,62 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/15/ 区块链技术核心概念与原理讲解（总结）/" >
+            <a class="abstract-title" href = "/2018/11/16/restful简介及资源介绍/" >
                 
-                    <span>区块链技术核心概念与原理讲解（总结）</span>
+                    <span>restful简介及资源介绍</span>
             </a>
             <div class="abstract-content">
-                 区块链总结
+                 课程目标
 
-区块链前世今生
+RESTful是什么？
+为什么要使用RESTful？
+RESTful与其它架构有什么区别？
+如何实现符合RESTful规范的API？
 
-1密码朋克组织里面很多的技术讨论，都在比特币中得到了借鉴，比如说工作量证明，时间戳协议取防止文件篡改以及点对点交易特点，随着比特币的发展，大家发现比特币技术可以应用到很多场景，把比特币以前的这些技术提炼出来，从而就有了区块链技术。
+ RESTful是什么
 
-区块链前景
-
-1比特币的很多技术都由应用场景，比如资产应用，比特币的记账方式，不能篡改的特点可以用来做登记，点对点的交易可以用来做共享经济，匿名性的特点也有很多的应用，目前而言，区块链人才紧缺，薪资很高。
-
-比特币是什么
+本质
 
 
-数字货币
-去中心化记账系统
+一种软件架构风格
 
-1微观上说，比特币是一种数字货币，宏观上来说是一种去中心化的记账系统，...
+
+核心
+
+
+面向资源
+
+
+解决的问题
+
+
+降低开发的复杂性
+提高系统的可伸缩性
+
+
+设计的概念和准则
+
+
+网络上的所有事物都可以被抽象为资源
+每一个资源都由唯一的资源标识，对资源的操作不会改变这些标识
+所有的操作都是无状态的
+
+ 什么是资源
+
+所谓“资源”，就是网络上的一个实体，或者说是网络上的一个具体信息。
+
+
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/15</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/16</span>
                 </div>
                 <!-- tags  -->
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "区块链，比特币，总结">区块链，比特币，总结</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "restful，api">restful，api</a>
     
 </div>
                 
@@ -397,6 +420,67 @@
                 <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "区块链，比特币，共识机制">区块链，比特币，共识机制</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >
+                
+                    <span>区块链技术核心概念与原理讲解（为什么记账-挖矿）</span>
+            </a>
+            <div class="abstract-content">
+                比特币要怎样解决账户的所有权问题？
+ 为什么记账
+
+记账：Hash打包过程
+消耗资源
+奖励
+
+ 挖矿-工作量证明
+
+规则
+
+
+一段时间内只有一人可以记账成功
+通过解决密码学难题（即工作量证明）竞争获得唯一记账权
+其它节点复制记账结果
+
+
+工作量证明
+
+
+Hash(上一个Hash值，交易记录值) = 456635BCD
+Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
+
+
+交易记录集
+
+
+手机广播中还没有被记录账本的交易
+交易的有效性验证
+添加一笔给自己转账的交易（挖矿奖励）
+
+
+工作量分析
+
+
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/15</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "区块链，比特币，挖矿">区块链，比特币，挖矿</a>
     
 </div>
                 
@@ -588,47 +672,28 @@ Haber/Stornetta提出了时间戳方法保证数字文件安全的协议
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >
+            <a class="abstract-title" href = "/2018/11/15/ 区块链技术核心概念与原理讲解（总结）/" >
                 
-                    <span>区块链技术核心概念与原理讲解（为什么记账-挖矿）</span>
+                    <span>区块链技术核心概念与原理讲解（总结）</span>
             </a>
             <div class="abstract-content">
-                比特币要怎样解决账户的所有权问题？
- 为什么记账
+                 区块链总结
 
-记账：Hash打包过程
-消耗资源
-奖励
+区块链前世今生
 
- 挖矿-工作量证明
+1密码朋克组织里面很多的技术讨论，都在比特币中得到了借鉴，比如说工作量证明，时间戳协议取防止文件篡改以及点对点交易特点，随着比特币的发展，大家发现比特币技术可以应用到很多场景，把比特币以前的这些技术提炼出来，从而就有了区块链技术。
 
-规则
+区块链前景
 
+1比特币的很多技术都由应用场景，比如资产应用，比特币的记账方式，不能篡改的特点可以用来做登记，点对点的交易可以用来做共享经济，匿名性的特点也有很多的应用，目前而言，区块链人才紧缺，薪资很高。
 
-一段时间内只有一人可以记账成功
-通过解决密码学难题（即工作量证明）竞争获得唯一记账权
-其它节点复制记账结果
+比特币是什么
 
 
-工作量证明
+数字货币
+去中心化记账系统
 
-
-Hash(上一个Hash值，交易记录值) = 456635BCD
-Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
-
-
-交易记录集
-
-
-手机广播中还没有被记录账本的交易
-交易的有效性验证
-添加一笔给自己转账的交易（挖矿奖励）
-
-
-工作量分析
-
-
-
+1微观上说，比特币是一种数字货币，宏观上来说是一种去中心化的记账系统，...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -639,7 +704,47 @@ Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "区块链，比特币，挖矿">区块链，比特币，挖矿</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "区块链，比特币，总结">区块链，比特币，总结</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >
+                
+                    <span>自然语言处理入门课程与模拟实战总结</span>
+            </a>
+            <div class="abstract-content">
+                 导读
+
+课程大纲
+适合人群
+课前技术储备
+
+ 本届课程主要涉及的几个问题
+
+快速了解自然语言处理
+自然语言处理开发环境介绍
+案例：NLP技术实现预测天气冷暖感知度
+结尾与探讨
+
+ 讨论总结
+t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫酷，结合了具体的自然语言处理以及数据挖掘的问题才能炫酷。机器学习好像内力一样，是一个武者的基础，而自然语言和数据挖掘的东西都是招式。如果你内功足够深厚，招式对你来说都是小意思。但机器学习同时也要求很高的数学基础，现在如果我们只讲工程实现，有很多的开源工具可以使用，你需要的只是知道这些工具都是干嘛用的就好，很多学生对机器学习特别的狂热，但对矩阵，概...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "自然语言处理，NLP，实战">自然语言处理，NLP，实战</a>
     
 </div>
                 
@@ -706,82 +811,10 @@ Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
             </div>
         </article>
     
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >
-                
-                    <span>自然语言处理入门课程与模拟实战总结</span>
-            </a>
-            <div class="abstract-content">
-                 导读
-
-课程大纲
-适合人群
-课前技术储备
-
- 本届课程主要涉及的几个问题
-
-快速了解自然语言处理
-自然语言处理开发环境介绍
-案例：NLP技术实现预测天气冷暖感知度
-结尾与探讨
-
- 讨论总结
-t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫酷，结合了具体的自然语言处理以及数据挖掘的问题才能炫酷。机器学习好像内力一样，是一个武者的基础，而自然语言和数据挖掘的东西都是招式。如果你内功足够深厚，招式对你来说都是小意思。但机器学习同时也要求很高的数学基础，现在如果我们只讲工程实现，有很多的开源工具可以使用，你需要的只是知道这些工具都是干嘛用的就好，很多学生对机器学习特别的狂热，但对矩阵，概...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "自然语言处理，NLP，实战">自然语言处理，NLP，实战</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >
-                
-                    <span>案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</span>
-            </a>
-            <div class="abstract-content">
-                 欧式距离一般形式
-1234def ComputeEuclideanDistance(x1, y1, x2, y2):    &quot;&quot;&quot;欧式距离计算：d=(x1-x2)^2+(y1-y2)^2&quot;&quot;&quot;    d = math.sqrt(math.pow(x1 - x2, 2) + math.pow(y1 - y2, 2))    return d
-
-即求两个向量之间的距离（二维）
-
- 欧式距离拓展形式
-123456def EuclideanDistance(instance1, instance2, length):    &quot...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "欧式距离，KNN">欧式距离，KNN</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/8/">8</a><a class="extend next" rel="next" href="/archives/page/2/">NEXT &#62;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/9/">9</a><a class="extend next" rel="next" href="/archives/page/2/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -2146,7 +2179,56 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
     
     
     
-    <div class="total-archive"> Total : 80 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 81 </div>
     
     <div class="post-archive">
     
@@ -2158,7 +2240,7 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
         </li>
     
     
@@ -2168,7 +2250,7 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
@@ -2178,27 +2260,32 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
         </li>
     
     
@@ -2223,22 +2310,17 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -2254,6 +2336,11 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -2408,12 +2495,12 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
         </li>
     
     
@@ -2423,12 +2510,12 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     
@@ -2852,6 +2939,8 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
         <span class="sidebar-tag-name" data-tags="区块链，比特币，共识机制"><span class="iconfont-archer">&#xe606;</span>区块链，比特币，共识机制</span>
     
         <span class="sidebar-tag-name" data-tags="区块链，比特币，总结"><span class="iconfont-archer">&#xe606;</span>区块链，比特币，总结</span>
+    
+        <span class="sidebar-tag-name" data-tags="restful，api"><span class="iconfont-archer">&#xe606;</span>restful，api</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

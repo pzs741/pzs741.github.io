@@ -302,6 +302,57 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/06/08/excle/" >
+                
+                    <span>一次千万级EXCLE数据处理任务</span>
+            </a>
+            <div class="abstract-content">
+                 一次千万级EXCLE数据处理任务
+
+21个十万级EXCLE数据，要求对根据一列对二列作统计
+痛点分析
+
+
+不能直接打开—太卡
+
+
+解决办法：python包操作EXCLE
+
+
+数据量太大，pandas无法一次性统计
+
+
+list可变长，两次循环做频率统计
+
+
+文件体积太大，读取慢
+
+
+存为csv
+
+1234567891011121314151617181920212223242526import xlrdfor j in range(1,22):    workbook = xlrd.open_workbook(&apos;/home/pzs741/PycharmProjects/mat...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/08</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "excle">excle</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数据处理">数据处理</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/06/07/基于深度学习和模板的问句生成算法/" >
                 
                     <span>基于深度学习和模板的问句生成算法</span>
@@ -408,40 +459,6 @@ templates —...
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
-                
-                    <span>xadmin快速开发后台管理系统</span>
-            </a>
-            <div class="abstract-content">
-                 xadmin快速开发数据管理后台
-主要流程就是加载xadmin这个app，就像使用其它app一样使用xadmin，它继承了django自带的admin的所有功能，所以开发非常方便。
- xadmind源码导入
-这里我们使用源码包直接放在工程目录下，而后注册app。
-1234567891011121314151617181920setting:sys.path.insert(0,os.path.join(BASE_DIR,&apos;extra_apps&apos;))INSTALLED_APPS = [    &apos;django.contrib.admin&apos;,    &a...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
             <a class="abstract-title" href = "/2018/05/19/爬虫前台/" >
                 
                     <span>pyspider快速部署爬虫前台</span>
@@ -470,6 +487,40 @@ age是任务有效期限，...
         <a class="post-tag" href="javascript:void(0);" data-tags = "爬虫">爬虫</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "self.crwal">self.crwal</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/05/19/xadmin快速开发数据管理后台/" >
+                
+                    <span>xadmin快速开发后台管理系统</span>
+            </a>
+            <div class="abstract-content">
+                 xadmin快速开发数据管理后台
+主要流程就是加载xadmin这个app，就像使用其它app一样使用xadmin，它继承了django自带的admin的所有功能，所以开发非常方便。
+ xadmind源码导入
+这里我们使用源码包直接放在工程目录下，而后注册app。
+1234567891011121314151617181920setting:sys.path.insert(0,os.path.join(BASE_DIR,&apos;extra_apps&apos;))INSTALLED_APPS = [    &apos;django.contrib.admin&apos;,    &a...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/19</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "xadmin">xadmin</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "快速开发">快速开发</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "后台管理">后台管理</a>
     
 </div>
                 
@@ -641,58 +692,6 @@ conda remov...
         <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "uwsgi">uwsgi</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/02/Elasticsearch的Restful接口的应用/" >
-                
-                    <span>Elasticsearch的Restful接口的应用</span>
-            </a>
-            <div class="abstract-content">
-                 Elasticsearch的Restful接口的应用
-
-请求指定类型的统计信息
-
-
-$ curl -XGET ‘http://localhost:9200/qa/huawei/_count?pretty’
-
-
-请求指定文档信息
-
-
-$ curl -XGET ‘http://localhost:9200/qa/huawei/c30f512cbee46a242034f31e2dae69df?pretty’
-
-
-请求指定类型的所有文档
-
-
-$ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
-
-
-请求匹配指定字段的文档
-
-...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/02</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "elasticsearch">elasticsearch</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "restful">restful</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "API">API</a>
     
 </div>
                 
@@ -2131,48 +2130,7 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 83 </div>
+    <div class="total-archive"> Total : 84 </div>
     
     <div class="post-archive">
     
@@ -2184,7 +2142,7 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
         </li>
     
     
@@ -2194,7 +2152,17 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
@@ -2205,11 +2173,6 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
@@ -2229,6 +2192,21 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理开发环境介绍/" >自然语言处理开发环境介绍</a>
         </li>
     
@@ -2239,17 +2217,12 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
         </li>
     
     
@@ -2264,32 +2237,7 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
         </li>
     
     
@@ -2299,12 +2247,22 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
         </li>
     
     
@@ -2315,6 +2273,11 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
@@ -2404,12 +2367,12 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
@@ -2474,12 +2437,12 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
         </li>
     
     
@@ -2897,6 +2860,8 @@ $ curl -XGET ‘http://localhost:9200/qa/huawei/_search?pretty’
         <span class="sidebar-tag-name" data-tags="restful，api"><span class="iconfont-archer">&#xe606;</span>restful，api</span>
     
         <span class="sidebar-tag-name" data-tags="restful，HTTP"><span class="iconfont-archer">&#xe606;</span>restful，HTTP</span>
+    
+        <span class="sidebar-tag-name" data-tags="restful，设计要素"><span class="iconfont-archer">&#xe606;</span>restful，设计要素</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

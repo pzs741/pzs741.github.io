@@ -302,21 +302,100 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/逻辑回归模型/" >
+            <a class="abstract-title" href = "/2018/11/12/神经元的多输出/" >
                 
-                    <span>逻辑回归模型</span>
+                    <span>神经元多输出模型</span>
             </a>
             <div class="abstract-content">
-                 神经元——Logits回归模型
- 神经网络
+                 神经元的多输出模型
 
-神经元
-逻辑回归模型
-神经网络训练
 
- 神经元结构
+增加神经元的个数，输出也就相应增多
 
- 神经元计算
+ 从二分类到多分类
+
+
+激活函数的归一化处理
+
+ 多分类例子
+
+
+多分类问题用到多个神经元，下面介绍如何去调整神经网络
+
+ 目标函数
+
+目标函数是用来衡量数据的符合程度，也叫损失函数
+
+ 二分类目标函数
+
+
+y = 真实值-预测值
+
+ 多分类目标函数
+
+
+这个时候的预测值已经是一个概率分布了，因此需要将多类别也就是预测输出值进行one-hot编码，也就是把单个值向01向量编码的转换过程，这里的目标函数是向量差的绝对值的和。
+
+ 一般的目标函数
+
+
+统计学中的平方差、信息论中的交叉熵（衡量两个分布的差）
+
+ 多分类例子
+
+多分...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "多输出">多输出</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/12/梯度下降/" >
+                
+                    <span>梯度下降</span>
+            </a>
+            <div class="abstract-content">
+                 神经网络训练
+下山算法
+
+找到方向
+走一步
+
+ 梯度下降算法
+
+
+参数=参数-学习率（步长×学习率）
+
+ Tensorflow基础
+ Tensorflow介绍
+
+google brain的第二代机器学习框架
+开源社区活跃
+可拓展性好
+API健全，对用户友好
+
+ 计算图模型
+
+
+
+
+声明式编程不需要知道数据是什么
 
 
             </div>
@@ -329,9 +408,9 @@
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经元">神经元</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "训练">训练</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "逻辑回归">逻辑回归</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "梯度下降">梯度下降</a>
     
 </div>
                 
@@ -671,48 +750,6 @@ WEB文档含有大量的网页噪声，抽取算法应该能有效的避免网�
         <a class="post-tag" href="javascript:void(0);" data-tags = "生日">生日</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "二十五">二十五</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/06/19/折腾之旅3/" >
-                
-                    <span>填坑之旅（三）---NGINX配置</span>
-            </a>
-            <div class="abstract-content">
-                 填坑之旅—云服务器生产环境
-在即将大功告成之际，uwsgi出来搅了个局，nginx很正常的泡在80端口，uwsgi跑出来了却没办法路由导80端口，唉…填坑之旅路漫漫
- 填坑必备技能
-123456#查看端口占用情况lsof -i:端口号#查看进程ps aux|grep 进程名#推出进程kill -QUIT PID
- 直接启动django
-
-对外开启8000端口
-python manager.py runserver 0.0.0.0:8000
-http://39.105.124.151:8000/
-
- 通过uwsgi启动django
-
-uwsgi --http :8000 --module...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/19</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "uwsgi">uwsgi</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "静态文件">静态文件</a>
     
 </div>
                 
@@ -2270,7 +2307,34 @@ uwsgi --http :8000 --module...
     
     
     
-    <div class="total-archive"> Total : 87 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 88 </div>
     
     <div class="post-archive">
     
@@ -2282,7 +2346,7 @@ uwsgi --http :8000 --module...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（usercf ）/" >个性化召回算法协同过滤理论部分（usercf ）</a>
         </li>
     
     
@@ -2292,17 +2356,12 @@ uwsgi --http :8000 --module...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（usercf ）/" >个性化召回算法协同过滤理论部分（usercf ）</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</a>
         </li>
     
     
@@ -2312,27 +2371,17 @@ uwsgi --http :8000 --module...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（总结）/" >区块链技术核心概念与原理讲解（总结）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
         </li>
     
     
@@ -2347,32 +2396,22 @@ uwsgi --http :8000 --module...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（总结）/" >区块链技术核心概念与原理讲解（总结）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理开发环境介绍/" >自然语言处理开发环境介绍</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
@@ -2382,17 +2421,57 @@ uwsgi --http :8000 --module...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
         </li>
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理开发环境介绍/" >自然语言处理开发环境介绍</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
         </li>
     
     
@@ -2407,27 +2486,7 @@ uwsgi --http :8000 --module...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
         </li>
     
     
@@ -2438,6 +2497,16 @@ uwsgi --http :8000 --module...
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
@@ -2582,22 +2651,22 @@ uwsgi --http :8000 --module...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/密云水库/" >密云水库</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href= "/2018/04/02/SAS2/" >文章搜索引擎————前后端结合</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/SAS/" >文章搜索引擎————环境搭建</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2018/04/01/滴答/" >《滴答》</a>
         </li>
     
     
@@ -3027,6 +3096,8 @@ uwsgi --http :8000 --module...
         <span class="sidebar-tag-name" data-tags="usercf"><span class="iconfont-archer">&#xe606;</span>usercf</span>
     
         <span class="sidebar-tag-name" data-tags="itemcf"><span class="iconfont-archer">&#xe606;</span>itemcf</span>
+    
+        <span class="sidebar-tag-name" data-tags="分析比较，itemcf"><span class="iconfont-archer">&#xe606;</span>分析比较，itemcf</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

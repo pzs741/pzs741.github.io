@@ -10,7 +10,7 @@
     <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>Ex_treme&#39;s blog</title>
+    <title>基于物品的协同过滤算法（itemcf ） · Ex_treme&#39;s blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -66,6 +66,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180317 as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" type="text/css" href= /css/mobile.css?v=20180317 media="(max-width: 980px)"/>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         
     <link rel="icon" href= /assets/bitbug_favicon.ico>
     <script>
@@ -177,12 +179,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Ex_treme&#39;s blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">基于物品的协同过滤算法（itemcf ）</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Ex_treme's blog.</a>
 </header>
@@ -196,24 +209,69 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            基于物品的协同过滤算法（itemcf ）
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "召回算法，协同过滤">召回算法，协同过滤</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "itemcf">itemcf</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/11/20</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -297,138 +355,47 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="基本公式"><a class="markdownIt-Anchor" href="#基本公式"></a> 基本公式</h1>
+<p><img src="https://raw.githubusercontent.com/pzs741/pzs741.github.io/master/photos/cf2.jpg" alt="image"></p>
+<h1 id="实现代码"><a class="markdownIt-Anchor" href="#实现代码"></a> 实现代码</h1>
+<p><strong>步骤1：导包</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line">import sys</span><br><span class="line">import util.reader as reader</span><br><span class="line">import operator</span><br><span class="line"></span><br><span class="line">sys.path.append(&quot;../util&quot;)</span><br><span class="line"></span><br><span class="line">def base_contribute_score():</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    itemcf base sim contribution score by user</span><br><span class="line">    :return:</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    return 1</span><br></pre></td></tr></table></figure>
+<p><strong>步骤2：主流程函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def main_flow():</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    main flow of itmecf</span><br><span class="line">    :return:</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    # 获取用户点击信息&#123;&apos;1&apos;: [&apos;1&apos;, &apos;3&apos;, &apos;6&apos;, &apos;47&apos;, &apos;50&apos;, &apos;70&apos;...]</span><br><span class="line">    user_click = reader.get_user_click(&quot;/home/pzs741/PycharmProjects/cd/data/ratings.csv&quot;)</span><br><span class="line">    # 计算物品相似度信息&#123;&apos;1&apos;:[(&apos;780&apos;,0.55),(&apos;3114&apos;,0.54),(&apos;356&apos;,0.53)...]...&#125;</span><br><span class="line">    sim_info = cal_item_sim(user_click)</span><br><span class="line">    # 推荐给用户最近行为相关的物品&#123;&apos;1&apos;:&#123;&apos;780&apos;:0.55,&apos;3114&apos;:0.54,&apos;356&apos;:0.53,...&#125;...&#125;</span><br><span class="line">    recom_result = cal_recom_result(sim_info, user_click)</span><br><span class="line">    print(recom_result[&quot;1&quot;])</span><br></pre></td></tr></table></figure>
+<p><strong>步骤3：计算物品相似度</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">def cal_item_sim(user_click):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    :param user_click:dict, key userid value [itemid1,itemid2]</span><br><span class="line">    :return: dict, key:itemid i, value dict, value_key itemid_j, value_value simcore</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    co_appear = &#123;&#125;</span><br><span class="line">    item_user_click_item = &#123;&#125;</span><br><span class="line">    for user, itemlist in user_click.items():</span><br><span class="line">        for index_i in range(0, len(itemlist)):</span><br><span class="line">            itemid_i = itemlist[index_i]</span><br><span class="line">            item_user_click_item.setdefault(itemid_i, 0)</span><br><span class="line">            item_user_click_item[itemid_i] += 1</span><br><span class="line">            for index_j in range(index_i + 1, len(itemlist)):</span><br><span class="line">                itemid_j = itemlist[index_j]</span><br><span class="line">                co_appear.setdefault(itemid_i, &#123;&#125;)</span><br><span class="line">                co_appear[itemid_i].setdefault(itemid_j, 0)</span><br><span class="line">                co_appear[itemid_i][itemid_j] += base_contribute_score()</span><br><span class="line"></span><br><span class="line">                co_appear.setdefault(itemid_j, &#123;&#125;)</span><br><span class="line">                co_appear[itemid_j].setdefault(itemid_i, 0)</span><br><span class="line">                co_appear[itemid_j][itemid_i] += base_contribute_score()</span><br><span class="line"></span><br><span class="line">    item_sim_score = &#123;&#125;</span><br><span class="line">    item_sim_score_sorted = &#123;&#125;</span><br><span class="line">    for itemid_i, relate_item in co_appear.items():</span><br><span class="line">        for itemid_j, co_time in relate_item.items():</span><br><span class="line">            sim_score = co_time / math.sqrt(item_user_click_item[itemid_i] * item_user_click_item[itemid_j])</span><br><span class="line">            item_sim_score.setdefault(itemid_i, &#123;&#125;)</span><br><span class="line">            item_sim_score[itemid_i].setdefault(itemid_j, 0)</span><br><span class="line">            item_sim_score[itemid_i][itemid_j] = sim_score</span><br><span class="line">    for itemid in item_sim_score:</span><br><span class="line">        item_sim_score_sorted[itemid] = sorted(item_sim_score[itemid].items(), key=operator.itemgetter(1),</span><br><span class="line">                                               reverse=True)</span><br><span class="line"></span><br><span class="line">    return item_sim_score_sorted</span><br></pre></td></tr></table></figure>
+<p><strong>步骤4：计算推荐结果</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">def cal_recom_result(sim_info, user_click):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    recom by itemcf</span><br><span class="line">    :param sim_info:item sim dict</span><br><span class="line">    :param user_click: user click dict</span><br><span class="line">    :return: dict, key:userid value dict, value_key itemid, value_value recom_score</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    recent_click_num = 3</span><br><span class="line">    topk = 5</span><br><span class="line">    recom_info = &#123;&#125;</span><br><span class="line">    for user in user_click:</span><br><span class="line">        click_list = user_click[user]</span><br><span class="line">        recom_info.setdefault(user, &#123;&#125;)</span><br><span class="line">        for itemid in click_list[:recent_click_num]:</span><br><span class="line">            if itemid not in sim_info:</span><br><span class="line">                continue</span><br><span class="line">            for itemidsimzuhe in sim_info[itemid][:topk]:</span><br><span class="line">                itemsimid = itemidsimzuhe[0]</span><br><span class="line">                itemsimscore = itemidsimzuhe[1]</span><br><span class="line">                recom_info[user][itemsimid] = itemsimscore</span><br><span class="line"></span><br><span class="line">    return recom_info</span><br></pre></td></tr></table></figure>
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/11/18/数据集介绍与公共信息抽取函数代码实战/" title= 数据集介绍与公共信息抽取函数代码实战 >
+                    <div class="prevTitle">数据集介绍与公共信息抽取函数代码实战</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
     
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >
-                
-                    <span>区块链技术核心概念与原理讲解（比特币是什么）</span>
-            </a>
-            <div class="abstract-content">
-                 比特币是什么？
-
-比特币是数字货币
-什么是货币
-
-
-凯恩斯《货币论》中：货币是可以承载价值的一般等价物
-
-
-货币历史
-
-
-铜币、金银
-银票
-法币 （人民币）
-
-
-数字货币
-
-
-一串数字（大家认可：共识）
-
- 信任从何而来？
-
-财产只受到自己控制
-无通胀（总量不变2100万个）
-没有假钞
-流通性好
-
-
-去中心化的记账系统
-
-
-
-出现记账不一致怎么办？
-
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/15</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "区块链，比特币">区块链，比特币</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >
-                
-                    <span>区块链技术核心概念与原理讲解（比特币原理）</span>
-            </a>
-            <div class="abstract-content">
-                 比特币原理
-
-账本如何验证？
-所有权问题？
-为什么记账？（挖矿）
-以谁的账本为准？（共识机制）
-
- 账本如何验证
-
-对比摘要比直接对比账本来的高效的多
-
-
-方案1
-
-
-核对账本记录，少数服从多数（效率太低，不行）
-
-
-Hash
-
-
-哈希函数：Hash（原始信息） = 摘要信息
-特点：
-同样的原始信息用同一个哈希函数总能得到相同的摘要信息
-原始信息任何微小的变化都会哈希出面目全非的摘要信息
-从摘要信息无法逆向推出原始信息
-
-
-
-对比摘要比直接对比账本来的高效的多
-
-
-区块
-
-
-
-账本一般包括序号、时间戳和Hash值，称之为区块的头，交易记录这是区块的主体部分。
-
-
-
-前一个账本信息和当前...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/15</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "区块链，比特币">区块链，比特币</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -488,6 +455,24 @@ Hash
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基本公式"><span class="toc-number">1.</span> <span class="toc-text"> 基本公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现代码"><span class="toc-number">2.</span> <span class="toc-text"> 实现代码</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -2815,6 +2800,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
     
     </body>
 </html>

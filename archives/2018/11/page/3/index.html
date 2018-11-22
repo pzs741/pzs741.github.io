@@ -302,6 +302,46 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >
+                
+                    <span>案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</span>
+            </a>
+            <div class="abstract-content">
+                 小节内容
+
+案例需求
+实验数据准备，代码演示
+数据分析与可视化，代码演示
+算法模型及原理讲解
+算法模型构建与实现，代码演示
+算法优化与应用
+
+ 案例需求
+[需求]现在你来了一个新任务，任务其实非常简单，就是根据吃冰淇淋、喝水的数量、户外活动时长判断程度天气冷热程度。你现在要做的就是去成都街头采访记录一些游客吃了多少冰淇淋，又喝了几瓶水，他觉得程度天气怎么样（这里只考虑二分类问题，假设只有**‘非常热’和‘一般热’**）。其中特征向量包括两个分别是冰淇淋数t、喝水数t2、户外活动时间t3,标签类别分别是非常热A和一般热B。
+ 数据准备
+
+ 代码示例
+1234567891011121314...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "NLP，预测">NLP，预测</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/11/14/自然语言处理开发环境介绍/" >
                 
                     <span>自然语言处理开发环境介绍</span>
@@ -383,39 +423,6 @@ t讨论：机器学习比较偏向底层和理论，机器学习本身不够炫�
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >
-                
-                    <span>机器学习库sklearn实现预测天气冷暖感知度</span>
-            </a>
-            <div class="abstract-content">
-                 流程
-
-加载数据集
-填充参数
-预测结果
-
- 核心代码
-1234567891011from sklearn import neighborsdef knn_sklearn_predict():    # 调用机器学习库knn分类器算法    knn = neighbors.KNeighborsClassifier()    #传入参数、特征数据和分类标签    knn.fit(datasets,labels)    #knn预测    res = knn.predict([[iceCream,drinkWater,playAct]])    print(&quot;访客认为天气&#123...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "机器学习，预测，sklearn">机器学习，预测，sklearn</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
             <a class="abstract-title" href = "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >
                 
                     <span>案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</span>
@@ -448,6 +455,38 @@ K-近邻算法假设给定一个训练数据集（随机访客），其中的实
                 <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "NLP，预测">NLP，预测</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >
+                
+                    <span>案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</span>
+            </a>
+            <div class="abstract-content">
+                 欧式距离一般形式
+1234def ComputeEuclideanDistance(x1, y1, x2, y2):    &quot;&quot;&quot;欧式距离计算：d=(x1-x2)^2+(y1-y2)^2&quot;&quot;&quot;    d = math.sqrt(math.pow(x1 - x2, 2) + math.pow(y1 - y2, 2))    return d
+
+即求两个向量之间的距离（二维）
+
+ 欧式距离拓展形式
+123456def EuclideanDistance(instance1, instance2, length):    &quot...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "欧式距离，KNN">欧式距离，KNN</a>
     
 </div>
                 
@@ -495,38 +534,6 @@ Sublime Text和Anaconda介绍
                 <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "自然语言处理">自然语言处理</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >
-                
-                    <span>案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</span>
-            </a>
-            <div class="abstract-content">
-                 欧式距离一般形式
-1234def ComputeEuclideanDistance(x1, y1, x2, y2):    &quot;&quot;&quot;欧式距离计算：d=(x1-x2)^2+(y1-y2)^2&quot;&quot;&quot;    d = math.sqrt(math.pow(x1 - x2, 2) + math.pow(y1 - y2, 2))    return d
-
-即求两个向量之间的距离（二维）
-
- 欧式距离拓展形式
-123456def EuclideanDistance(instance1, instance2, length):    &quot...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "欧式距离，KNN">欧式距离，KNN</a>
     
 </div>
                 
@@ -605,39 +612,30 @@ Sublime Text和Anaconda介绍
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建(1)/" >
+            <a class="abstract-title" href = "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >
                 
-                    <span>数据处理与模型图构建（1）</span>
+                    <span>机器学习库sklearn实现预测天气冷暖感知度</span>
             </a>
             <div class="abstract-content">
-                 多层神经网络的Tensorflow实战
-
-神经元的Tensorflow实现
-神经网络的Tensorflow实现
-
- Tensorflow环境搭建
-1234conda install tensorflow==1.8.0下载数据集CIFAR-10 python version conda install jupyter jupyter notebook
- 数据预处理
+                 流程
 
 加载数据集
-查看数据类型
-验证图片输出
+填充参数
+预测结果
 
- 加载数据集
-123456import pickleimport numpy as npimport osCIFAR_DIR = &apos;cifar-10-batches-py&...
+ 核心代码
+1234567891011from sklearn import neighborsdef knn_sklearn_predict():    # 调用机器学习库knn分类器算法    knn = neighbors.KNeighborsClassifier()    #传入参数、特征数据和分类标签    knn.fit(datasets,labels)    #knn预测    res = knn.predict([[iceCream,drinkWater,playAct]])    print(&quot;访客认为天气&#123...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
                 </div>
                 <!-- tags  -->
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "机器学习，预测，sklearn">机器学习，预测，sklearn</a>
     
 </div>
                 
@@ -2345,7 +2343,10 @@ Sublime Text和Anaconda介绍
     
     
     
-    <div class="total-archive"> Total : 92 </div>
+    
+    
+    
+    <div class="total-archive"> Total : 93 </div>
     
     <div class="post-archive">
     
@@ -2357,12 +2358,17 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于物品的协同过滤算法改进（itemcf 改进）/" >基于物品的协同过滤算法改进（itemcf 改进）</a>
+            <span class="archive-post-date">11/22</span><a class="archive-post-title" href= "/2018/11/22/基于用户的协同过滤算法改进（usercf 改进）/" >基于用户的协同过滤算法改进（usercf 改进）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于用户的协同过滤算法（usercf ）/" >基于用户的协同过滤算法（usercf ）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于物品的协同过滤算法改进（itemcf 改进）/" >基于物品的协同过滤算法改进（itemcf 改进）</a>
         </li>
     
     
@@ -2377,17 +2383,12 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >个性化召回算法协同过滤理论部分（itemcf ）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
         </li>
     
     
@@ -2397,12 +2398,17 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
         </li>
     
     
@@ -2413,6 +2419,11 @@ Sublime Text和Anaconda介绍
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
         </li>
     
     
@@ -2442,7 +2453,7 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
         </li>
     
     
@@ -2472,12 +2483,12 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
         </li>
     
     
@@ -2492,12 +2503,7 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
         </li>
     
     
@@ -2507,12 +2513,12 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -2527,6 +2533,11 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
         </li>
     
@@ -2537,17 +2548,12 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/本地连接/" >解决本地无法连接和图片压缩问题</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
         </li>
     
     
@@ -2622,12 +2628,12 @@ Sublime Text和Anaconda介绍
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
@@ -3135,6 +3141,8 @@ Sublime Text和Anaconda介绍
         <span class="sidebar-tag-name" data-tags="算法改进，协同过滤"><span class="iconfont-archer">&#xe606;</span>算法改进，协同过滤</span>
     
         <span class="sidebar-tag-name" data-tags="协同过滤"><span class="iconfont-archer">&#xe606;</span>协同过滤</span>
+    
+        <span class="sidebar-tag-name" data-tags="usercf，算法改进"><span class="iconfont-archer">&#xe606;</span>usercf，算法改进</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

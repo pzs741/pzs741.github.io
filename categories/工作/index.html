@@ -302,6 +302,35 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/22/基于用户的协同过滤算法改进（usercf 改进）/" >
+                
+                    <span>基于用户的协同过滤算法改进（usercf 改进）</span>
+            </a>
+            <div class="abstract-content">
+                 调试流程
+1234567891011121314def main_flow():    &quot;&quot;&quot;    main flow of itmecf    :return:    &quot;&quot;&quot;    user_click, user_click_time = reader.get_user_click(        &quot;/home/pzs741/PycharmProjects/CollaborativeFiltering/data/ratings.csv&quot;)    item_info = reader.get_item_...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/22</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "协同过滤">协同过滤</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "usercf，算法改进">usercf，算法改进</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/11/21/基于用户的协同过滤算法（usercf ）/" >
                 
                     <span>基于用户的协同过滤算法（usercf ）</span>
@@ -428,6 +457,47 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >
+                
+                    <span>个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</span>
+            </a>
+            <div class="abstract-content">
+                 Usercf Vs Itemcf
+
+推荐实时性
+
+
+usercf：用户新的行为不会很快造成推荐结果的变化，因为其基于相似度用户矩阵完成推荐，因此用户自身行为不会造成推荐结果发生改变;（缺）
+itemcf：用户一旦有了新的行为，其推荐结果很快就会发生改变，因此点击了物品之后，很快就会推荐相似的物品。（优）
+
+
+新用户/新物品的推荐
+
+
+usercf：新用户到来之后，需要一定的操作之后才能得到和其相似的其它用户，因此没有办法立即推荐。  但新物品一旦入库并获得点击，可以立刻推荐给相似爱好的用户。（缺/优）
+itemcf：一旦新用户完成的物品的点击，那么就可以马上获得和该物品相似的其它物品的...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/17</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "usercf">usercf</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "分析比较，itemcf">分析比较，itemcf</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/11/17/个性化召回算法协同过滤理论部分（usercf ）/" >
                 
                     <span>个性化召回算法协同过滤理论部分（usercf ）</span>
@@ -461,54 +531,6 @@ N(u)N(u)N(u)和N(v)N(v)N(v)表示的是用户uuu和用户vvv行为过的物品�
         <a class="post-tag" href="javascript:void(0);" data-tags = "召回算法，协同过滤">召回算法，协同过滤</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "usercf">usercf</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >
-                
-                    <span>个性化召回算法协同过滤理论部分（itemcf ）</span>
-            </a>
-            <div class="abstract-content">
-                 协同过滤（collaboratice filtering）
-
-基于物品的协同过滤（Itemcf）背景，例子，公式与工业界落地时的公式升级
-基于用户的协同过滤（Usercf）背景，例子，公式与工业界落地时候的公式升级
-Itemcf与Usercf优缺点分析
-
- 背景
-
-信息过载，用户实际需求不明确
-强依赖于用户行为
-
- Item cf
-
-给用户推荐它之前喜欢的物品相似的物品
-如何衡量相似物品（基于用户行为取衡量）
-如何衡量喜欢（用户是否为真实点击，实际消费购买）
-
- example
-
-
-a d 物品是很相似的，因为用户A和D都喜欢它们，因此C卖了d之后，我们就可以推荐他买a，因为a和d是相...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/17</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "召回算法，协同过滤">召回算法，协同过滤</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "itemcf">itemcf</a>
     
 </div>
                 
@@ -570,25 +592,32 @@ a d 物品是很相似的，因为用户A和D都喜欢它们，因此C卖了d之
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >
+            <a class="abstract-title" href = "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >
                 
-                    <span>个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</span>
+                    <span>个性化召回算法协同过滤理论部分（itemcf ）</span>
             </a>
             <div class="abstract-content">
-                 Usercf Vs Itemcf
+                 协同过滤（collaboratice filtering）
 
-推荐实时性
+基于物品的协同过滤（Itemcf）背景，例子，公式与工业界落地时的公式升级
+基于用户的协同过滤（Usercf）背景，例子，公式与工业界落地时候的公式升级
+Itemcf与Usercf优缺点分析
+
+ 背景
+
+信息过载，用户实际需求不明确
+强依赖于用户行为
+
+ Item cf
+
+给用户推荐它之前喜欢的物品相似的物品
+如何衡量相似物品（基于用户行为取衡量）
+如何衡量喜欢（用户是否为真实点击，实际消费购买）
+
+ example
 
 
-usercf：用户新的行为不会很快造成推荐结果的变化，因为其基于相似度用户矩阵完成推荐，因此用户自身行为不会造成推荐结果发生改变;（缺）
-itemcf：用户一旦有了新的行为，其推荐结果很快就会发生改变，因此点击了物品之后，很快就会推荐相似的物品。（优）
-
-
-新用户/新物品的推荐
-
-
-usercf：新用户到来之后，需要一定的操作之后才能得到和其相似的其它用户，因此没有办法立即推荐。  但新物品一旦入库并获得点击，可以立刻推荐给相似爱好的用户。（缺/优）
-itemcf：一旦新用户完成的物品的点击，那么就可以马上获得和该物品相似的其它物品的...
+a d 物品是很相似的，因为用户A和D都喜欢它们，因此C卖了d之后，我们就可以推荐他买a，因为a和d是相...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -599,9 +628,9 @@ itemcf：一旦新用户完成的物品的点击，那么就可以马上获得�
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "usercf">usercf</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "召回算法，协同过滤">召回算法，协同过滤</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "分析比较，itemcf">分析比较，itemcf</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "itemcf">itemcf</a>
     
 </div>
                 
@@ -611,24 +640,28 @@ itemcf：一旦新用户完成的物品的点击，那么就可以马上获得�
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/16/Restful API实战（架构区别）/" >
+            <a class="abstract-title" href = "/2018/11/16/ Restful API实战（restful设计要素）/" >
                 
-                    <span>Restful API实战（架构区别）</span>
+                    <span>Restful API实战（restful设计要素）</span>
             </a>
             <div class="abstract-content">
-                 SOAP WebService
+                 如何设计RESTful API
 
-WebService是一种跨编程语言和跨操作系统平台的远程调用技术。
-WebService通过HTTP协议发送请求和接收结果时采用XML格式封装，并增加了一些特定的HTTP消息头，这些特定的HTTP消息头和XML内容格式就是SOAP协议。
+资源路径（URI）
+HTTP动词
+过滤信息
+状态码
+错误处理
+返回结果
 
- 效率和易用性
+ 资源路径
+在RESTful架构中，每个网址代表一种资源，所以网址中不能有动词，只能有名词。一般来说API中的名词应该使用复数。
+举个栗子：
 
-SOAP由于各种需求不断扩充其本身协议的内容，导致SOAP处理方面的性能有所下降。同时在易用性方面以及学习成本上也有所增加。
-RESTful由于其面向资源接口设计以及操作抽象简化了开发者的不良设计，同时也最大限度的利用了Http最初的应用协议设计理念。
-
- 安全性
-
-RESTful对于资源型服务接...
+有一个API提供动物园（zoo）的信息，还包括各种动物园和雇员的信息，则它的路径应该设计成下面这样。
+https://api.example.com/v1/zoos //动物园资源
+http://api.example.com/v1/animals //动物资源
+http://api.example.com/v1/employees //...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -639,47 +672,7 @@ RESTful对于资源型服务接...
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "restful，HTTP">restful，HTTP</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/16/RESTful中HTTP协议介绍/" >
-                
-                    <span>RESTful中HTTP协议介绍</span>
-            </a>
-            <div class="abstract-content">
-                 HTTP协议-URL
-
-HTTP是一个术语应用层的协议，特点是简捷、快速。
-schema://host[:port]/path[?query-string][#anchor]
-schema:指定底层使用的协议（例如：http,https,ftp）
-host:服务器的IP地址或者域名
-port:服务器端口，默认为80  （https默认43）
-path：访问资源的路径
-query-string：法哦送给http服务器的数据
-anchor：锚
-
- HTTP协议-请求
-
-组成格式：请求行、消息报头、请求正文
-请求行格式：Method Request_URI HTTP-Version CRLF...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/16</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "restful，HTTP">restful，HTTP</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "restful，设计要素">restful，设计要素</a>
     
 </div>
                 
@@ -2354,7 +2347,10 @@ anchor：锚
     
     
     
-    <div class="total-archive"> Total : 92 </div>
+    
+    
+    
+    <div class="total-archive"> Total : 93 </div>
     
     <div class="post-archive">
     
@@ -2366,12 +2362,17 @@ anchor：锚
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于物品的协同过滤算法改进（itemcf 改进）/" >基于物品的协同过滤算法改进（itemcf 改进）</a>
+            <span class="archive-post-date">11/22</span><a class="archive-post-title" href= "/2018/11/22/基于用户的协同过滤算法改进（usercf 改进）/" >基于用户的协同过滤算法改进（usercf 改进）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于用户的协同过滤算法（usercf ）/" >基于用户的协同过滤算法（usercf ）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于物品的协同过滤算法改进（itemcf 改进）/" >基于物品的协同过滤算法改进（itemcf 改进）</a>
         </li>
     
     
@@ -2386,17 +2387,12 @@ anchor：锚
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >个性化召回算法协同过滤理论部分（itemcf ）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
         </li>
     
     
@@ -2406,12 +2402,17 @@ anchor：锚
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
         </li>
     
     
@@ -2422,6 +2423,11 @@ anchor：锚
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
         </li>
     
     
@@ -2451,7 +2457,7 @@ anchor：锚
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
         </li>
     
     
@@ -2481,12 +2487,12 @@ anchor：锚
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
         </li>
     
     
@@ -2501,12 +2507,7 @@ anchor：锚
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
         </li>
     
     
@@ -2516,12 +2517,12 @@ anchor：锚
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -2536,6 +2537,11 @@ anchor：锚
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
         </li>
     
@@ -2546,17 +2552,12 @@ anchor：锚
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/本地连接/" >解决本地无法连接和图片压缩问题</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
         </li>
     
     
@@ -2631,12 +2632,12 @@ anchor：锚
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
@@ -3144,6 +3145,8 @@ anchor：锚
         <span class="sidebar-tag-name" data-tags="算法改进，协同过滤"><span class="iconfont-archer">&#xe606;</span>算法改进，协同过滤</span>
     
         <span class="sidebar-tag-name" data-tags="协同过滤"><span class="iconfont-archer">&#xe606;</span>协同过滤</span>
+    
+        <span class="sidebar-tag-name" data-tags="usercf，算法改进"><span class="iconfont-archer">&#xe606;</span>usercf，算法改进</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

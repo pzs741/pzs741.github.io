@@ -336,21 +336,26 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建（2）/" >
+            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建(1)/" >
                 
-                    <span>数据处理与模型图构建（2）</span>
+                    <span>数据处理与模型图构建（1）</span>
             </a>
             <div class="abstract-content">
-                 模型图构建流程
+                 多层神经网络的Tensorflow实战
 
-导包
-读数据模块
-模型图构建
+神经元的Tensorflow实现
+神经网络的Tensorflow实现
 
- 导包
-1234567import tensorflow as tfimport osimport pickleimport numpy as npCIFAR_DIR = &apos;cifar-10-batches-py&apos;print(os.listdir(CIFAR_DIR))
+ Tensorflow环境搭建
+1234conda install tensorflow==1.8.0下载数据集CIFAR-10 python version conda install jupyter jupyter notebook
+ 数据预处理
 
-[‘batches.meta’, ‘test_batch’, ‘data_batch_1’, ‘data_batch_4’, ‘data_batch_5’, ‘readme.html’, ‘data_batch_2’, ‘data_batch_3’...
+加载数据集
+查看数据类型
+验证图片输出
+
+ 加载数据集
+123456import pickleimport numpy as npimport osCIFAR_DIR = &apos;cifar-10-batches-py&...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -413,53 +418,26 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/神经元的多输出/" >
+            <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建（2）/" >
                 
-                    <span>神经元多输出模型</span>
+                    <span>数据处理与模型图构建（2）</span>
             </a>
             <div class="abstract-content">
-                 神经元的多输出模型
+                 模型图构建流程
 
+导包
+读数据模块
+模型图构建
 
-增加神经元的个数，输出也就相应增多
+ 导包
+1234567import tensorflow as tfimport osimport pickleimport numpy as npCIFAR_DIR = &apos;cifar-10-batches-py&apos;print(os.listdir(CIFAR_DIR))
 
- 从二分类到多分类
-
-
-激活函数的归一化处理
-
- 多分类例子
-
-
-多分类问题用到多个神经元，下面介绍如何去调整神经网络
-
- 目标函数
-
-目标函数是用来衡量数据的符合程度，也叫损失函数
-
- 二分类目标函数
-
-
-y = 真实值-预测值
-
- 多分类目标函数
-
-
-这个时候的预测值已经是一个概率分布了，因此需要将多类别也就是预测输出值进行one-hot编码，也就是把单个值向01向量编码的转换过程，这里的目标函数是向量差的绝对值的和。
-
- 一般的目标函数
-
-
-统计学中的平方差、信息论中的交叉熵（衡量两个分布的差）
-
- 多分类例子
-
-多分...
+[‘batches.meta’, ‘test_batch’, ‘data_batch_1’, ‘data_batch_4’, ‘data_batch_5’, ‘readme.html’, ‘data_batch_2’, ‘data_batch_3’...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
                 </div>
                 <!-- tags  -->
                 
@@ -467,46 +445,7 @@ y = 真实值-预测值
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "多输出">多输出</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/逻辑回归模型/" >
-                
-                    <span>逻辑回归模型</span>
-            </a>
-            <div class="abstract-content">
-                 神经元——Logits回归模型
- 神经网络
-
-神经元
-逻辑回归模型
-神经网络训练
-
- 神经元结构
-
- 神经元计算
-
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经元">神经元</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "逻辑回归">逻辑回归</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Tensorflow">Tensorflow</a>
     
 </div>
                 
@@ -627,6 +566,109 @@ Tensorflow基础
         <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "机器学习">机器学习</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/12/逻辑回归模型/" >
+                
+                    <span>逻辑回归模型</span>
+            </a>
+            <div class="abstract-content">
+                 神经元——Logits回归模型
+ 神经网络
+
+神经元
+逻辑回归模型
+神经网络训练
+
+ 神经元结构
+
+ 神经元计算
+
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经元">神经元</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "逻辑回归">逻辑回归</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/12/神经元的多输出/" >
+                
+                    <span>神经元多输出模型</span>
+            </a>
+            <div class="abstract-content">
+                 神经元的多输出模型
+
+
+增加神经元的个数，输出也就相应增多
+
+ 从二分类到多分类
+
+
+激活函数的归一化处理
+
+ 多分类例子
+
+
+多分类问题用到多个神经元，下面介绍如何去调整神经网络
+
+ 目标函数
+
+目标函数是用来衡量数据的符合程度，也叫损失函数
+
+ 二分类目标函数
+
+
+y = 真实值-预测值
+
+ 多分类目标函数
+
+
+这个时候的预测值已经是一个概率分布了，因此需要将多类别也就是预测输出值进行one-hot编码，也就是把单个值向01向量编码的转换过程，这里的目标函数是向量差的绝对值的和。
+
+ 一般的目标函数
+
+
+统计学中的平方差、信息论中的交叉熵（衡量两个分布的差）
+
+ 多分类例子
+
+多分...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经网络">神经网络</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "多输出">多输出</a>
     
 </div>
                 
@@ -2387,7 +2429,10 @@ OptiPNG –...
     
     
     
-    <div class="total-archive"> Total : 92 </div>
+    
+    
+    
+    <div class="total-archive"> Total : 93 </div>
     
     <div class="post-archive">
     
@@ -2399,12 +2444,17 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于物品的协同过滤算法改进（itemcf 改进）/" >基于物品的协同过滤算法改进（itemcf 改进）</a>
+            <span class="archive-post-date">11/22</span><a class="archive-post-title" href= "/2018/11/22/基于用户的协同过滤算法改进（usercf 改进）/" >基于用户的协同过滤算法改进（usercf 改进）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于用户的协同过滤算法（usercf ）/" >基于用户的协同过滤算法（usercf ）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于物品的协同过滤算法改进（itemcf 改进）/" >基于物品的协同过滤算法改进（itemcf 改进）</a>
         </li>
     
     
@@ -2419,17 +2469,12 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >个性化召回算法协同过滤理论部分（itemcf ）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
         </li>
     
     
@@ -2439,12 +2484,17 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
         </li>
     
     
@@ -2455,6 +2505,11 @@ OptiPNG –...
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
         </li>
     
     
@@ -2484,7 +2539,7 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
         </li>
     
     
@@ -2514,12 +2569,12 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
         </li>
     
     
@@ -2534,12 +2589,7 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
         </li>
     
     
@@ -2549,12 +2599,12 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -2569,6 +2619,11 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
         </li>
     
@@ -2579,17 +2634,12 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/本地连接/" >解决本地无法连接和图片压缩问题</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
         </li>
     
     
@@ -2664,12 +2714,12 @@ OptiPNG –...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
@@ -3177,6 +3227,8 @@ OptiPNG –...
         <span class="sidebar-tag-name" data-tags="算法改进，协同过滤"><span class="iconfont-archer">&#xe606;</span>算法改进，协同过滤</span>
     
         <span class="sidebar-tag-name" data-tags="协同过滤"><span class="iconfont-archer">&#xe606;</span>协同过滤</span>
+    
+        <span class="sidebar-tag-name" data-tags="usercf，算法改进"><span class="iconfont-archer">&#xe606;</span>usercf，算法改进</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

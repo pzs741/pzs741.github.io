@@ -317,18 +317,64 @@ height:50vh;
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >
+            <a class="abstract-title" href = "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >
                 
-                    <span>神经网络实现（多分类logistic回归模型实现）</span>
+                    <span>案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</span>
             </a>
             <div class="abstract-content">
-                 改动
+                 小节内容
 
-数据集输入
-图模型
+案例需求
+实验数据准备，代码演示
+数据分析与可视化，代码演示
+算法模型及原理讲解
+算法模型构建与实现，代码演示
+算法优化与应用
 
- 数据集输入
-123456789101112131415161718192021222324252627282930313233343536373839404142class CifarData:    def __init__(self,filenames,need_shuffle):        all_data = []        all_labels = []        for filename in filenames:            data,labels = load_data(filename)            al...
+ 案例需求
+[需求]现在你来了一个新任务，任务其实非常简单，就是根据吃冰淇淋、喝水的数量、户外活动时长判断程度天气冷热程度。你现在要做的就是去成都街头采访记录一些游客吃了多少冰淇淋，又喝了几瓶水，他觉得程度天气怎么样（这里只考虑二分类问题，假设只有**‘非常热’和‘一般热’**）。其中特征向量包括两个分别是冰淇淋数t、喝水数t2、户外活动时间t3,标签类别分别是非常热A和一般热B。
+ 数据准备
+
+ 代码示例
+1234567891011121314...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "NLP，预测">NLP，预测</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >
+                
+                    <span>神经元实现（二分类logistic回归模型实现）（1）</span>
+            </a>
+            <div class="abstract-content">
+                
+数据加载部分没有发生改变
+使用CifarDta数据进行训练的模块（改变）
+图模型构建模块没有改变
+模型训练(新增)
+
+
+只放出新增和改变的代码
+
+ 模型训练(新增)
+123init = tf.global_variables_initializer()with tf.Session() as sess:    sess.run([loss,accuracy,train_op],feed_dict=&#123;x:,y:&#125;)
+ 使用CifarDta数据进行训练的模块（改变）
+1234567891011121314151617181920212223242526272829303...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -388,6 +434,39 @@ height:50vh;
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >
+                
+                    <span>神经元实现（二分类logistic回归模型实现）（2）</span>
+            </a>
+            <div class="abstract-content">
+                
+调整了数据集的测试代码
+新增了训练的测试代码
+
+ 数据集的测试代码
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960def load_data(filename):    &quot;&quot;&quot;read date from data file.&quot;&quot;&quot;    with open(filename,&apos;rb&apos;) as f:        data = pic...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/11/13/数据处理与模型图构建(1)/" >
                 
                     <span>数据处理与模型图构建（1）</span>
@@ -430,24 +509,18 @@ height:50vh;
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >
+            <a class="abstract-title" href = "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >
                 
-                    <span>神经元实现（二分类logistic回归模型实现）（1）</span>
+                    <span>神经网络实现（多分类logistic回归模型实现）</span>
             </a>
             <div class="abstract-content">
-                
-数据加载部分没有发生改变
-使用CifarDta数据进行训练的模块（改变）
-图模型构建模块没有改变
-模型训练(新增)
+                 改动
 
+数据集输入
+图模型
 
-只放出新增和改变的代码
-
- 模型训练(新增)
-123init = tf.global_variables_initializer()with tf.Session() as sess:    sess.run([loss,accuracy,train_op],feed_dict=&#123;x:,y:&#125;)
- 使用CifarDta数据进行训练的模块（改变）
-1234567891011121314151617181920212223242526272829303...
+ 数据集输入
+123456789101112131415161718192021222324252627282930313233343536373839404142class CifarData:    def __init__(self,filenames,need_shuffle):        all_data = []        all_labels = []        for filename in filenames:            data,labels = load_data(filename)            al...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -470,120 +543,36 @@ height:50vh;
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >
+            <a class="abstract-title" href = "/2018/11/12/梯度下降/" >
                 
-                    <span>神经元实现（二分类logistic回归模型实现）（2）</span>
+                    <span>梯度下降</span>
             </a>
             <div class="abstract-content">
-                
-调整了数据集的测试代码
-新增了训练的测试代码
+                 神经网络训练
+下山算法
 
- 数据集的测试代码
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960def load_data(filename):    &quot;&quot;&quot;read date from data file.&quot;&quot;&quot;    with open(filename,&apos;rb&apos;) as f:        data = pic...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/13</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分类">二分类</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "logistic">logistic</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/机器学习、深度学习简介/" >
-                
-                    <span>机器学习、深度学习简介</span>
-            </a>
-            <div class="abstract-content">
-                 神经网络入门
+找到方向
+走一步
 
-机器学习简介
-深度学习简介
-神经网络
-Tensorflow基础
-神经网络Tensorflow实战
-
- 机器学习是什么
-
-机器学习是什么——无序数据转化为价值的方法
+ 梯度下降算法
 
 
-机器学习价值——从数据中抽取规律，并用来预测未来
+参数=参数-学习率（步长×学习率）
 
- 机器学习应用距离
+ Tensorflow基础
+ Tensorflow介绍
 
-分类问题——图像识别、垃圾邮件识别
+google brain的第二代机器学习框架
+开源社区活跃
+可拓展性好
+API健全，对用户友好
 
-
-回归问题——股价预测、房价预测
-
-
-排序问题——点击率预估、推荐
-
-
-生成问题——图像生成、图像风格转换、图像文字描述生成
-
- 机器学习简介
+ 计算图模型
 
 
-机器学习应用流程
 
- 机器学习岗位职责
 
-数据处理（采集+去噪）
-模型训练（特征+模型）
-模型评估与优化（MSE、F1-score、AUC+调参）
-...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "机器学习">机器学习</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/逻辑回归模型/" >
-                
-                    <span>逻辑回归模型</span>
-            </a>
-            <div class="abstract-content">
-                 神经元——Logits回归模型
- 神经网络
-
-神经元
-逻辑回归模型
-神经网络训练
-
- 神经元结构
-
- 神经元计算
+声明式编程不需要知道数据是什么
 
 
             </div>
@@ -596,9 +585,9 @@ Tensorflow基础
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "神经元">神经元</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "训练">训练</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "逻辑回归">逻辑回归</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "梯度下降">梯度下降</a>
     
 </div>
                 
@@ -672,36 +661,21 @@ y = 真实值-预测值
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/12/梯度下降/" >
+            <a class="abstract-title" href = "/2018/11/12/逻辑回归模型/" >
                 
-                    <span>梯度下降</span>
+                    <span>逻辑回归模型</span>
             </a>
             <div class="abstract-content">
-                 神经网络训练
-下山算法
+                 神经元——Logits回归模型
+ 神经网络
 
-找到方向
-走一步
+神经元
+逻辑回归模型
+神经网络训练
 
- 梯度下降算法
+ 神经元结构
 
-
-参数=参数-学习率（步长×学习率）
-
- Tensorflow基础
- Tensorflow介绍
-
-google brain的第二代机器学习框架
-开源社区活跃
-可拓展性好
-API健全，对用户友好
-
- 计算图模型
-
-
-
-
-声明式编程不需要知道数据是什么
+ 神经元计算
 
 
             </div>
@@ -714,9 +688,9 @@ API健全，对用户友好
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "训练">训练</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "神经元">神经元</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "梯度下降">梯度下降</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "逻辑回归">逻辑回归</a>
     
 </div>
                 
@@ -726,33 +700,63 @@ API健全，对用户友好
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/09/小猪快跑实验室/" >
+            <a class="abstract-title" href = "/2018/11/12/机器学习、深度学习简介/" >
                 
-                    <span>小猪快跑实验室登场</span>
+                    <span>机器学习、深度学习简介</span>
             </a>
             <div class="abstract-content">
-                2018年9月3日，第七届“中国软件杯”大学生软件设计大赛决赛在南京国际博览中心圆满落幕，武警工程大学信息工程学院参赛团队“小猪快跑实验室”历经近半年的不懈努力，成功从4217支参赛队伍中脱颖而出，入围总决赛，与来自各高等院校的100支参赛队伍同场竞技，并最终取得大赛一等奖的好成绩。
+                 神经网络入门
+
+机器学习简介
+深度学习简介
+神经网络
+Tensorflow基础
+神经网络Tensorflow实战
+
+ 机器学习是什么
+
+机器学习是什么——无序数据转化为价值的方法
 
 
-参赛团队由武警工程大学信息工程学院研究生学员彭圳生、李爱、本科生学员郑凯和指导老师刘菲菲组成。
+机器学习价值——从数据中抽取规律，并用来预测未来
 
- 软件设计类的顶级权威赛事
-“中国软件杯”大学生软件设计大赛是由工业和信息化部、教育部、江苏省人民政府共同主办的全国大学生软件设计类的顶级权威赛事，自2011年以来已成功举办七届，每届大赛设计题目均面向国内...
+ 机器学习应用距离
+
+分类问题——图像识别、垃圾邮件识别
+
+
+回归问题——股价预测、房价预测
+
+
+排序问题——点击率预估、推荐
+
+
+生成问题——图像生成、图像风格转换、图像文字描述生成
+
+ 机器学习简介
+
+
+机器学习应用流程
+
+ 机器学习岗位职责
+
+数据处理（采集+去噪）
+模型训练（特征+模型）
+模型评估与优化（MSE、F1-score、AUC+调参）
+...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/09</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
                 </div>
                 <!-- tags  -->
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "小猪快跑实验室">小猪快跑实验室</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度学习">深度学习</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "软件杯">软件杯</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "公众号">公众号</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "机器学习">机器学习</a>
     
 </div>
                 
@@ -2558,12 +2562,7 @@ API健全，对用户友好
     
     
     
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 94 </div>
+    <div class="total-archive"> Total : 95 </div>
     
     <div class="post-archive">
     
@@ -2580,17 +2579,22 @@ API健全，对用户友好
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/23</span><a class="archive-post-title" href= "/2018/11/23/TensorFlow与Flask结合打造手写体数字识别/" >TensorFlow与Flask结合打造手写体数字识别</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/22</span><a class="archive-post-title" href= "/2018/11/22/基于用户的协同过滤算法改进（usercf 改进）/" >基于用户的协同过滤算法改进（usercf 改进）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于用户的协同过滤算法（usercf ）/" >基于用户的协同过滤算法（usercf ）</a>
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于物品的协同过滤算法改进（itemcf 改进）/" >基于物品的协同过滤算法改进（itemcf 改进）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于物品的协同过滤算法改进（itemcf 改进）/" >基于物品的协同过滤算法改进（itemcf 改进）</a>
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于用户的协同过滤算法（usercf ）/" >基于用户的协同过滤算法（usercf ）</a>
         </li>
     
     
@@ -2605,7 +2609,7 @@ API健全，对用户友好
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >个性化召回算法协同过滤理论部分（itemcf ）</a>
         </li>
     
     
@@ -2615,7 +2619,7 @@ API健全，对用户友好
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >个性化召回算法协同过滤理论部分（itemcf ）</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
         </li>
     
     
@@ -2625,12 +2629,12 @@ API健全，对用户友好
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
         </li>
     
     
@@ -2640,12 +2644,22 @@ API健全，对用户友好
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（总结）/" >区块链技术核心概念与原理讲解（总结）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
         </li>
     
     
@@ -2656,16 +2670,6 @@ API健全，对用户友好
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
         </li>
     
     
@@ -2685,17 +2689,17 @@ API健全，对用户友好
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
         </li>
     
     
@@ -2710,12 +2714,12 @@ API健全，对用户友好
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
         </li>
     
     
@@ -2725,12 +2729,12 @@ API健全，对用户友好
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
         </li>
     
     
@@ -2740,22 +2744,17 @@ API健全，对用户友好
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
@@ -2766,6 +2765,11 @@ API健全，对用户友好
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
@@ -2850,12 +2854,12 @@ API健全，对用户友好
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
@@ -3367,6 +3371,8 @@ API健全，对用户友好
         <span class="sidebar-tag-name" data-tags="usercf，算法改进"><span class="iconfont-archer">&#xe606;</span>usercf，算法改进</span>
     
         <span class="sidebar-tag-name" data-tags="推荐算法，在线评估"><span class="iconfont-archer">&#xe606;</span>推荐算法，在线评估</span>
+    
+        <span class="sidebar-tag-name" data-tags="TensorFlow，在线评估"><span class="iconfont-archer">&#xe606;</span>TensorFlow，在线评估</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

@@ -302,6 +302,40 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/05/06/生产环境配置/" >
+                
+                    <span>django+nginx+uwsgi生产环境配置</span>
+            </a>
+            <div class="abstract-content">
+                 生产环境配置
+ mysql基础配置
+123456#修改配置文件$ nano /etc/mysql//mysql.conf.d/mysqld.cnf bind 0.0.0.0#给所有用户赋权GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;root&apos; WITH GRANT OPTION;FLUSH PRIVILEGES;
+ 依赖包环境配置
+12345678910111213141516#导出依赖包pip listpip freeze &gt; requirement...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/06</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "django">django</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "uwsgi">uwsgi</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/05/02/Elasticsearch的Restful接口的应用/" >
                 
                     <span>Elasticsearch的Restful接口的应用</span>
@@ -657,55 +691,6 @@ LDA是一种典型的词袋模型，即一篇文档是由一组词构成，词�
         <a class="post-tag" href="javascript:void(0);" data-tags = "LDA">LDA</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "主题模型">主题模型</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/03/29/关键词检索模型————TF-IDF的简单应用/" >
-                
-                    <span>关键词检索模型————TF-IDF的简单应用</span>
-            </a>
-            <div class="abstract-content">
-                 TF-IDF算法
-
-TF-IDF算法的定义
-TF-IDF算法应用范围
-TF-IDF算法的原理
-
- TF-IDF算法（一）
-
-TF-IDF（term frequency-inverse document frequency）是一种用于信息检索与文本挖掘的常用技术。用以评估一字词对于一个文件集或一个语料库中的其中一份文件的重要程度。
-TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平率很高，并且在其它文章中很少出现，则认为此词或者短语具有很好的类别区分能力，适合用来分类。
-
- TF-IDF算法应用范围
-
-权重计算
-搜索引擎
-论文检索
-文章比对
-关键词抽取
-
- TF-IDF算法的原...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/03/29</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "TF-IDF">TF-IDF</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "检索模型">检索模型</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "关键词">关键词</a>
     
 </div>
                 
@@ -2439,12 +2424,7 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
     
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 94 </div>
+    <div class="total-archive"> Total : 95 </div>
     
     <div class="post-archive">
     
@@ -2461,17 +2441,22 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/23</span><a class="archive-post-title" href= "/2018/11/23/TensorFlow与Flask结合打造手写体数字识别/" >TensorFlow与Flask结合打造手写体数字识别</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/22</span><a class="archive-post-title" href= "/2018/11/22/基于用户的协同过滤算法改进（usercf 改进）/" >基于用户的协同过滤算法改进（usercf 改进）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于用户的协同过滤算法（usercf ）/" >基于用户的协同过滤算法（usercf ）</a>
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于物品的协同过滤算法改进（itemcf 改进）/" >基于物品的协同过滤算法改进（itemcf 改进）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于物品的协同过滤算法改进（itemcf 改进）/" >基于物品的协同过滤算法改进（itemcf 改进）</a>
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2018/11/21/基于用户的协同过滤算法（usercf ）/" >基于用户的协同过滤算法（usercf ）</a>
         </li>
     
     
@@ -2486,7 +2471,7 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >个性化召回算法协同过滤理论部分（itemcf ）</a>
         </li>
     
     
@@ -2496,7 +2481,7 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >个性化召回算法协同过滤理论部分（itemcf ）</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
         </li>
     
     
@@ -2506,12 +2491,12 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
         </li>
     
     
@@ -2521,12 +2506,22 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/restful简介及资源介绍/" >restful简介及资源介绍</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（总结）/" >区块链技术核心概念与原理讲解（总结）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
         </li>
     
     
@@ -2537,16 +2532,6 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
         </li>
     
     
@@ -2566,17 +2551,17 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
         </li>
     
     
@@ -2591,12 +2576,12 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
         </li>
     
     
@@ -2606,12 +2591,12 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
         </li>
     
     
@@ -2621,22 +2606,17 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
@@ -2647,6 +2627,11 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
         </li>
     
     
@@ -2731,12 +2716,12 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/爬虫前台/" >pyspider快速部署爬虫前台</a>
+            <span class="archive-post-date">05/19</span><a class="archive-post-title" href= "/2018/05/19/xadmin快速开发数据管理后台/" >xadmin快速开发后台管理系统</a>
         </li>
     
     
@@ -3248,6 +3233,8 @@ TF-IDF的主要思想：如果某个词或短语在一篇文章中出现的平�
         <span class="sidebar-tag-name" data-tags="usercf，算法改进"><span class="iconfont-archer">&#xe606;</span>usercf，算法改进</span>
     
         <span class="sidebar-tag-name" data-tags="推荐算法，在线评估"><span class="iconfont-archer">&#xe606;</span>推荐算法，在线评估</span>
+    
+        <span class="sidebar-tag-name" data-tags="TensorFlow，在线评估"><span class="iconfont-archer">&#xe606;</span>TensorFlow，在线评估</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

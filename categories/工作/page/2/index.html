@@ -302,6 +302,47 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >
+                
+                    <span>个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</span>
+            </a>
+            <div class="abstract-content">
+                 Usercf Vs Itemcf
+
+推荐实时性
+
+
+usercf：用户新的行为不会很快造成推荐结果的变化，因为其基于相似度用户矩阵完成推荐，因此用户自身行为不会造成推荐结果发生改变;（缺）
+itemcf：用户一旦有了新的行为，其推荐结果很快就会发生改变，因此点击了物品之后，很快就会推荐相似的物品。（优）
+
+
+新用户/新物品的推荐
+
+
+usercf：新用户到来之后，需要一定的操作之后才能得到和其相似的其它用户，因此没有办法立即推荐。  但新物品一旦入库并获得点击，可以立刻推荐给相似爱好的用户。（缺/优）
+itemcf：一旦新用户完成的物品的点击，那么就可以马上获得和该物品相似的其它物品的...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/17</span>
+                </div>
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "usercf">usercf</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "分析比较，itemcf">分析比较，itemcf</a>
+    
+</div>
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >
                 
                     <span>个性化召回算法协同过滤理论部分（itemcf ）</span>
@@ -730,71 +771,10 @@ RESTful与其它架构有什么区别？
             </div>
         </article>
     
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >
-                
-                    <span>区块链技术核心概念与原理讲解（为什么记账-挖矿）</span>
-            </a>
-            <div class="abstract-content">
-                比特币要怎样解决账户的所有权问题？
- 为什么记账
-
-记账：Hash打包过程
-消耗资源
-奖励
-
- 挖矿-工作量证明
-
-规则
-
-
-一段时间内只有一人可以记账成功
-通过解决密码学难题（即工作量证明）竞争获得唯一记账权
-其它节点复制记账结果
-
-
-工作量证明
-
-
-Hash(上一个Hash值，交易记录值) = 456635BCD
-Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
-
-
-交易记录集
-
-
-手机广播中还没有被记录账本的交易
-交易的有效性验证
-添加一笔给自己转账的交易（挖矿奖励）
-
-
-工作量分析
-
-
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/15</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "区块链，比特币，挖矿">区块链，比特币，挖矿</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/categories/工作/">&#60; PREV</a><a class="page-number" href="/categories/工作/">1</a><span class="page-number current">2</span><a class="page-number" href="/categories/工作/page/3/">3</a><a class="page-number" href="/categories/工作/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/categories/工作/page/8/">8</a><a class="extend next" rel="next" href="/categories/工作/page/3/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/categories/工作/">&#60; PREV</a><a class="page-number" href="/categories/工作/">1</a><span class="page-number current">2</span><a class="page-number" href="/categories/工作/page/3/">3</a><a class="page-number" href="/categories/工作/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/categories/工作/page/9/">9</a><a class="extend next" rel="next" href="/categories/工作/page/3/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -2546,7 +2526,54 @@ Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
     
     
     
-    <div class="total-archive"> Total : 97 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 98 </div>
     
     <div class="post-archive">
     
@@ -2563,17 +2590,22 @@ Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/26</span><a class="archive-post-title" href= "/2018/11/26/flask发布手写字识别模型/" >flask发布手写字识别模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/24</span><a class="archive-post-title" href= "/2018/11/24/ TensorFlow结合mnist进行线性模型训练/" >TensorFlow结合mnist进行线性模型训练</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/23</span><a class="archive-post-title" href= "/2018/11/23/TensorFlow与Flask结合打造手写体数字识别/" >TensorFlow与Flask结合打造手写体数字识别</a>
+            <span class="archive-post-date">11/23</span><a class="archive-post-title" href= "/2018/11/23/个性化推荐召回算法的离线在线评估方法/" >个性化推荐召回算法的离线在线评估方法</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/23</span><a class="archive-post-title" href= "/2018/11/23/个性化推荐召回算法的离线在线评估方法/" >个性化推荐召回算法的离线在线评估方法</a>
+            <span class="archive-post-date">11/23</span><a class="archive-post-title" href= "/2018/11/23/TensorFlow与Flask结合打造手写体数字识别/" >TensorFlow与Flask结合打造手写体数字识别</a>
         </li>
     
     
@@ -2603,16 +2635,6 @@ Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >个性化召回算法协同过滤理论部分（itemcf ）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（usercf ）/" >个性化召回算法协同过滤理论部分（usercf ）</a>
         </li>
     
@@ -2623,17 +2645,12 @@ Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >个性化召回算法协同过滤理论部分（itemcf ）</a>
         </li>
     
     
@@ -2643,17 +2660,17 @@ Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/RESTful中HTTP协议介绍/" >RESTful中HTTP协议介绍</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
         </li>
     
     
@@ -2673,22 +2690,22 @@ Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理开发环境介绍/" >自然语言处理开发环境介绍</a>
         </li>
     
     
@@ -2703,22 +2720,37 @@ Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（可视化数据分析）/" >案例：NLP技术实现预测天气冷暖感知度（可视化数据分析）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理开发环境介绍/" >自然语言处理开发环境介绍</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</a>
         </li>
     
     
@@ -2733,17 +2765,27 @@ Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
         </li>
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建(1)/" >数据处理与模型图构建（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/数据处理与模型图构建（2）/" >数据处理与模型图构建（2）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
         </li>
     
     
@@ -2754,16 +2796,6 @@ Hash（上一个Hash值，交易记录集，随机数） = 0000aFD635BCD
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/逻辑回归模型/" >逻辑回归模型</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/机器学习、深度学习简介/" >机器学习、深度学习简介</a>
         </li>
     
     

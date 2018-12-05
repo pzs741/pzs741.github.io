@@ -243,7 +243,9 @@ height:50vh;
             
                 <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "TensorFlow，mnist">TensorFlow，mnist</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "TensorFlow">TensorFlow</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mnist">mnist</a>
     
 </div>
             
@@ -367,42 +369,42 @@ height:50vh;
 <h1 id="全局代码"><a class="markdownIt-Anchor" href="#全局代码"></a> 全局代码</h1>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># @Time    : 18-11-24 上午9:43</span><br><span class="line"># @Author  : Ex_treme</span><br><span class="line"># @Email   : pzsyjsgldd@163.com</span><br><span class="line"># @File    : regression.py</span><br><span class="line"># @Software: PyCharm</span><br><span class="line"></span><br><span class="line">from mnist import input_data</span><br><span class="line">from mnist import model</span><br><span class="line"></span><br><span class="line">data = input_data.read_data_sets(&quot;MNIST_DATA&quot;, one_hot=True)</span><br><span class="line">import tensorflow as tf</span><br><span class="line"></span><br><span class="line"># create model</span><br><span class="line">with tf.variable_scope(&quot;regression&quot;):</span><br><span class="line">    x = tf.placeholder(tf.float32, [None, 784])</span><br><span class="line">    y, variables = model.regression(x)</span><br><span class="line"></span><br><span class="line"># train</span><br><span class="line">y_ = tf.placeholder(&quot;float&quot;, [None, 10])</span><br><span class="line">cross_entropy = -tf.reduce_sum(y_ * tf.log(y))</span><br><span class="line"></span><br><span class="line">train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)</span><br><span class="line">correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))</span><br><span class="line">accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))</span><br><span class="line"></span><br><span class="line">saver = tf.train.Saver(variables)</span><br><span class="line"></span><br><span class="line"># important step 对所有变量进行初始化</span><br><span class="line">init = tf.initialize_all_variables()</span><br><span class="line">sess = tf.Session()</span><br><span class="line"># 上面定义的都没有运算，直到 sess.run 才会开始运算</span><br><span class="line">sess.run(init)</span><br><span class="line"># 迭代 1000 次学习，sess.run optimizer</span><br><span class="line">for i in range(1000):</span><br><span class="line">    batch_xs, batch_ys = data.train.next_batch(100)</span><br><span class="line">    # training train_step 和 loss 都是由 placeholder 定义的运算，所以这里要用 feed 传入参数</span><br><span class="line">    sess.run(train_step, feed_dict=&#123;x: batch_xs, y_: batch_ys&#125;)</span><br><span class="line">    if i % 50 == 0:</span><br><span class="line">        # to see the step improvement</span><br><span class="line">        print((sess.run(accuracy, feed_dict=&#123;x: data.test.images, y_: data.test.labels&#125;)))</span><br></pre></td></tr></table></figure>
 <p><strong>运行结果：</strong><br>
-模型精确度： 0.1289<br>
-模型精确度： 0.8357<br>
-模型精确度： 0.8917<br>
-模型精确度： 0.9037<br>
-模型精确度： 0.8971<br>
-模型精确度： 0.9097<br>
-模型精确度： 0.9143<br>
-模型精确度： 0.9049<br>
-模型精确度： 0.9054<br>
-模型精确度： 0.9117<br>
-模型精确度： 0.9087<br>
-模型精确度： 0.9022<br>
-模型精确度： 0.9161<br>
-模型精确度： 0.915<br>
-模型精确度： 0.9164<br>
-模型精确度： 0.9048<br>
-模型精确度： 0.9174<br>
-模型精确度： 0.9131<br>
-模型精确度： 0.9047<br>
-模型精确度： 0.9149<br>
-模型保存路径： /home/pzs741/PycharmProjects/tensorflow-minist-master/mnist/data/regression_model</p>
+​        模型精确度： 0.1289<br>
+​        模型精确度： 0.8357<br>
+​        模型精确度： 0.8917<br>
+​        模型精确度： 0.9037<br>
+​        模型精确度： 0.8971<br>
+​        模型精确度： 0.9097<br>
+​        模型精确度： 0.9143<br>
+​        模型精确度： 0.9049<br>
+​        模型精确度： 0.9054<br>
+​        模型精确度： 0.9117<br>
+​        模型精确度： 0.9087<br>
+​        模型精确度： 0.9022<br>
+​        模型精确度： 0.9161<br>
+​        模型精确度： 0.915<br>
+​        模型精确度： 0.9164<br>
+​        模型精确度： 0.9048<br>
+​        模型精确度： 0.9174<br>
+​        模型精确度： 0.9131<br>
+​        模型精确度： 0.9047<br>
+​        模型精确度： 0.9149<br>
+​        模型保存路径： /home/pzs741/PycharmProjects/tensorflow-minist-master/mnist/data/regression_model</p>
 <h1 id="主要步骤解释"><a class="markdownIt-Anchor" href="#主要步骤解释"></a> 主要步骤解释</h1>
 <ul>
 <li>
 <p>导包及数据<br>
-from mnist import input_data<br>
-from mnist import model</p>
+​    from mnist import input_data<br>
+​    from mnist import model</p>
 <pre><code>  data = input_data.read_data_sets(&quot;MNIST_DATA&quot;, one_hot=True)
   import tensorflow as tf
 </code></pre>
 </li>
 <li>
 <p>定义线性模型<br>
-with tf.variable_scope(“regression”):<br>
-x = tf.placeholder(tf.float32, [None, 784])<br>
-y, variables = model.regression(x)</p>
+​    with tf.variable_scope(“regression”):<br>
+​        x = tf.placeholder(tf.float32, [None, 784])<br>
+​        y, variables = model.regression(x)</p>
 </li>
 <li>
 <p>定义交叉熵和预测值</p>
@@ -416,21 +418,22 @@ y, variables = model.regression(x)</p>
     correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 </code></pre>
+<p>​</p>
 <ul>
 <li>然后对所有变量进行初始化，通过 sess.run optimizer，迭代 1000 次进行学习<br>
-# important step 对所有变量进行初始化<br>
-init = tf.initialize_all_variables()<br>
-sess = tf.Session()<br>
-# 上面定义的都没有运算，直到 sess.run 才会开始运算<br>
-sess.run(init)<br>
-# 迭代 1000 次学习，sess.run optimizer<br>
-for i in range(1000):<br>
-batch_xs, batch_ys = data.train.next_batch(100)<br>
-# training train_step 和 loss 都是由 placeholder 定义的运算，所以这里要用 feed 传入参数<br>
-sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})<br>
-if i % 50 == 0:<br>
-# to see the step improvement<br>
-print((sess.run(accuracy, feed_dict={x: data.test.images, y_: data.test.labels})))</li>
+​    # important step 对所有变量进行初始化<br>
+​    init = tf.initialize_all_variables()<br>
+​    sess = tf.Session()<br>
+​    # 上面定义的都没有运算，直到 sess.run 才会开始运算<br>
+​    sess.run(init)<br>
+​    # 迭代 1000 次学习，sess.run optimizer<br>
+​    for i in range(1000):<br>
+​        batch_xs, batch_ys = data.train.next_batch(100)<br>
+​        # training train_step 和 loss 都是由 placeholder 定义的运算，所以这里要用 feed 传入参数<br>
+​        sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})<br>
+​        if i % 50 == 0:<br>
+​            # to see the step improvement<br>
+​            print((sess.run(accuracy, feed_dict={x: data.test.images, y_: data.test.labels})))</li>
 </ul>
 
     </article>
@@ -447,8 +450,8 @@ print((sess.run(accuracy, feed_dict={x: data.test.images, y_: data.test.labels})
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/11/23/TensorFlow与Flask结合打造手写体数字识别/" title= TensorFlow与Flask结合打造手写体数字识别 >
-                    <div class="prevTitle">TensorFlow与Flask结合打造手写体数字识别</div>
+                <a href= "/2018/11/23/个性化推荐召回算法的离线在线评估方法/" title= 个性化推荐召回算法的离线在线评估方法 >
+                    <div class="prevTitle">个性化推荐召回算法的离线在线评估方法</div>
                 </a>
             
         </li>
@@ -2051,228 +2054,6 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-archive"> Total : 99 </div>
     
     <div class="post-archive">
@@ -2340,6 +2121,11 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >个性化召回算法协同过滤理论部分（itemcf ）</a>
         </li>
     
@@ -2350,22 +2136,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
         </li>
     
     
@@ -2380,6 +2151,36 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
         </li>
     
@@ -2390,37 +2191,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
         </li>
     
     
@@ -2430,22 +2201,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</a>
         </li>
     
     
@@ -2455,17 +2211,32 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
         </li>
     
     
@@ -2480,12 +2251,17 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -2500,17 +2276,22 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/本地连接/" >解决本地无法连接和图片压缩问题</a>
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/本地连接/" >解决本地无法连接和图片压缩问题</a>
         </li>
     
     
@@ -2630,12 +2411,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
         </li>
     
     
@@ -3110,6 +2891,64 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="TensorFlow，卷积"><span class="iconfont-archer">&#xe606;</span>TensorFlow，卷积</span>
     
         <span class="sidebar-tag-name" data-tags="TensorFlow，GPU"><span class="iconfont-archer">&#xe606;</span>TensorFlow，GPU</span>
+    
+        <span class="sidebar-tag-name" data-tags="设计要素"><span class="iconfont-archer">&#xe606;</span>设计要素</span>
+    
+        <span class="sidebar-tag-name" data-tags="TensorFlow"><span class="iconfont-archer">&#xe606;</span>TensorFlow</span>
+    
+        <span class="sidebar-tag-name" data-tags="mnist"><span class="iconfont-archer">&#xe606;</span>mnist</span>
+    
+        <span class="sidebar-tag-name" data-tags="卷积"><span class="iconfont-archer">&#xe606;</span>卷积</span>
+    
+        <span class="sidebar-tag-name" data-tags="比特币"><span class="iconfont-archer">&#xe606;</span>比特币</span>
+    
+        <span class="sidebar-tag-name" data-tags="总结"><span class="iconfont-archer">&#xe606;</span>总结</span>
+    
+        <span class="sidebar-tag-name" data-tags="预测"><span class="iconfont-archer">&#xe606;</span>预测</span>
+    
+        <span class="sidebar-tag-name" data-tags="HTTP"><span class="iconfont-archer">&#xe606;</span>HTTP</span>
+    
+        <span class="sidebar-tag-name" data-tags="在线评估"><span class="iconfont-archer">&#xe606;</span>在线评估</span>
+    
+        <span class="sidebar-tag-name" data-tags="GPU"><span class="iconfont-archer">&#xe606;</span>GPU</span>
+    
+        <span class="sidebar-tag-name" data-tags="召回算法"><span class="iconfont-archer">&#xe606;</span>召回算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="分析比较"><span class="iconfont-archer">&#xe606;</span>分析比较</span>
+    
+        <span class="sidebar-tag-name" data-tags="推荐算法"><span class="iconfont-archer">&#xe606;</span>推荐算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="个性化"><span class="iconfont-archer">&#xe606;</span>个性化</span>
+    
+        <span class="sidebar-tag-name" data-tags="KNN"><span class="iconfont-archer">&#xe606;</span>KNN</span>
+    
+        <span class="sidebar-tag-name" data-tags="挖矿"><span class="iconfont-archer">&#xe606;</span>挖矿</span>
+    
+        <span class="sidebar-tag-name" data-tags="共识机制"><span class="iconfont-archer">&#xe606;</span>共识机制</span>
+    
+        <span class="sidebar-tag-name" data-tags="算法改进"><span class="iconfont-archer">&#xe606;</span>算法改进</span>
+    
+        <span class="sidebar-tag-name" data-tags="摄影"><span class="iconfont-archer">&#xe606;</span>摄影</span>
+    
+        <span class="sidebar-tag-name" data-tags="北京"><span class="iconfont-archer">&#xe606;</span>北京</span>
+    
+        <span class="sidebar-tag-name" data-tags="密云水库"><span class="iconfont-archer">&#xe606;</span>密云水库</span>
+    
+        <span class="sidebar-tag-name" data-tags="数据集"><span class="iconfont-archer">&#xe606;</span>数据集</span>
+    
+        <span class="sidebar-tag-name" data-tags="信息抽取"><span class="iconfont-archer">&#xe606;</span>信息抽取</span>
+    
+        <span class="sidebar-tag-name" data-tags="sklearn"><span class="iconfont-archer">&#xe606;</span>sklearn</span>
+    
+        <span class="sidebar-tag-name" data-tags="分类器"><span class="iconfont-archer">&#xe606;</span>分类器</span>
+    
+        <span class="sidebar-tag-name" data-tags="吉他"><span class="iconfont-archer">&#xe606;</span>吉他</span>
+    
+        <span class="sidebar-tag-name" data-tags="曲谱"><span class="iconfont-archer">&#xe606;</span>曲谱</span>
+    
+        <span class="sidebar-tag-name" data-tags="实战"><span class="iconfont-archer">&#xe606;</span>实战</span>
+    
+        <span class="sidebar-tag-name" data-tags="开发环境"><span class="iconfont-archer">&#xe606;</span>开发环境</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

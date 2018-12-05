@@ -243,7 +243,9 @@ height:50vh;
             
                 <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "TensorFlow，GPU">TensorFlow，GPU</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "TensorFlow">TensorFlow</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "GPU">GPU</a>
     
 </div>
             
@@ -360,52 +362,52 @@ height:50vh;
 </ul>
 <blockquote>
 <p>sudo lshw -numeric -c display<br>
-*-display<br>
-description: 3D controller<br>
-product: NVIDIA Corporation [10DE:1C20]<br>
-vendor: NVIDIA Corporation [10DE]<br>
-physical id: 0<br>
-bus info: pci@0000:01:00.0<br>
-version: a1<br>
-width: 64 bits<br>
-clock: 33MHz<br>
-capabilities: pm msi pciexpress bus_master cap_list rom<br>
-configuration: driver=nvidia latency=0<br>
-resources: irq:137 memory:93000000-93ffffff memory:50000000-5fffffff memory:60000000-61ffffff ioport:4000(size=128) memory:94000000-9407ffff<br>
-*-display<br>
-description: VGA compatible controller<br>
-product: Intel Corporation [8086:591B]<br>
-vendor: Intel Corporation [8086]<br>
-physical id: 2<br>
-bus info: pci@0000:00:02.0<br>
-version: 04<br>
-width: 64 bits<br>
-clock: 33MHz<br>
-capabilities: pciexpress msi pm vga_controller bus_master cap_list rom<br>
-configuration: driver=i915_bpo latency=0<br>
-resources: irq:126 memory:92000000-92ffffff memory:a0000000-afffffff ioport:5000(size=64)</p>
+​      *-display<br>
+​             description: 3D controller<br>
+​             product: NVIDIA Corporation [10DE:1C20]<br>
+​             vendor: NVIDIA Corporation [10DE]<br>
+​             physical id: 0<br>
+​             bus info: pci@0000:01:00.0<br>
+​             version: a1<br>
+​             width: 64 bits<br>
+​             clock: 33MHz<br>
+​             capabilities: pm msi pciexpress bus_master cap_list rom<br>
+​             configuration: driver=nvidia latency=0<br>
+​             resources: irq:137 memory:93000000-93ffffff memory:50000000-5fffffff memory:60000000-61ffffff ioport:4000(size=128) memory:94000000-9407ffff<br>
+​        *-display<br>
+​             description: VGA compatible controller<br>
+​             product: Intel Corporation [8086:591B]<br>
+​             vendor: Intel Corporation [8086]<br>
+​             physical id: 2<br>
+​             bus info: pci@0000:00:02.0<br>
+​             version: 04<br>
+​             width: 64 bits<br>
+​             clock: 33MHz<br>
+​             capabilities: pciexpress msi pm vga_controller bus_master cap_list rom<br>
+​             configuration: driver=i915_bpo latency=0<br>
+​             resources: irq:126 memory:92000000-92ffffff memory:a0000000-afffffff ioport:5000(size=64)</p>
 </blockquote>
 <ul>
 <li>找出你的系统应该安装的英伟达显卡驱动</li>
 </ul>
 <blockquote>
 <p>ubuntu-drivers devices<br>
-== /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0 ==<br>
-vendor   : NVIDIA Corporation<br>
-modalias : pci:v000010DEd00001C20sv00001025sd0000120Cbc03sc02i00<br>
-driver   : xserver-xorg-video-nouveau - distro free builtin<br>
-driver   : nvidia-384 - third-party non-free recommended</p>
+​      == /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0 ==<br>
+​      vendor   : NVIDIA Corporation<br>
+​      modalias : pci:v000010DEd00001C20sv00001025sd0000120Cbc03sc02i00<br>
+​      driver   : xserver-xorg-video-nouveau - distro free builtin<br>
+​      driver   : nvidia-384 - third-party non-free recommended</p>
 </blockquote>
 <ul>
 <li>安装该驱动</li>
 </ul>
 <blockquote>
 <p>sudo apt install nvidia-384<br>
-正在读取软件包列表… 完成<br>
-正在分析软件包的依赖关系树<br>
-正在读取状态信息… 完成<br>
-nvidia-384 已经是最新版 (384.130-0ubuntu0.16.04.1)。<br>
-升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 2 个软件包未被升级。</p>
+​      正在读取软件包列表… 完成<br>
+​      正在分析软件包的依赖关系树<br>
+​      正在读取状态信息… 完成<br>
+​      nvidia-384 已经是最新版 (384.130-0ubuntu0.16.04.1)。<br>
+​      升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 2 个软件包未被升级。</p>
 </blockquote>
 <ul>
 <li>验证是否安装成功</li>
@@ -2078,228 +2080,6 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-archive"> Total : 99 </div>
     
     <div class="post-archive">
@@ -2367,6 +2147,11 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf ）/" >个性化召回算法协同过滤理论部分（itemcf ）</a>
         </li>
     
@@ -2377,22 +2162,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化推荐算法实战入门必修课/" >个性化推荐算法实战入门必修课</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）/" >个性化召回算法协同过滤理论部分（itemcf与usercf的针对不同场景的分析）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
         </li>
     
     
@@ -2407,6 +2177,36 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/Restful API实战（架构区别）/" >Restful API实战（架构区别）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2018/11/16/ Restful API实战（restful设计要素）/" >Restful API实战（restful设计要素）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（共识机制）/" >区块链技术核心概念与原理讲解（共识机制）</a>
         </li>
     
@@ -2417,37 +2217,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（区块链的过去与未来）/" >区块链技术核心概念与原理讲解（区块链的过去与未来）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（为什么记账-挖矿）/" >区块链技术核心概念与原理讲解（为什么记账-挖矿）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/区块链技术核心概念与原理讲解（比特币原理）/" >区块链技术核心概念与原理讲解（比特币原理）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2018/11/15/ 区块链技术核心概念与原理讲解（比特币是什么）/" >区块链技术核心概念与原理讲解（比特币是什么）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
         </li>
     
     
@@ -2457,22 +2227,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP概述/" >NLP概述</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（案例需求和数据准备）/" >案例：NLP技术实现预测天气冷暖感知度（案例需求和数据准备）</a>
         </li>
     
     
@@ -2482,17 +2237,32 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）/" >案例：NLP技术实现预测天气冷暖感知度（KNN模型原理介绍）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现1）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）/" >案例：NLP技术实现预测天气冷暖感知度（KNN分类器模型实现2）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/利用KNN分类器采访随机游客预测天气感知度/" >利用KNN分类器采访随机游客预测天气感知度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/机器学习库sklearn实现预测天气冷暖感知度/" >机器学习库sklearn实现预测天气冷暖感知度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2018/11/14/自然语言处理入门课程与模拟实战总结/" >自然语言处理入门课程与模拟实战总结</a>
         </li>
     
     
@@ -2507,12 +2277,17 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（1）/" >神经元实现（二分类logistic回归模型实现）（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经元实现（二分类logistic回归模型实现）（2）/" >神经元实现（二分类logistic回归模型实现）（2）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2018/11/13/神经网络实现（多分类logistic回归模型实现）/" >神经网络实现（多分类logistic回归模型实现）</a>
         </li>
     
     
@@ -2527,17 +2302,22 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/神经元的多输出/" >神经元多输出模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/梯度下降/" >梯度下降</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/本地连接/" >解决本地无法连接和图片压缩问题</a>
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/小猪快跑实验室/" >小猪快跑实验室登场</a>
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2018/11/09/本地连接/" >解决本地无法连接和图片压缩问题</a>
         </li>
     
     
@@ -2657,12 +2437,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/SAS4/" >文章搜索引擎————LDA算法整合</a>
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2018/04/04/xadmin/" >文章搜索引擎——后台和总结</a>
         </li>
     
     
@@ -3137,6 +2917,64 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="TensorFlow，卷积"><span class="iconfont-archer">&#xe606;</span>TensorFlow，卷积</span>
     
         <span class="sidebar-tag-name" data-tags="TensorFlow，GPU"><span class="iconfont-archer">&#xe606;</span>TensorFlow，GPU</span>
+    
+        <span class="sidebar-tag-name" data-tags="设计要素"><span class="iconfont-archer">&#xe606;</span>设计要素</span>
+    
+        <span class="sidebar-tag-name" data-tags="TensorFlow"><span class="iconfont-archer">&#xe606;</span>TensorFlow</span>
+    
+        <span class="sidebar-tag-name" data-tags="mnist"><span class="iconfont-archer">&#xe606;</span>mnist</span>
+    
+        <span class="sidebar-tag-name" data-tags="卷积"><span class="iconfont-archer">&#xe606;</span>卷积</span>
+    
+        <span class="sidebar-tag-name" data-tags="比特币"><span class="iconfont-archer">&#xe606;</span>比特币</span>
+    
+        <span class="sidebar-tag-name" data-tags="总结"><span class="iconfont-archer">&#xe606;</span>总结</span>
+    
+        <span class="sidebar-tag-name" data-tags="预测"><span class="iconfont-archer">&#xe606;</span>预测</span>
+    
+        <span class="sidebar-tag-name" data-tags="HTTP"><span class="iconfont-archer">&#xe606;</span>HTTP</span>
+    
+        <span class="sidebar-tag-name" data-tags="在线评估"><span class="iconfont-archer">&#xe606;</span>在线评估</span>
+    
+        <span class="sidebar-tag-name" data-tags="GPU"><span class="iconfont-archer">&#xe606;</span>GPU</span>
+    
+        <span class="sidebar-tag-name" data-tags="召回算法"><span class="iconfont-archer">&#xe606;</span>召回算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="分析比较"><span class="iconfont-archer">&#xe606;</span>分析比较</span>
+    
+        <span class="sidebar-tag-name" data-tags="推荐算法"><span class="iconfont-archer">&#xe606;</span>推荐算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="个性化"><span class="iconfont-archer">&#xe606;</span>个性化</span>
+    
+        <span class="sidebar-tag-name" data-tags="KNN"><span class="iconfont-archer">&#xe606;</span>KNN</span>
+    
+        <span class="sidebar-tag-name" data-tags="挖矿"><span class="iconfont-archer">&#xe606;</span>挖矿</span>
+    
+        <span class="sidebar-tag-name" data-tags="共识机制"><span class="iconfont-archer">&#xe606;</span>共识机制</span>
+    
+        <span class="sidebar-tag-name" data-tags="算法改进"><span class="iconfont-archer">&#xe606;</span>算法改进</span>
+    
+        <span class="sidebar-tag-name" data-tags="摄影"><span class="iconfont-archer">&#xe606;</span>摄影</span>
+    
+        <span class="sidebar-tag-name" data-tags="北京"><span class="iconfont-archer">&#xe606;</span>北京</span>
+    
+        <span class="sidebar-tag-name" data-tags="密云水库"><span class="iconfont-archer">&#xe606;</span>密云水库</span>
+    
+        <span class="sidebar-tag-name" data-tags="数据集"><span class="iconfont-archer">&#xe606;</span>数据集</span>
+    
+        <span class="sidebar-tag-name" data-tags="信息抽取"><span class="iconfont-archer">&#xe606;</span>信息抽取</span>
+    
+        <span class="sidebar-tag-name" data-tags="sklearn"><span class="iconfont-archer">&#xe606;</span>sklearn</span>
+    
+        <span class="sidebar-tag-name" data-tags="分类器"><span class="iconfont-archer">&#xe606;</span>分类器</span>
+    
+        <span class="sidebar-tag-name" data-tags="吉他"><span class="iconfont-archer">&#xe606;</span>吉他</span>
+    
+        <span class="sidebar-tag-name" data-tags="曲谱"><span class="iconfont-archer">&#xe606;</span>曲谱</span>
+    
+        <span class="sidebar-tag-name" data-tags="实战"><span class="iconfont-archer">&#xe606;</span>实战</span>
+    
+        <span class="sidebar-tag-name" data-tags="开发环境"><span class="iconfont-archer">&#xe606;</span>开发环境</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
